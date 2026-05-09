@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumInsieme | El Cine nos Une</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: white; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .bg-lumiere-blue { background-color: #0A192F; }
+        .border-lumiere { border-color: #1E3A8A; }
+        .text-lumiere-cyan { color: #38BDF8; }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #1E3A8A; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const App = () => {
+            const [view, setView] = useState('landing'); // landing, profile, dashboard, chat
+            const [user, setUser] = useState({ name: '', genres: [] });
+            const [rooms, setRooms] = useState([
+                { id: 1, movie: 'Metrópolis', place: 'Cine Capitol', date: '2023-11-20', time: '21:00', host: 'Auguste', members: 3 },
+                { id: 2, movie: 'Casablanca', place: 'Sala Lumière', date: '2023-11-22', time: '19:30', host: 'Louis', members: 8 }
+            ]);
+            const [activeRoom, setActiveRoom] = useState(null);
+            const [messages, setMessages] = useState([
+                { id: 1, user: 'Sistema', text: '¡Bienvenidos a la sala! Coordinen su encuentro aquí.' }
+            ]);
+            const [isModalOpen, setIsModalOpen] = useState(false);
+
+            // --- Lógica ---
+            const handleJoin = (room) => {
+                setActiveRoom(room);
+                setView('chat');
+            };
+
+            const createRoom = (e) => {
+                e.preventDefault();
+                const newRoom = {
+                    id: rooms.length + 1,
+                    movie: e.target.movie.value,
+                    place: e.target.place.value,
+                    date: e.target.date.value,
+                    time: e.target.time.value,
+                    host: user.name,
+                    members: 1
+                };
+                setRooms([newRoom, ...rooms]);
+                setIsModalOpen(false);
+            };
+
+            const sendMessage = (e) => {
+                e.preventDefault();
+                const text = e.target.msg.value;
+                if(!text) return;
+                setMessages([...messages, { id: Date.now(), user: user.name, text }]);
+                e.target.reset();
+            };
+
+            // --- Vistas ---
+            
+            // 1. LANDING
+            if (view === 'landing') return (
+                <div className="h-screen flex flex-col items-center justify-center text-center p-6 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black">
+                    <div className="mb-8 animate-pulse">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    </div>
+                    <h1 className="text-7xl font-bold mb-4 tracking-tighter italic">LumInsieme</h1>
+                    <p className="text-slate-400 max-w-md mb-8 italic">"El cine es un trabajo de equipo. El encuentro comienza aquí."</p>
+                    <button onClick={() => setView('profile')} className="px-10 py-4 border border-white hover:bg-white hover:text-black transition-all duration-500 tracking-widest font-bold">
+                        INGRESAR A LA FUNCIÓN
+                    </button>
+                </div>
+            );
+
+            // 2. PROFILE
+            if (view === 'profile') return (
+                <div className="min-h-screen flex items-center justify-center p-6 bg-black">
+                    <div className="max-w-md w-full bg-slate-900/50 p-10 border border-blue-900/30 rounded-lg">
+                        <h2 className="text-3xl mb-6 italic">Crea tu Perfil de Espectador</h2>
+                        <input 
+                            type="text" 
+                            placeholder="Tu Nombre" 
+                            className="w-full bg-black border border-slate-700 p-3 mb-6 focus:border-blue-500 outline-none"
+                            onBlur={(e) => setUser({...user, name: e.target.value})}
+                        />
+                        <p className="text-sm text-slate-400 mb-4 uppercase tracking-widest">Estilos favoritos</p>
+                        <div className="flex flex-wrap gap-2 mb-8">
+                            {['Noir', 'Nouvelle Vague', 'Expresionismo', 'Mudo', 'Sci-Fi'].map(g => (
+                                <button key={g} onClick={() => setUser({...user, genres: [...user.genres, g]})} className="text-xs border border-slate-700 px-3 py-1 hover:bg-blue-600">
+                                    {g}
+                                </button>
+                            ))}
+                        </div>
+                        <button onClick={() => setView('dashboard')} className="w-full bg-white text-black font-bold py-3 hover:bg-blue-400 transition-colors">
+                            GUARDAR Y ENTRAR
+                        </button>
+                    </div>
+                </div>
+            );
+
+            // 3. DASHBOARD
+            if (view === 'dashboard') return (
+                <div className="min-h-screen bg-black">
+                    <nav className="p-6 border-b border-white/10 flex justify-between items-center sticky top-0 bg-black/90 backdrop-blur-md">
+                        <h2 className="text-2xl font-bold italic tracking-tighter">LumInsieme</h2>
+                        <div className="flex gap-6 items-center">
+                            <span className="text-blue-400 text-sm">Sr/a. {user.name}</span>
+                            <button onClick={() => setIsModalOpen(true)} className="bg-blue-700 px-4 py-2 text-sm font-bold rounded">CREAR SALA</button>
+                        </div>
+                    </nav>
+
+                    <main className="p-8 max-w-6xl mx-auto">
+                        <h3 className="text-4xl mb-10 opacity-80 uppercase tracking-widest text-center">Cartelera de Encuentros</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {rooms.map(room => (
+                                <div key={room.id} className="bg-slate-900/30 border border-blue-900/20 p-6 hover:border-blue-500 transition-all group">
+                                    <h4 className="text-2xl mb-4 group-hover:text-blue-400">{room.movie}</h4>
+                                    <div className="text-slate-400 text-sm space-y-2 mb-6">
+                                        <p>📍 {room.place}</p>
+                                        <p>📅 {room.date} | ⏰ {room.time}</p>
+                                        <p className="text-xs italic">Organizado por: {room.host}</p>
+                                    </div>
+                                    <button onClick={() => handleJoin(room)} className="w-full border border-white py-2 font-bold hover:bg-white hover:text-black transition-all text-xs">
+                                        UNIRSE A LA SALA
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </main>
+
+                    {isModalOpen && (
+                        <div className="fixed inset-0 bg-black/95 flex items-center justify-center p-6 z-50">
+                            <form onSubmit={createRoom} className="bg-slate-900 p-8 border border-blue-500 max-w-sm w-full space-y-4">
+                                <h3 className="text-2xl italic mb-4">Nueva Proyección</h3>
+                                <input name="movie" placeholder="Película" required className="w-full bg-black border border-slate-700 p-2" />
+                                <input name="place" placeholder="Cine / Lugar" required className="w-full bg-black border border-slate-700 p-2" />
+                                <input name="date" type="date" required className="w-full bg-black border border-slate-700 p-2" />
+                                <input name="time" type="time" required className="w-full bg-black border border-slate-700 p-2" />
+                                <div className="flex gap-2">
+                                    <button type="submit" className="flex-1 bg-white text-black py-2 font-bold">CREAR</button>
+                                    <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 border border-white py-2">CANCELAR</button>
+                                </div>
+                            </form>
+                        </div>
+                    )}
+                </div>
+            );
+
+            // 4. CHAT
+            if (view === 'chat') return (
+                <div className="h-screen flex flex-col bg-black">
+                    <header className="p-4 border-b border-blue-900/50 flex justify-between items-center">
+                        <button onClick={() => setView('dashboard')} className="text-xs text-slate-500 hover:text-white">← VOLVER</button>
+                        <div className="text-center">
+                            <h2 className="text-xl italic">{activeRoom.movie}</h2>
+                            <p className="text-[10px] text-blue-400 uppercase tracking-widest">{activeRoom.place}</p>
+                        </div>
+                        <button onClick={() => setView('dashboard')} className="text-xs text-red-500 font-bold border border-red-500 px-2 py-1">SALIR</button>
+                    </header>
+
+                    <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                        {messages.map(m => (
+                            <div key={m.id} className={`flex flex-col ${m.user === user.name ? 'items-end' : 'items-start'}`}>
+                                <span className="text-[10px] text-slate-500 mb-1 uppercase tracking-tighter">{m.user}</span>
+                                <div className={`max-w-[80%] p-3 rounded ${m.user === user.name ? 'bg-blue-900 text-white' : 'bg-slate-800 text-slate-200'}`}>
+                                    <p className="text-sm">{m.text}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <form onSubmit={sendMessage} className="p-4 border-t border-blue-900/50 flex gap-2">
+                        <input name="msg" placeholder="Escribe un mensaje..." className="flex-1 bg-transparent border border-slate-700 p-3 outline-none focus:border-blue-500" />
+                        <button className="bg-white text-black px-6 font-bold uppercase text-xs">Enviar</button>
+                    </form>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+
+    <!-- Cargador de Babel para procesar JSX en el navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+</html>
