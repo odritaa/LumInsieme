@@ -1,0 +1,10 @@
+#--- Librerias y entornos de ejecucion ---#
+*/env/*
+*/node_modules/*
+*/package.json
+/*package-lock.json
+#--- Librerias y entornos de ejecucion ---#
+#--- CONFIGURACIONES DEL SISTEMA ---#
+*.env
+#--- CONFIGURACIONES DEL SISTEMA ---#
+
