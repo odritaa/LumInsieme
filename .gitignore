@@ -1,5 +1,6 @@
 #--- Librerias y entornos de ejecucion ---#
 */env/*
+*/.pycache/*
 */node_modules/*
 */package.json
 /*package-lock.json
