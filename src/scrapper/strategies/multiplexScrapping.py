@@ -1,27 +1,63 @@
 from utils.strategyScrapping import StrategyScrapping
 from utils.movieData import MovieData
+from playwright.async_api import TimeoutError, Error as PlaywrightError
+
 
 class MultiplexStrategy(StrategyScrapping):
     URL = "https://www.multiplex.com.ar/"
     def __init__(self):
         super().__init__()
-    
+
     async def doScrapping(self, page) -> list[MovieData]:
-        # --- Scrapping process steps and extract elements --- #
-        # 1. Click on label: "Multiplex Belgrano"(label[class='btn-complejo'])
-        # 2. Click on div with screenting's hour -> Extract {Date}
-        # 3. div[class='bloque-formatos'] -> a -> h4[class='no-link-style'] Extract{Titulo de la pelicula}
-        # 4. div[class='contenedor-horas'] -> span[class='no-link-style']:
-        # IF:
-        # ->> Display None and span[class='horario-desactivado'] -> Not extract
-        # ELSE:
-        # ->> span[class='horario-btn'] -> Extract {list with screentings}
-        # 5. a[class='portada-link'] -> img Extract {Image}
-        #
         await page.goto(self.URL)
 
-        cineButton = await page.query_selector("label[class='btn-complejo']")[1]
-        await cineButton.click()
-        daysButtonSelector = await page.query_selector("div[class='swiper-slide']")
+        try:
+            # Step 1 — Select cinema complex
+            await page.wait_for_selector(
+                "label[class='btn-complejo']",
+                state="attached",
+                timeout=15000
+            )
+            cineButtons = await page.query_selector_all("label[class='btn-complejo']")
+            if len(cineButtons) < 2:
+                raise TimeoutError(
+                    "Expected at least 2 elements for 'label[class=\"btn-complejo\"]'"
+                )
+            await cineButtons[1].click()
+
+            # Step 2 — Get day selectors
+            await page.wait_for_selector(
+                "div[class='swiper-slide']",
+                state="attached",
+                timeout=15000
+            )
+            daysButtonSelector = await page.query_selector_all("div[class='swiper-slide']")
+
+            for day in daysButtonSelector:
+                await day.wait_for_selector("fecha-label", state="attached", timeout=5000)
+                fechaLabel = await day.query_selector("fecha-label")
+                await fechaLabel.wait_for_selector("btn-date", state="attached", timeout=5000)
+                btnDate = await fechaLabel.query_selector("btn-date")
+                dateDivs = await btnDate.query_selector_all("div")
+                if len(dateDivs) < 2:
+                    raise TimeoutError("Expected at least 2 'div' inside 'btn-date'")
+                dateSpans = await dateDivs[1].query_selector_all("span")
+                if len(dateSpans) < 2:
+                    raise TimeoutError(
+                        "Expected at least 2 'span' inside 'btn-date > div:nth-child(2)'"
+                    )
+                month = await dateSpans[0].inner_text()
+                dayNumber = await dateSpans[1].inner_text()
+                month, dayNumber = [month.strip(), int(dayNumber.strip())]
+
+                await day.click()
+
+        except TimeoutError as e:
+            print(f"[ELEMENT NOT FOUND] {e}")
+            raise
+        except PlaywrightError as e:
+            print(f"[ELEMENT NOT CLICKABLE / ACTION FAILED] {e}")
+            raise
+
 
         
