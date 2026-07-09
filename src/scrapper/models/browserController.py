@@ -1,46 +1,50 @@
 
 from types import CoroutineType
+import asyncio
 
 from playwright.async_api import async_playwright
 
+
 from utils.movieData import MovieData
 from utils.strategyScrapping import StrategyScrapping
+from strategies.multiplexScrapping import MultiplexStrategy
 
 class PlaywrightBrowserController:
     _browser = None
     _context = None
     _strategy: StrategyScrapping = None
-    def __new__(cls, browser, context):
+    def __new__(cls):
         if not hasattr(cls, '_instance'):
-            cls._browser = async_playwright().start().chromium.launch(headless=True)
-            cls._context = cls._browser.new_context()
-            cls._instance = super(PlaywrightBrowserController, cls).__new__(cls)
-
+            cls._instance = super().__new__(cls)
         return cls._instance
     
-    def __init__(self, browser, context):
-        if not hasattr(self, 'browser'):
-            self.browser = browser
-        if not hasattr(self, 'context'):
-            self.context = context
+    def __init__(self):
+        pass
     
+    async def start(self):
+        playwright = await async_playwright().start()
+        self.browser = await playwright.chromium.launch(headless=True)
+        self.context = await self.browser.new_context()
+
     async def _new_page(self):
-        return await self.context.new_context().new_page()
+        return await self.context.new_page()
     
     async def scrapper_page(self, strategy: StrategyScrapping) -> list[MovieData]:
         page_context: CoroutineType = await self._new_page()
         responseInfo:list[MovieData] = await strategy.doScrapping(page_context)
         return responseInfo
 
-    async def run():
-        BrowserController = PlaywrightBrowserController()
-        stretegies:list[StrategyScrapping] = [] # --- Load the strategies later.... --- #
+    async def run(self):
+        stretegies:list[StrategyScrapping] = [MultiplexStrategy()] # --- Load the strategies later.... --- #
         # --- Load the strategy later.... --- #
-        task = [BrowserController.scrapper_page(strategy) for strategy in stretegies]
+        task = [self.scrapper_page(strategy) for strategy in stretegies]
 
-        # await asyncio.gather(*task)
-        # await BrowserController.close()
+        await asyncio.gather(*task)
+        await self.close()
 
     # --- Close the browser ---#
     async def close(self):
+        await self.context.close()
         await self.browser.close()
+if __name__ == "__main__":
+    asyncio.run(PlaywrightBrowserController.run())

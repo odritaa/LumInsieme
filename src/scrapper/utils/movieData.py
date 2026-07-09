@@ -1,7 +1,7 @@
 from datetime import datetime
 
 class MovieData:
-    def __init__(self, title:str, screenings:list[datetime], duration:str, theater:str ):
+    def __init__(self, title:str, screenings:list[dict], duration:str, theater:str ):
         self.title = title
         self.screenings = screenings
         self.duration = duration
