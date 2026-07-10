@@ -39,7 +39,12 @@ class PlaywrightBrowserController:
         # --- Load the strategy later.... --- #
         task = [self.scrapper_page(strategy) for strategy in stretegies]
 
-        await asyncio.gather(*task)
+        movies = await asyncio.gather(*task)
+        print(f"[DEBUG] Movies data: \n----------------------\n")
+        for movieData in movies:
+            for movie in movieData:
+                print(movie)
+                print("----------------------")
         await self.close()
 
     # --- Close the browser ---#
