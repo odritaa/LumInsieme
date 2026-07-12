@@ -22,6 +22,4 @@ class StrategyScrapping(ABC):
     
     def containsClass(self, element, className) -> bool:
         """Check if the given element contains the specified class."""
-        return element.evaluate(f"""
-            ()=>{{return this.classList.contains('{className}');}}
-            """)
+        return element.evaluate(f"""element => element.classList.contains('{className}')""")

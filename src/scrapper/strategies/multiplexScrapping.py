@@ -18,18 +18,21 @@ class MultiplexStrategy(StrategyScrapping):
                 hoursScreenings = []
                 type = await format.query_selector("span")
                 type = await type.inner_text()
-                for hours in await format.query_selector_all("div[class='contenedor-horas'] > span"):
-                    if not await self.isHidden(hours) and not await self.containsClass(hours, "horario-desactivado"):
-                        hour = await hours.inner_text()
-                        print(f"[DEBUG] {type.strip()}->{hour.strip()}")
-                        hoursScreenings.append(hour.strip())
+                contentHours = await format.query_selector("div[class='contenedor-horas']")
+                await contentHours.wait_for_selector("span.horario-btn", state="attached", timeout=TIMEOUT)
+                contentHours = await contentHours.query_selector_all("span.horario-btn:not(.horario-desactivado):visible")
+                for hours in contentHours:
+                    is_class_disabled = await self.containsClass(hours, "horario-desactivado")
+                    if not is_class_disabled:
+                        hours = await hours.inner_text()
+                        hoursScreenings.append(hours.strip())
                 
                 screenings.append({"type": type, "hours": hoursScreenings})
-                return screenings
 
             except PlaywrightError as e:
                 print(f"[ELEMENT NOT FOUND] Could not find title for movie: {e}")
                 pass
+        return screenings
     
     def monthToNumber(self, month: str) -> int:
         match month:
@@ -80,7 +83,7 @@ class MultiplexStrategy(StrategyScrapping):
             )
             daysButtonSelector = await page.query_selector_all("div[class='swiper-slide']")
 
-            for day in daysButtonSelector:
+            for day in daysButtonSelector[0:5]:
                 await day.click() # Select the day to load the movies for that day
 
                 await day.wait_for_selector("label[class='fecha-label']", state="attached", timeout=TIMEOUT)
