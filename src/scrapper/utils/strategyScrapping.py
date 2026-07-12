@@ -13,7 +13,7 @@ class StrategyScrapping(ABC):
 
     def isHidden(self, element) -> bool:
         """Check if the given element is hidden."""
-        return element.evaluate_handle("""
+        return element.evaluate("""
             (element)=>{
                 const style = window.getComputedStyle(element);
                 return (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0');

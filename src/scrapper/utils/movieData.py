@@ -1,5 +1,4 @@
 from datetime import datetime
-from turtle import screensize
 
 class MovieData:
     def __init__(self, title:str, date:datetime, screenings:list[dict], duration:str, theater:str ):

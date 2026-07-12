@@ -16,16 +16,15 @@ class MultiplexStrategy(StrategyScrapping):
         for format in context:
             try:
                 hoursScreenings = []
-                type = await format.query_selector("span")
-                type = await type.inner_text()
-                contentHours = await format.query_selector("div[class='contenedor-horas']")
-                await contentHours.wait_for_selector("span.horario-btn", state="attached", timeout=TIMEOUT)
-                contentHours = await contentHours.query_selector_all("span.horario-btn:not(.horario-desactivado):visible")
-                for hours in contentHours:
+                type = await format.locator("span").first.inner_text()
+                contentHours = format.locator("div[class='contenedor-horas']")
+                await contentHours.locator("span.horario-btn").first.wait_for(state="attached", timeout=TIMEOUT)
+                hoursElements = await contentHours.locator("span.horario-btn:not(.horario-desactivado):visible").all()
+                for hours in hoursElements:
                     is_class_disabled = await self.containsClass(hours, "horario-desactivado")
                     if not is_class_disabled:
-                        hours = await hours.inner_text()
-                        hoursScreenings.append(hours.strip())
+                        hoursText = await hours.inner_text()
+                        hoursScreenings.append(hoursText.strip())
                 
                 screenings.append({"type": type, "hours": hoursScreenings})
 
@@ -34,86 +33,44 @@ class MultiplexStrategy(StrategyScrapping):
                 pass
         return screenings
     
-    def monthToNumber(self, month: str) -> int:
-        match month:
-            case "ENE": return 1
-            case "FEB": return 2
-            case "MAR": return 3
-            case "ABR": return 4
-            case "MAY": return 5
-            case "JUN": return 6
-            case "JUL": return 7
-            case "AGO": return 8
-            case "SEP": return 9
-            case "OCT": return 10
-            case "NOV": return 11
-            case "DIC": return 12
-        return -1       
-        
 
     async def doScrapping(self, page) -> list[MovieData]:
         moviesData: list[MovieData] = []
         await page.goto(self.URL)
 
         try:
-            popupClose = await page.wait_for_selector(
-                "a[class='dialog-close-button dialog-lightbox-close-button']", 
-                state="attached",
-                timeout=TIMEOUT
-                )
+            popupClose = page.locator("a[class='dialog-close-button dialog-lightbox-close-button']")
+            await popupClose.wait_for(state="attached", timeout=TIMEOUT)
             await popupClose.click() # Close the popup if it appears
             # Step 1 — Select cinema complex
-            await page.wait_for_selector(
-                "label[class='btn-complejo']",
-                state="attached",
-                timeout=TIMEOUT
-            )
-            cineButtons = await page.query_selector_all("label[class='btn-complejo']")
-            if len(cineButtons) < 2:
+            cineButtons = page.locator("label[class='btn-complejo']")
+            await cineButtons.first.wait_for(state="attached", timeout=TIMEOUT)
+            if await cineButtons.count() < 2:
                 raise TimeoutError(
                     "Expected at least 2 elements for 'label[class=\"btn-complejo\"]'"
                 )
-            await cineButtons[1].click()
+            await cineButtons.nth(1).click()
 
             # Step 2 — Get day selectors
-            await page.wait_for_selector(
-                "div[class='swiper-slide']",
-                state="attached",
-                timeout=TIMEOUT
-            )
-            daysButtonSelector = await page.query_selector_all("div[class='swiper-slide']")
+            dayLabels = page.locator("label.fecha-label")
+            dayCount = await dayLabels.count()
 
-            for day in daysButtonSelector[0:5]:
-                await day.click() # Select the day to load the movies for that day
+            for i in range(min(dayCount, 5)):
+                dayLabel = dayLabels.nth(i)
+                await dayLabel.click()
 
-                await day.wait_for_selector("label[class='fecha-label']", state="attached", timeout=TIMEOUT)
-                fechaLabel = await day.query_selector("label[class='fecha-label']")
-                await fechaLabel.wait_for_selector("div[class='btn-date']", state="attached", timeout=TIMEOUT)
-                btnDate = await fechaLabel.query_selector(".btn-date")
-                dateDivs = await btnDate.query_selector_all("div")
-                if len(dateDivs) < 2:
-                    raise TimeoutError("Expected at least 2 'div' inside 'btn-date'")
-                dateSpans = await dateDivs[1].query_selector_all("span")
-                if len(dateSpans) < 2:
-                    raise TimeoutError(
-                        "Expected at least 2 'span' inside 'btn-date > div:nth-child(2)'"
-                    )
-                month = await dateSpans[0].inner_text()
-                dayNumber = await dateSpans[1].inner_text()
-                month, dayNumber = [month.strip(), int(dayNumber.strip())]
-                fechaEnd = datetime.now().replace(month=self.monthToNumber(month), day=dayNumber)
-                await page.wait_for_selector("div[id='funciones-list']", state="attached", timeout=TIMEOUT)
-                funcionesList = await page.query_selector("div[id='funciones-list']")
-                if not funcionesList:
-                    raise TimeoutError("Could not find element with selector '#funciones-list'")
-                funciones = await funcionesList.query_selector_all("div[class='funcion-item visible']")
-                for movie in funciones:
-                    title = await movie.query_selector("h4")
-                    title = await title.inner_text()
+                hiddenInput = dayLabel.locator("input[name='dia']")
+                dateValue = await hiddenInput.get_attribute("value")
+                mes, dia, anio = dateValue.split(".")
+                fechaEnd = datetime(int(anio), int(mes), int(dia))
+                funcionesList = page.locator("div[id='funciones-list']")
+                await funcionesList.wait_for(state="attached", timeout=TIMEOUT)
+                funciones = funcionesList.locator("div[class='funcion-item visible']")
+                for movie in await funciones.all():
+                    title = await movie.locator("h4").first.inner_text()
                     try:
-                        formatos = await movie.query_selector_all("div[class='formato-idioma']:visible")
-                        #formatos = [screening for screening in formatos if not await self.isHidden(screening)]
-                        screenings = await self.extractScreenings(formatos)
+                        formatos = movie.locator("div[class='formato-idioma']:visible")
+                        screenings = await self.extractScreenings(await formatos.all())
                         moviesData.append(MovieData(title.strip(), fechaEnd, screenings, "1 hora", "Multiplex Belgrano"))
                     except PlaywrightError as e:
                         print(f"[ELEMENT NOT FOUND] screenings error not found: {e}")
