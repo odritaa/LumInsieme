@@ -21,6 +21,9 @@ class PlaywrightBrowserController:
     def __init__(self):
         pass
     
+    async def is_running(self):
+        return self._browser is not None and self._context is not None
+
     async def start(self):
         playwright = await async_playwright().start()
         self.browser = await playwright.chromium.launch(headless=True)

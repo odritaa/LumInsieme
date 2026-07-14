@@ -1,9 +1,9 @@
 # Minuta de implementación: Despliegue del Scrapper en AWS
 
-**Fecha:** 11/07/2026
-**Proyecto:** LumInsieme
-**Módulo:** Scrapper (src/scrapper/)
-**Objetivo:** Analizar la viabilidad de desplegar el scrapper en AWS para que el frontend pueda consumirlo, y definir una arquitectura que permita una futura implementación de gRPC y Redis.
+- **Fecha:** 11/07/2026
+- **Proyecto:** LumInsieme
+- **Módulo:** Scrapper (src/scrapper/)
+- **Objetivo:** Analizar la viabilidad de desplegar el scrapper en AWS para que el frontend pueda consumirlo, y definir una arquitectura que permita una futura implementación de gRPC y Redis.
 
 ---
 
