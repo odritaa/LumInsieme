@@ -1,9 +1,11 @@
 import asyncio
+import json
 from fastapi import FastAPI
 from redis import Redis
 
 from utils.config import SCRAPER_CONFIG, SERVER_CONFIG, REDIS_CONFIG
 from models.browserController import PlaywrightBrowserController
+from strategies.multiplexScrapping import MultiplexStrategy
 
 app = FastAPI()
 controller = PlaywrightBrowserController()
@@ -14,6 +16,29 @@ CACHE_TTL = SCRAPER_CONFIG["cache_ttl"]
 @app.on_event("startup")
 async def startup():
     await controller.start()
+    asyncio.create_task(run_initial_scrape())
+
+async def run_initial_scrape():
+    try:
+        strategies = [MultiplexStrategy()]
+        tasks = [controller.scrapper_page(s) for s in strategies]
+        movies_lists = await asyncio.gather(*tasks)
+
+        all_movies = []
+        for movie_list in movies_lists:
+            for m in movie_list:
+                all_movies.append({
+                    "title": m.title,
+                    "date": m.date.isoformat(),
+                    "screenings": m.screenings,
+                    "duration": m.duration,
+                    "theater": m.theater
+                })
+
+        redis.setex("scraped_data", CACHE_TTL, json.dumps(all_movies))
+        print(f"[INFO] Scraping inicial completado. {len(all_movies)} películas cacheadas.")
+    except Exception as e:
+        print(f"[ERROR] Scraping inicial falló: {e}")
 
 @app.get("/health")
 async def health_check():
@@ -27,8 +52,7 @@ async def health_check():
 async def get_data():
     cached_data = redis.get("scraped_data")
     if cached_data:
-        print(f"[INFO] Scrapping data -> {cached_data}")
-        return {"data": cached_data, "source": "cache"}
+        return {"data": json.loads(cached_data), "source": "cache"}
     return {"data": None, "source": "api"}
 
 @app.on_event("shutdown")
