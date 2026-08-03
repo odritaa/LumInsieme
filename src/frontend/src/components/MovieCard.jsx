@@ -1,25 +1,47 @@
-import { useAppContext } from "../contexts/AppContext";
+import { useNavigate } from "react-router-dom";
+import { formatDate, posterLabel } from "../utils/format";
 
-export default function MovieCard({ movie }) {
-  const { openModalWithMovie } = useAppContext();
+/** Película de la cartelera (scrapper). Al elegirla se abre el alta de sala prellenada. */
+export default function MovieCard({ movie, index = 0 }) {
+  const navigate = useNavigate();
+
+  const createRoomHere = () =>
+    navigate("/crear-sala", { state: { movie: { title: movie.title, place: movie.place } } });
+
+  const screenings = movie.screenings ?? [];
 
   return (
-    <div className="bg-slate-900/30 border border-blue-900/20 p-6 hover:border-blue-500 transition-all group cursor-pointer"
-         onClick={() => openModalWithMovie(movie)}>
-      <h4 className="text-2xl mb-4 group-hover:text-blue-400 font-serif">{movie.title}</h4>
-      <div className="text-slate-400 text-sm space-y-2 mb-4">
-        <p>📍 {movie.place}</p>
-        <p>🎬 {movie.duration}</p>
+    <div className="room-card" style={{ animationDelay: `${index * 0.1}s` }}>
+      <div className="room-card-header">
+        <div className="cinema-poster-placeholder">{posterLabel(movie.title)}</div>
+        <h3>{movie.title}</h3>
+        <p className="room-cinema-info">{movie.place}</p>
       </div>
-      <div className="space-y-1 mb-6">
-        {movie.screenings.map((s, i) => (
-          <p key={i} className="text-xs text-blue-300">
-            {s.type}: {s.hours.join(" - ")}
-          </p>
-        ))}
-      </div>
-      <button className="w-full border border-white py-2 font-bold hover:bg-white hover:text-black transition-all text-xs">
-        CREAR SALA
+
+      <div className="divider-subtle" />
+      <p className="room-card-datetime">
+        {[formatDate(movie.date), movie.duration].filter(Boolean).join(" · ")}
+      </p>
+
+      {screenings.length > 0 && (
+        <div className="screenings-list">
+          {screenings.map((s, i) => (
+            <div key={`${s.type}-${i}`}>
+              <p className="screening-type">{s.type}</p>
+              <div className="screening-hours">
+                {(s.hours ?? []).map((h) => (
+                  <span key={h} className="screening-hour">
+                    {h}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <button type="button" className="btn-primary cta-button-full" onClick={createRoomHere}>
+        Crear sala para esta función
       </button>
     </div>
   );

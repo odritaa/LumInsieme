@@ -1,74 +1,172 @@
-import { createContext, useContext, useState, useCallback } from "react";
-import { mockRooms, mockMessages } from "../services/mockData";
+import { createContext, useContext, useState, useCallback, useMemo } from "react";
+import { CURRENT_USER_ID, demoUser, mockRooms, mockMessages } from "../services/mockData";
+import { currentTime } from "../utils/format";
 
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
-  const [view, setView] = useState("landing");
-  const [user, setUser] = useState({ name: "", genres: [] });
+  const [user, setUser] = useState(null);
   const [rooms, setRooms] = useState(mockRooms);
-  const [activeRoom, setActiveRoom] = useState(null);
   const [messages, setMessages] = useState(mockMessages);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [prefillModal, setPrefillModal] = useState(null);
 
-  const handleJoin = useCallback((room) => {
-    setActiveRoom(room);
-    setView("chat");
+  /* ---- Sesión (mock: todavía no hay backend de auth) ---- */
+
+  const login = useCallback(() => setUser(demoUser), []);
+
+  const logout = useCallback(() => setUser(null), []);
+
+  const updateUser = useCallback((patch) => {
+    setUser((prev) => ({ ...prev, ...patch }));
+
+    // Nombre y géneros viajan denormalizados en salas y mensajes: sincronizarlos.
+    const memberPatch = {};
+    if (patch.name !== undefined) memberPatch.name = patch.name;
+    if (patch.genres !== undefined) memberPatch.genres = patch.genres;
+    if (Object.keys(memberPatch).length === 0) return;
+
+    setRooms((rs) =>
+      rs.map((room) => ({
+        ...room,
+        members: room.members.map((m) =>
+          m.id === CURRENT_USER_ID ? { ...m, ...memberPatch } : m
+        ),
+      }))
+    );
+
+    if (patch.name !== undefined) {
+      setMessages((ms) =>
+        ms.map((m) => (m.authorId === CURRENT_USER_ID ? { ...m, author: patch.name } : m))
+      );
+    }
   }, []);
 
-  const createRoom = useCallback((e) => {
-    e.preventDefault();
-    const form = e.target;
-    const newRoom = {
-      id: Date.now(),
-      movie: form.movie.value,
-      place: form.place.value,
-      date: form.date.value,
-      time: form.time.value,
-      host: form.host.value,
-      members: 1,
-    };
-    setRooms((prev) => [newRoom, ...prev]);
-    setIsModalOpen(false);
-    setPrefillModal(null);
+  const deleteAccount = useCallback(() => {
+    setRooms((rs) =>
+      rs.map((room) => ({
+        ...room,
+        members: room.members.filter((m) => m.id !== CURRENT_USER_ID),
+      }))
+    );
+    setMessages((ms) => ms.filter((m) => m.authorId !== CURRENT_USER_ID));
+    setUser(null);
   }, []);
 
-  const sendMessage = useCallback((e) => {
-    e.preventDefault();
-    const text = e.target.msg.value;
-    if (!text) return;
-    setMessages((prev) => [
-      ...prev,
-      { id: Date.now(), user: user.name, text },
-    ]);
-    e.target.reset();
-  }, [user.name]);
+  /* ---- Salas ---- */
 
-  const openModalWithMovie = useCallback((movie) => {
-    setPrefillModal(movie);
-    setIsModalOpen(true);
+  const getRoom = useCallback((id) => rooms.find((r) => r.id === String(id)) ?? null, [rooms]);
+
+  const createRoom = useCallback(
+    ({ movie, place, date, time, capacity, note }) => {
+      const room = {
+        id: String(Date.now()),
+        movie,
+        place,
+        date,
+        time,
+        host: user?.name ?? "Anónimo",
+        capacity,
+        note,
+        members: [
+          {
+            id: CURRENT_USER_ID,
+            name: user?.name ?? "Anónimo",
+            genres: user?.genres ?? [],
+            isAdmin: true,
+          },
+        ],
+      };
+      setRooms((prev) => [room, ...prev]);
+      return room;
+    },
+    [user]
+  );
+
+  const joinRoom = useCallback(
+    (roomId) => {
+      setRooms((prev) =>
+        prev.map((room) => {
+          if (room.id !== roomId) return room;
+          if (room.members.some((m) => m.id === CURRENT_USER_ID)) return room;
+          if (room.members.length >= room.capacity) return room;
+          return {
+            ...room,
+            members: [
+              ...room.members,
+              { id: CURRENT_USER_ID, name: user?.name ?? "Anónimo", genres: user?.genres ?? [] },
+            ],
+          };
+        })
+      );
+    },
+    [user]
+  );
+
+  const leaveRoom = useCallback((roomId) => {
+    setRooms((prev) =>
+      prev.map((room) =>
+        room.id === roomId
+          ? { ...room, members: room.members.filter((m) => m.id !== CURRENT_USER_ID) }
+          : room
+      )
+    );
   }, []);
 
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-    setPrefillModal(null);
-  }, []);
+  /* ---- Chat ---- */
 
-  const value = {
-    view, setView,
-    user, setUser,
-    rooms, setRooms,
-    activeRoom, setActiveRoom,
-    messages, setMessages,
-    isModalOpen, setIsModalOpen,
-    prefillModal, setPrefillModal,
-    handleJoin,
-    createRoom,
-    sendMessage,
-    openModalWithMovie,
-    closeModal,
-  };
+  const getMessages = useCallback(
+    (roomId) => messages.filter((m) => m.roomId === roomId),
+    [messages]
+  );
+
+  const sendMessage = useCallback(
+    (roomId, text) => {
+      const clean = text.trim();
+      if (!clean) return;
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `m${Date.now()}`,
+          roomId,
+          authorId: CURRENT_USER_ID,
+          author: user?.name ?? "Anónimo",
+          time: currentTime(),
+          text: clean,
+        },
+      ]);
+    },
+    [user]
+  );
+
+  const value = useMemo(
+    () => ({
+      user,
+      rooms,
+      login,
+      logout,
+      updateUser,
+      deleteAccount,
+      getRoom,
+      createRoom,
+      joinRoom,
+      leaveRoom,
+      getMessages,
+      sendMessage,
+    }),
+    [
+      user,
+      rooms,
+      login,
+      logout,
+      updateUser,
+      deleteAccount,
+      getRoom,
+      createRoom,
+      joinRoom,
+      leaveRoom,
+      getMessages,
+      sendMessage,
+    ]
+  );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

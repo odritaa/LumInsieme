@@ -1,3 +1,40 @@
+/** Id del usuario propio: permite distinguir "Tú" sin depender del nombre. */
+export const CURRENT_USER_ID = "me";
+
+/** Géneros ofrecidos en el editor de perfil. */
+export const GENRES = [
+  "Ciencia Ficción",
+  "Drama",
+  "Thriller Psicológico",
+  "Cine Indie",
+  "Cine de Autor",
+  "Romance",
+  "Suspenso",
+  "Animación",
+  "Comedia",
+  "Acción",
+  "Documental",
+  "Terror",
+  "Fantasía",
+  "Musical",
+];
+
+/** Perfil que se carga al iniciar sesión (mock: todavía no hay backend de auth). */
+export const demoUser = {
+  id: CURRENT_USER_ID,
+  name: "Mi Perfil",
+  age: 28,
+  city: "Buenos Aires",
+  genres: ["Ciencia Ficción", "Drama", "Thriller Psicológico", "Cine Indie", "Cine de Autor"],
+  favoriteMovies: [
+    { initials: "Me", title: "Metrópolis" },
+    { initials: "Ca", title: "Casablanca" },
+    { initials: "LO", title: "Los Olvidados" },
+    { initials: "EC", title: "El Ciudadano" },
+    { initials: "No", title: "Nosferatu" },
+  ],
+};
+
 export const mockMovies = [
   {
     title: "Metrópolis",
@@ -50,29 +87,96 @@ export const mockMovies = [
 
 export const mockRooms = [
   {
-    id: 1,
+    id: "1",
     movie: "Metrópolis",
     place: "Cine Capitol",
     date: "2026-07-14",
     time: "21:00",
     host: "Auguste",
-    members: 3,
+    capacity: 6,
+    note: "Buscamos gente que quiera disfrutar el expresionismo alemán en pantalla grande.",
+    members: [
+      { id: "u1", name: "Auguste Renoir", genres: ["Ciencia Ficción", "Drama"], isAdmin: true },
+      { id: "u2", name: "Marina Gómez", genres: ["Thriller Psicológico", "Cine de Autor"] },
+      { id: CURRENT_USER_ID, name: "Mi Perfil", genres: ["Ciencia Ficción", "Drama"] },
+    ],
   },
   {
-    id: 2,
+    id: "2",
     movie: "Casablanca",
     place: "Sala Lumière",
     date: "2026-07-16",
     time: "19:30",
     host: "Louis",
-    members: 8,
+    capacity: 4,
+    note: "Clásico en copia restaurada. Después charlamos en el bar de al lado.",
+    members: [
+      { id: "u3", name: "Louis Lumière", genres: ["Drama", "Romance"], isAdmin: true },
+      { id: "u4", name: "Rita Solano", genres: ["Romance", "Musical"] },
+    ],
+  },
+  {
+    id: "3",
+    movie: "Los Olvidados",
+    place: "Cine Arte",
+    date: "2026-07-18",
+    time: "18:00",
+    host: "Camila",
+    capacity: 5,
+    note: "Ciclo de cine latinoamericano. Vamos temprano para conseguir buenos asientos.",
+    members: [
+      { id: "u5", name: "Camila Duarte", genres: ["Documental", "Drama"], isAdmin: true },
+      { id: "u6", name: "Federico Gil", genres: ["Cine Indie", "Drama"] },
+      { id: "u7", name: "Tomás Marín", genres: ["Cine de Autor"] },
+      { id: "u8", name: "Lucía Paz", genres: ["Drama", "Suspenso"] },
+    ],
+  },
+  {
+    id: "4",
+    movie: "Nosferatu",
+    place: "Cine Gótico",
+    date: "2026-07-22",
+    time: "22:30",
+    host: "Sofía",
+    capacity: 3,
+    note: "Función muda con música en vivo. Ideal para fanáticos del terror clásico.",
+    members: [
+      { id: "u9", name: "Sofía Vera", genres: ["Terror", "Fantasía"], isAdmin: true },
+    ],
   },
 ];
 
 export const mockMessages = [
   {
-    id: 1,
-    user: "Sistema",
-    text: "¡Bienvenidos a la sala! Coordinen su encuentro aquí.",
+    id: "m1",
+    roomId: "1",
+    authorId: "u1",
+    author: "Auguste Renoir",
+    time: "19:45",
+    text: "¡Hola gente! ¿Nos juntamos 15 min antes en la puerta?",
+  },
+  {
+    id: "m2",
+    roomId: "1",
+    authorId: "u2",
+    author: "Marina Gómez",
+    time: "19:50",
+    text: "Me sumo. ¿Compramos entradas ya o en el momento?",
+  },
+  {
+    id: "m3",
+    roomId: "1",
+    authorId: CURRENT_USER_ID,
+    author: "Mi Perfil",
+    time: "19:52",
+    text: "Yo compro las mías online, así aseguramos butacas juntas.",
+  },
+  {
+    id: "m4",
+    roomId: "2",
+    authorId: "u3",
+    author: "Louis Lumière",
+    time: "18:10",
+    text: "¡Bienvenidos a la sala! Coordinemos el encuentro acá.",
   },
 ];

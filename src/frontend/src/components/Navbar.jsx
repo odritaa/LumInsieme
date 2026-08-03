@@ -1,19 +1,29 @@
+import { Link } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
+import { getInitials } from "../utils/avatar";
+import BrandMark from "./BrandMark";
 
-export default function Navbar() {
-  const { user, setIsModalOpen } = useAppContext();
+/**
+ * Barra superior común a todas las vistas internas.
+ * `action` es el botón secundario de la derecha: { to, label }.
+ */
+export default function Navbar({ action }) {
+  const { user } = useAppContext();
 
   return (
-    <nav className="p-6 border-b border-white/10 flex justify-between items-center sticky top-0 bg-black/90 backdrop-blur-md z-40">
-      <h2 className="text-2xl font-bold italic tracking-tighter font-serif">LumInsieme</h2>
-      <div className="flex gap-6 items-center">
-        <span className="text-blue-400 text-sm">Sr/a. {user.name}</span>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-blue-700 px-4 py-2 text-sm font-bold rounded"
-        >
-          CREAR SALA
-        </button>
+    <nav className="navbar">
+      <Link className="navbar-logo" to="/feed">
+        <BrandMark />
+      </Link>
+      <div className="navbar-actions">
+        {action && (
+          <Link className="btn-secondary text-sm" to={action.to}>
+            {action.label}
+          </Link>
+        )}
+        <Link className="navbar-avatar" to="/perfil" title="Mi perfil">
+          {getInitials(user?.name)}
+        </Link>
       </div>
     </nav>
   );

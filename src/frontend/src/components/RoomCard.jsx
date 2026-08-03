@@ -1,22 +1,61 @@
-import { useAppContext } from "../contexts/AppContext";
+import { Link } from "react-router-dom";
+import { CURRENT_USER_ID } from "../services/mockData";
+import { getAvatarStyle, getInitials } from "../utils/avatar";
+import { formatDateTime, posterLabel } from "../utils/format";
 
-export default function RoomCard({ room }) {
-  const { handleJoin } = useAppContext();
+export default function RoomCard({ room, index = 0 }) {
+  const taken = room.members.length;
+  const free = Math.max(room.capacity - taken, 0);
+  const isMember = room.members.some((m) => m.id === CURRENT_USER_ID);
 
   return (
-    <div className="bg-slate-900/30 border border-blue-900/20 p-6 hover:border-blue-500 transition-all group">
-      <h4 className="text-2xl mb-4 group-hover:text-blue-400 font-serif">{room.movie}</h4>
-      <div className="text-slate-400 text-sm space-y-2 mb-6">
-        <p>📍 {room.place}</p>
-        <p>📅 {room.date} | ⏰ {room.time}</p>
-        <p className="text-xs italic">Organizado por: {room.host}</p>
+    <div className="room-card" style={{ animationDelay: `${index * 0.1}s` }}>
+      <div className="room-card-header">
+        <div className="cinema-poster-placeholder">{posterLabel(room.movie)}</div>
+        <h3>{room.movie}</h3>
+        <p className="room-cinema-info">{room.place}</p>
       </div>
-      <button
-        onClick={() => handleJoin(room)}
-        className="w-full border border-white py-2 font-bold hover:bg-white hover:text-black transition-all text-xs"
-      >
-        UNIRSE A LA SALA
-      </button>
+
+      <div className="divider-subtle" />
+      <p className="room-card-datetime">{formatDateTime(room.date, room.time)}</p>
+
+      <div className="capacity-section">
+        <span className="capacity-label">Capacidad</span>
+        <span className="capacity-count">
+          {taken} / {room.capacity}
+        </span>
+      </div>
+      <div className="capacity-bar">
+        <div
+          className="capacity-bar-fill"
+          style={{ width: `${Math.min((taken / room.capacity) * 100, 100)}%` }}
+        />
+      </div>
+
+      <div className="members-section">
+        <p className="members-label">Miembros</p>
+        <div className="members-avatars">
+          {room.members.map((m) => (
+            <div
+              key={m.id}
+              className="avatar-small"
+              style={getAvatarStyle(m.id, m.id === CURRENT_USER_ID)}
+              title={m.name}
+            >
+              {getInitials(m.name)}
+            </div>
+          ))}
+          {free > 0 && (
+            <div className="avatar-small avatar-more" title={`${free} lugares disponibles`}>
+              +{free}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <Link className="btn-primary cta-button-full" to={`/sala/${room.id}`}>
+        {isMember ? "Ver la sala" : free === 0 ? "Sala completa" : "Unirse a la Sala"}
+      </Link>
     </div>
   );
 }
