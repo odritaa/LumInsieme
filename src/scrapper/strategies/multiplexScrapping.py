@@ -45,7 +45,6 @@ class MultiplexStrategy(StrategyScrapping):
 
     async def doScrapping(self, page) -> dict:
         moviesDaysData:dict = {}
-        moviesData: list[MovieData] = []
         await page.goto(self.URL)
 
         try:
@@ -67,6 +66,7 @@ class MultiplexStrategy(StrategyScrapping):
 
             for i in range(min(dayCount, 5)):
                 dayLabel = dayLabels.nth(i)
+                moviesData: list[MovieData] = []
                 await dayLabel.click()
 
                 hiddenInput = dayLabel.locator("input[name='dia']")
