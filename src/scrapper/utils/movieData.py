@@ -8,6 +8,6 @@ class MovieData:
         self.duration = duration
         self.theater = theater
     
-    def __str__(self):
+    def __repr__(self):
         return f"TITULO:{self.title} \n- {self.date.strftime('%Y-%m-%d')} \n- {self.duration} \n- {self.theater} \n- Screenings: {self.screenings}"
     

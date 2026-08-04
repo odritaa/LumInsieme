@@ -2,12 +2,13 @@
 **/env/*
 =======
 */env/*
-*/__pycache__/*
-*/node_modules/*
+**/__pycache__/*
+**/node_modules/*
 */package.json
 /*package-lock.json
 #--- Librerias y entornos de ejecucion ---#
 #--- CONFIGURACIONES DEL SISTEMA ---#
+*.pyc
 *.env
 #--- CONFIGURACIONES DEL SISTEMA ---#
 
