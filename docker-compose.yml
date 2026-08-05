@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: luminsieme-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-luminsieme}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?definir POSTGRES_PASSWORD en el .env de la raiz}
+      POSTGRES_DB: ${POSTGRES_DB:-luminsieme}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./src/login-controller/db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-luminsieme} -d ${POSTGRES_DB:-luminsieme}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  login-controller:
+    build: ./src/login-controller
+    container_name: luminsieme-login
+    restart: unless-stopped
+    env_file:
+      - ./src/login-controller/.env
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-luminsieme}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-luminsieme}
+    ports:
+      - "4000:4000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:

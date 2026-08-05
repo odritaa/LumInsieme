@@ -24,18 +24,28 @@ export default function EditProfile() {
   const updateFavorite = (index, field, value) =>
     setFavorites((prev) => prev.map((f, i) => (i === index ? { ...f, [field]: value } : f)));
 
-  const handleSubmit = (e) => {
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    updateUser({
-      name: name.trim(),
-      age: age === "" ? null : Number(age),
-      city: city.trim(),
-      genres,
-      favoriteMovies: favorites
-        .filter((f) => f.title.trim())
-        .map((f) => ({ initials: f.initials.trim(), title: f.title.trim() })),
-    });
-    navigate("/perfil");
+    setSaving(true);
+    setError(null);
+    try {
+      await updateUser({
+        name: name.trim(),
+        age: age === "" ? null : Number(age),
+        city: city.trim(),
+        genres,
+        favoriteMovies: favorites
+          .filter((f) => f.title.trim())
+          .map((f) => ({ initials: f.initials.trim(), title: f.title.trim() })),
+      });
+      navigate("/perfil");
+    } catch {
+      setError("No pudimos guardar los cambios. Intentá de nuevo.");
+      setSaving(false);
+    }
   };
 
   return (
@@ -144,12 +154,18 @@ export default function EditProfile() {
             </div>
           </div>
 
+          {error && (
+            <p className="empty-state" role="alert">
+              {error}
+            </p>
+          )}
+
           <div className="form-actions">
             <Link className="btn-secondary" to="/perfil">
               Cancelar
             </Link>
-            <button type="submit" className="btn-primary">
-              Guardar cambios
+            <button type="submit" className="btn-primary" disabled={saving}>
+              {saving ? "Guardando…" : "Guardar cambios"}
             </button>
           </div>
         </form>
