@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: luminsieme-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-luminsieme}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-luminsieme}
+      POSTGRES_DB: ${POSTGRES_DB:-luminsieme}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_datos:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-luminsieme}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: luminsieme-redis
+    ports:
+      - "6379:6379"
+    # appendonly evita perder la cache en cada reinicio del contenedor. No es
+    # un requisito de correccion: Redis aqui nunca es fuente de verdad.
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis_datos:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgres_datos:
+  redis_datos:
