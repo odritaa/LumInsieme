@@ -78,6 +78,15 @@ func (s *cacheServer) GetTTL(ctx context.Context, req *pb.GetTTLRequest) (*pb.Ge
 	return &pb.GetTTLResponse{TtlSeconds: int64(ttl.Seconds())}, nil
 }
 
+func (s *cacheServer) SetWithTTL(ctx context.Context, req *pb.SetWithTTLRequest) (*pb.SetWithTTLResponse, error) {
+	ttl := time.Duration(req.TtlSeconds) * time.Second
+	err := s.rdb.Set(ctx, req.Key, req.Value, ttl).Err()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "redis SET with TTL failed: %v", err)
+	}
+	return &pb.SetWithTTLResponse{Ok: true}, nil
+}
+
 // List operations
 
 func (s *cacheServer) Push(ctx context.Context, req *pb.PushRequest) (*pb.PushResponse, error) {

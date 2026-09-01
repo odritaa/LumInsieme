@@ -8,17 +8,10 @@ SCRAPER_CONFIG = {
     "cache_ttl": int(os.getenv("CACHE_TTL")),
 }
 
-# Configuración del servidor
-SERVER_CONFIG = {
-    "host": os.getenv("HOST"),
-    "port": int(os.getenv("PORT")),
-}
-
-# Configuración de Redis
-REDIS_CONFIG = {
-    "host": os.getenv("REDIS_HOST"),
-    "port": int(os.getenv("REDIS_PORT")),
-    "decode_responses": True,
+# Configuración del cliente gRPC hacia el cache-controller
+GRPC_CONFIG = {
+    "host": os.getenv("GRPC_HOST"),
+    "port": int(os.getenv("GRPC_PORT")),
 }
 
 
