@@ -1,0 +1,11 @@
+name: Observaciones LUSAT
+method: GET
+url: https://network.satnogs.org/api/observations/14629499/
+timeout: 0
+followRedirects: true
+maxRedirects: 5
+headers:
+  Accept: application/json
+  Authorization: Token b8d1ef14fdf7b4d3ffd9f8db504f12e0631ed4e4
+body: ''
+body_type: none

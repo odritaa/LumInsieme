@@ -1,0 +1,9 @@
+name: Telemetría LUSAT (20442)
+method: GET
+url: https://db.satnogs.org/api/telemetry/?satellite=20442
+timeout: 0
+followRedirects: true
+maxRedirects: 5
+headers:
+  Accept: application/json
+  Authorization: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9

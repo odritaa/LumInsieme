@@ -13,10 +13,16 @@ redis = Redis(host=REDIS_CONFIG["host"], port=REDIS_CONFIG["port"], decode_respo
 
 CACHE_TTL = SCRAPER_CONFIG["cache_ttl"]
 
+<<<<<<< HEAD
 @app.on_event("startup")
 async def startup():
     await controller.start()
     asyncio.create_task(run_initial_scrape())
+=======
+async def startup():
+    await controller.start()
+    await controller.run()
+>>>>>>> 1d517e3fda1feb8d62af3b85ad9998aa96f97dc6
 
 async def run_initial_scrape():
     try:
@@ -24,6 +30,7 @@ async def run_initial_scrape():
         tasks = [controller.scrapper_page(s) for s in strategies]
         movies_lists = await asyncio.gather(*tasks)
 
+<<<<<<< HEAD
         all_movies = []
         for movie_list in movies_lists:
             for m in movie_list:
@@ -37,6 +44,10 @@ async def run_initial_scrape():
 
         redis.setex("scraped_data", CACHE_TTL, json.dumps(all_movies))
         print(f"[INFO] Scraping inicial completado. {len(all_movies)} películas cacheadas.")
+=======
+        #redis.setex("scraped_data", CACHE_TTL, json.dumps(all_movies))
+        print(f"[INFO] Scraping inicial completado. {len(movies_lists)} películas cacheadas.")
+>>>>>>> 1d517e3fda1feb8d62af3b85ad9998aa96f97dc6
     except Exception as e:
         print(f"[ERROR] Scraping inicial falló: {e}")
 
@@ -55,11 +66,18 @@ async def get_data():
         return {"data": json.loads(cached_data), "source": "cache"}
     return {"data": None, "source": "api"}
 
+<<<<<<< HEAD
 @app.on_event("shutdown")
+=======
+>>>>>>> 1d517e3fda1feb8d62af3b85ad9998aa96f97dc6
 async def shutdown():
     await controller.close()
     redis.close()
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     import uvicorn
     uvicorn.run(app, host=SERVER_CONFIG["host"], port=SERVER_CONFIG["port"])
+=======
+    asyncio.run(startup())
+>>>>>>> 1d517e3fda1feb8d62af3b85ad9998aa96f97dc6

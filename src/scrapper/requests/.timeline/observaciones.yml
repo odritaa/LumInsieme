@@ -1,0 +1,224 @@
+- id: 35b71c01-995f-43d9-ad06-b29f870c2546
+  timestamp: 1785507284557
+  envName: development
+  request:
+    id: observaciones
+    name: Telemetría LUSAT (20442)
+    method: GET
+    url: https://db.satnogs.org/api/telemetry/?satellite=20442
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    auth:
+      type: none
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      allow: GET, POST, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '8182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: application/json
+      date: Fri, 31 Jul 2026 14:14:44 GMT
+      link: >-
+        <https://db.satnogs.org/api/telemetry/?cursor=cD0yMDI2LTA3LTE5KzIxJTNBNTIlM0E0MyUyQjAwJTNBMDA%3D&satellite=20442>;
+        rel="next"
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Accept
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: >-
+      {"next":"https://db.satnogs.org/api/telemetry/?cursor=cD0yMDI2LTA3LTE5KzIxJTNBNTIlM0E0MyUyQjAwJTNBMDA%3D&satellite=20442","previous":null,"results":[{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"534549532045204520","observer":"(¯`·._.·(¯`·._.·
+      I LOVE BALI
+      ·._.·´¯)·._.·´¯)-OI71og","timestamp":"2026-07-31T11:36:18Z","version":"","observation_id":14662552,"station_id":4451,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"35454520494549453549203520","observer":"(¯`·._.·(¯`·._.·
+      I LOVE BALI
+      ·._.·´¯)·._.·´¯)-OI71og","timestamp":"2026-07-31T11:35:38Z","version":"","observation_id":14662552,"station_id":4451,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"4520455335354545453548534535533545452035535345352049495320452045204520","observer":"(¯`·._.·(¯`·._.·
+      I LOVE BALI
+      ·._.·´¯)·._.·´¯)-OI71og","timestamp":"2026-07-31T11:35:26Z","version":"","observation_id":14662552,"station_id":4451,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"4945204553532049494945204849533520354945454535484549495345354835354545352049352045494935204549454949455320","observer":"(¯`·._.·(¯`·._.·
+      I LOVE BALI
+      ·._.·´¯)·._.·´¯)-OI71og","timestamp":"2026-07-31T11:34:57Z","version":"","observation_id":14662552,"station_id":4451,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"49204920454520554920","observer":"M0GLU-IO91vc","timestamp":"2026-07-29T18:06:17Z","version":"","observation_id":14647685,"station_id":2125,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204554204520542045452045205320","observer":"wz4jm
+      station-EL89vb","timestamp":"2026-07-28T00:01:32Z","version":"","observation_id":14629499,"station_id":5062,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"54204920444920545520455520","observer":"wz4jm
+      station-EL89vb","timestamp":"2026-07-28T00:01:23Z","version":"","observation_id":14629499,"station_id":5062,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"494E45204554204920524945452055204520414E205220455220","observer":"wz4jm
+      station-EL89vb","timestamp":"2026-07-28T00:01:12Z","version":"","observation_id":14629499,"station_id":5062,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"55204520542053204920482045204520","observer":"wz4jm
+      station-EL89vb","timestamp":"2026-07-28T00:00:49Z","version":"","observation_id":14629499,"station_id":5062,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204945204553452049204C204120452048204920482045204520494520","observer":"wz4jm
+      station-EL89vb","timestamp":"2026-07-28T00:00:29Z","version":"","observation_id":14629499,"station_id":5062,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"54205420452049204520","observer":"LW2DYB-GF11br","timestamp":"2026-07-24T09:53:55Z","version":"","observation_id":14601228,"station_id":1861,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"54205420452045204520","observer":"LW2DYB-GF11br","timestamp":"2026-07-24T09:53:55Z","version":"","observation_id":14601228,"station_id":1861,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204520452045204520","observer":"UX5UL-KO50ei","timestamp":"2026-07-20T16:15:37Z","version":"","observation_id":14573600,"station_id":2968,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204520452045204520","observer":"UX5UL-KO50ei","timestamp":"2026-07-20T16:15:18Z","version":"","observation_id":14573600,"station_id":2968,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204520452045204520","observer":"UX5UL-KO50ei","timestamp":"2026-07-20T16:15:18Z","version":"","observation_id":14573600,"station_id":2968,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"44204E20452054205420","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:56:33Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"5220542049452054204520","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:56:19Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"4B204E452054204520","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:56:19Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"4920542044204E204520","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:56:19Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"54204920452045205420","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:55:13Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"5420542041205420454520","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:54:59Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"54204920542054204520","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:54:21Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"4E205420452041205420","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:54:06Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45205320542054205420","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:53:44Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]},{"sat_id":"ZDPY-4221-9426-0630-5344","norad_cat_id":20442,"transmitter":"","app_source":"network","decoded":"","frame":"45204520542053205420","observer":"KC1OCA
+      quadrifilar (UHF) & Airspy
+      Mini-FN32uc","timestamp":"2026-07-19T21:52:43Z","version":"","observation_id":14563601,"station_id":4803,"associated_satellites":[]}]}
+    timeMs: 2233.4268720000982
+    size: 8182
+- id: 95fb89e9-3a51-47cd-807b-fd7f56034a91
+  timestamp: 1785506905139
+  envName: development
+  request:
+    id: observaciones
+    name: Telemetría LUSAT (20442)
+    method: GET
+    url: https://db.satnogs.org/api/telemetry/?satellite=20442
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+    params: []
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, POST, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '58'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: application/json
+      date: Fri, 31 Jul 2026 14:08:25 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Accept, Cookie
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Authentication credentials were not provided."}'
+    timeMs: 898.8386630000314
+    size: 58
+- id: 3c3f08b4-22e5-4164-8688-4681827a70f6
+  timestamp: 1785506358673
+  envName: development
+  request:
+    id: observaciones
+    name: observaciones
+    method: GET
+    url: https://db.satnogs.org/api/observations/?status=good
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 404
+    statusText: Not Found
+    headers:
+      connection: keep-alive
+      content-length: '10182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: text/html; charset=utf-8
+      date: Fri, 31 Jul 2026 13:59:18 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Cookie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    timeMs: 236.836753999989
+    size: 10182
+    bodyRef:
+      file: 3c3f08b4-22e5-4164-8688-4681827a70f6-response.gz
+      encoding: gzip
+      size: 10182
+- id: 2d268b6b-a19b-4c9a-8ceb-c3b20cdfd474
+  timestamp: 1785506297213
+  envName: development
+  request:
+    id: observaciones
+    name: observaciones
+    method: GET
+    url: https://db.satnogs.org/api/observations/?status=good
+    headers: {}
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 404
+    statusText: Not Found
+    headers:
+      connection: keep-alive
+      content-length: '10182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: text/html; charset=utf-8
+      date: Fri, 31 Jul 2026 13:58:17 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Cookie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    timeMs: 1137.0381169999891
+    size: 10182
+    bodyRef:
+      file: 2d268b6b-a19b-4c9a-8ceb-c3b20cdfd474-response.gz
+      encoding: gzip
+      size: 10182

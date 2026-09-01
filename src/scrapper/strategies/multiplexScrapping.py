@@ -32,10 +32,19 @@ class MultiplexStrategy(StrategyScrapping):
                 print(f"[ELEMENT NOT FOUND] Could not find title for movie: {e}")
                 pass
         return screenings
-    
 
-    async def doScrapping(self, page) -> list[MovieData]:
-        moviesData: list[MovieData] = []
+    async def extractDurationMovie(self, page) -> str:
+        try:
+            page.click() # Click on link to open the movie details page
+            movieDetail = await page.wait_for_load_state("networkidle", timeout=TIMEOUT)
+            duration = await movieDetail.locator("div[id='durationID'] > p")
+            return duration.innerText()
+        except PlaywrightError as e:
+            print(f"[ELEMENT NOT FOUND] Could not find duration for movie: {e}")
+            return "1 hora"  # Default value if duration is not found
+
+    async def doScrapping(self, page) -> dict:
+        moviesDaysData:dict = {}
         await page.goto(self.URL)
 
         try:
@@ -57,6 +66,7 @@ class MultiplexStrategy(StrategyScrapping):
 
             for i in range(min(dayCount, 5)):
                 dayLabel = dayLabels.nth(i)
+                moviesData: list[MovieData] = []
                 await dayLabel.click()
 
                 hiddenInput = dayLabel.locator("input[name='dia']")
@@ -71,12 +81,13 @@ class MultiplexStrategy(StrategyScrapping):
                     try:
                         formatos = movie.locator("div[class='formato-idioma']:visible")
                         screenings = await self.extractScreenings(await formatos.all())
+                        # duration = await self.extractDurationMovie(movie.locator()) Implements later
                         moviesData.append(MovieData(title.strip(), fechaEnd, screenings, "1 hora", "Multiplex Belgrano"))
                     except PlaywrightError as e:
                         print(f"[ELEMENT NOT FOUND] screenings error not found: {e}")
                         pass
-
-                return moviesData
+                # Save the data for the current day before moving to the next day
+                moviesDaysData[f"{anio}-{mes}-{dia}"] = moviesData
 
 
         except TimeoutError as e:
@@ -86,5 +97,4 @@ class MultiplexStrategy(StrategyScrapping):
             print(f"[ELEMENT NOT CLICKABLE / ACTION FAILED] {e}")
             raise
 
-
-        
+        return moviesDaysData

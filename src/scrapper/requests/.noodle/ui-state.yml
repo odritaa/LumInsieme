@@ -1,0 +1,4 @@
+lastRequest: observaciones-lusat
+example:
+  request: auth
+  response: body
