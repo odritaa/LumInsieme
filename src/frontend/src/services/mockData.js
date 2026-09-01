@@ -19,22 +19,6 @@ export const GENRES = [
   "Musical",
 ];
 
-/** Perfil que se carga al iniciar sesión (mock: todavía no hay backend de auth). */
-export const demoUser = {
-  id: CURRENT_USER_ID,
-  name: "Mi Perfil",
-  age: 28,
-  city: "Buenos Aires",
-  genres: ["Ciencia Ficción", "Drama", "Thriller Psicológico", "Cine Indie", "Cine de Autor"],
-  favoriteMovies: [
-    { initials: "Me", title: "Metrópolis" },
-    { initials: "Ca", title: "Casablanca" },
-    { initials: "LO", title: "Los Olvidados" },
-    { initials: "EC", title: "El Ciudadano" },
-    { initials: "No", title: "Nosferatu" },
-  ],
-};
-
 export const mockMovies = [
   {
     title: "Metrópolis",

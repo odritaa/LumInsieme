@@ -1,28 +1,58 @@
-import { createContext, useContext, useState, useCallback, useMemo } from "react";
-import { CURRENT_USER_ID, demoUser, mockRooms, mockMessages } from "../services/mockData";
+import { createContext, useContext, useState, useCallback, useEffect, useMemo } from "react";
+import { CURRENT_USER_ID, mockRooms, mockMessages } from "../services/mockData";
+import {
+  deleteCurrentUser,
+  fetchCurrentUser,
+  logoutRequest,
+  updateCurrentUser,
+} from "../services/authService";
 import { currentTime } from "../utils/format";
 
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [authStatus, setAuthStatus] = useState("loading");
   const [rooms, setRooms] = useState(mockRooms);
   const [messages, setMessages] = useState(mockMessages);
 
-  /* ---- Sesión (mock: todavía no hay backend de auth) ---- */
+  /* ---- Sesión (JWT en cookie httpOnly emitida por el login-controller) ---- */
 
-  const login = useCallback(() => setUser(demoUser), []);
+  // Rehidrata la sesión al montar: sin esto la cookie existe pero la app no sabe quién sos.
+  useEffect(() => {
+    let cancelled = false;
+    fetchCurrentUser()
+      .then((current) => {
+        if (cancelled) return;
+        setUser(current);
+        setAuthStatus(current ? "authenticated" : "anonymous");
+      })
+      .catch(() => {
+        if (!cancelled) setAuthStatus("anonymous");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-  const logout = useCallback(() => setUser(null), []);
+  const logout = useCallback(async () => {
+    try {
+      await logoutRequest();
+    } finally {
+      setUser(null);
+      setAuthStatus("anonymous");
+    }
+  }, []);
 
-  const updateUser = useCallback((patch) => {
-    setUser((prev) => ({ ...prev, ...patch }));
+  const updateUser = useCallback(async (patch) => {
+    const saved = await updateCurrentUser(patch);
+    setUser(saved);
 
     // Nombre y géneros viajan denormalizados en salas y mensajes: sincronizarlos.
     const memberPatch = {};
-    if (patch.name !== undefined) memberPatch.name = patch.name;
-    if (patch.genres !== undefined) memberPatch.genres = patch.genres;
-    if (Object.keys(memberPatch).length === 0) return;
+    if (patch.name !== undefined) memberPatch.name = saved.name;
+    if (patch.genres !== undefined) memberPatch.genres = saved.genres;
+    if (Object.keys(memberPatch).length === 0) return saved;
 
     setRooms((rs) =>
       rs.map((room) => ({
@@ -35,12 +65,17 @@ export function AppProvider({ children }) {
 
     if (patch.name !== undefined) {
       setMessages((ms) =>
-        ms.map((m) => (m.authorId === CURRENT_USER_ID ? { ...m, author: patch.name } : m))
+        ms.map((m) => (m.authorId === CURRENT_USER_ID ? { ...m, author: saved.name } : m))
       );
     }
+
+    return saved;
   }, []);
 
-  const deleteAccount = useCallback(() => {
+  const deleteAccount = useCallback(async () => {
+    await deleteCurrentUser();
+
+    // Salas y mensajes siguen siendo mock en memoria: limpiarlos acá.
     setRooms((rs) =>
       rs.map((room) => ({
         ...room,
@@ -49,6 +84,7 @@ export function AppProvider({ children }) {
     );
     setMessages((ms) => ms.filter((m) => m.authorId !== CURRENT_USER_ID));
     setUser(null);
+    setAuthStatus("anonymous");
   }, []);
 
   /* ---- Salas ---- */
@@ -140,8 +176,8 @@ export function AppProvider({ children }) {
   const value = useMemo(
     () => ({
       user,
+      authStatus,
       rooms,
-      login,
       logout,
       updateUser,
       deleteAccount,
@@ -154,8 +190,8 @@ export function AppProvider({ children }) {
     }),
     [
       user,
+      authStatus,
       rooms,
-      login,
       logout,
       updateUser,
       deleteAccount,

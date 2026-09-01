@@ -6,12 +6,17 @@ import ConfirmModal from "../components/ConfirmModal";
 import { getInitials } from "../utils/avatar";
 
 export default function Profile() {
-  const { user, deleteAccount } = useAppContext();
+  const { user, deleteAccount, logout } = useAppContext();
   const navigate = useNavigate();
   const [confirming, setConfirming] = useState(false);
 
-  const handleDelete = () => {
-    deleteAccount();
+  const handleDelete = async () => {
+    await deleteAccount();
+    navigate("/", { replace: true });
+  };
+
+  const handleLogout = async () => {
+    await logout();
     navigate("/", { replace: true });
   };
 
@@ -30,6 +35,9 @@ export default function Profile() {
             <Link className="profile-edit-btn" to="/perfil/editar">
               Editar perfil
             </Link>
+            <button type="button" className="profile-edit-btn" onClick={handleLogout}>
+              Cerrar sesión
+            </button>
             <button type="button" className="btn-danger" onClick={() => setConfirming(true)}>
               Eliminar cuenta
             </button>
