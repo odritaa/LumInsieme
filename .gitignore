@@ -1,7 +1,4 @@
 #--- Librerias y entornos de ejecucion ---#
-# Los patrones con "/" se anclan a la raiz del repo y "*" no cruza directorios,
-# por eso "*/node_modules/*" NO cubre src/<servicio>/node_modules. Sin barra
-# inicial el patron coincide a cualquier profundidad.
 node_modules/
 env/
 venv/
@@ -9,6 +6,9 @@ __pycache__/
 *.pyc
 dist/
 build/
+*/node_modules/*
+*/package.json
+/*package-lock.json
 #--- Librerias y entornos de ejecucion ---#
 #--- CONFIGURACIONES DEL SISTEMA ---#
 *.env
