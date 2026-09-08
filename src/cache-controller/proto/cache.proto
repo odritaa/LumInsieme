@@ -14,6 +14,7 @@ service CacheService {
   // TTL operations
   rpc SetTTL(SetTTLRequest) returns (SetTTLResponse);
   rpc GetTTL(GetTTLRequest) returns (GetTTLResponse);
+  rpc SetWithTTL(SetWithTTLRequest) returns (SetWithTTLResponse);
 
   // List operations (for chat messages, etc.)
   rpc Push(PushRequest) returns (PushResponse);
@@ -84,6 +85,16 @@ message GetTTLRequest {
 
 message GetTTLResponse {
   int64 ttl_seconds = 1;
+}
+
+message SetWithTTLRequest {
+  string key = 1;
+  string value = 2;
+  int64 ttl_seconds = 3;
+}
+
+message SetWithTTLResponse {
+  bool ok = 1;
 }
 
 // List operations

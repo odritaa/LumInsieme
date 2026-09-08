@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.6.2
 // - protoc             v5.28.3
-// source: cache.proto
+// source: proto/cache.proto
 
 package pb
 
@@ -19,21 +19,22 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	CacheService_Get_FullMethodName       = "/cache.CacheService/Get"
-	CacheService_Set_FullMethodName       = "/cache.CacheService/Set"
-	CacheService_Delete_FullMethodName    = "/cache.CacheService/Delete"
-	CacheService_Exists_FullMethodName    = "/cache.CacheService/Exists"
-	CacheService_SetTTL_FullMethodName    = "/cache.CacheService/SetTTL"
-	CacheService_GetTTL_FullMethodName    = "/cache.CacheService/GetTTL"
-	CacheService_Push_FullMethodName      = "/cache.CacheService/Push"
-	CacheService_Range_FullMethodName     = "/cache.CacheService/Range"
-	CacheService_HSet_FullMethodName      = "/cache.CacheService/HSet"
-	CacheService_HGet_FullMethodName      = "/cache.CacheService/HGet"
-	CacheService_HGetAll_FullMethodName   = "/cache.CacheService/HGetAll"
-	CacheService_HDel_FullMethodName      = "/cache.CacheService/HDel"
-	CacheService_Publish_FullMethodName   = "/cache.CacheService/Publish"
-	CacheService_Subscribe_FullMethodName = "/cache.CacheService/Subscribe"
-	CacheService_Health_FullMethodName    = "/cache.CacheService/Health"
+	CacheService_Get_FullMethodName        = "/cache.CacheService/Get"
+	CacheService_Set_FullMethodName        = "/cache.CacheService/Set"
+	CacheService_Delete_FullMethodName     = "/cache.CacheService/Delete"
+	CacheService_Exists_FullMethodName     = "/cache.CacheService/Exists"
+	CacheService_SetTTL_FullMethodName     = "/cache.CacheService/SetTTL"
+	CacheService_GetTTL_FullMethodName     = "/cache.CacheService/GetTTL"
+	CacheService_SetWithTTL_FullMethodName = "/cache.CacheService/SetWithTTL"
+	CacheService_Push_FullMethodName       = "/cache.CacheService/Push"
+	CacheService_Range_FullMethodName      = "/cache.CacheService/Range"
+	CacheService_HSet_FullMethodName       = "/cache.CacheService/HSet"
+	CacheService_HGet_FullMethodName       = "/cache.CacheService/HGet"
+	CacheService_HGetAll_FullMethodName    = "/cache.CacheService/HGetAll"
+	CacheService_HDel_FullMethodName       = "/cache.CacheService/HDel"
+	CacheService_Publish_FullMethodName    = "/cache.CacheService/Publish"
+	CacheService_Subscribe_FullMethodName  = "/cache.CacheService/Subscribe"
+	CacheService_Health_FullMethodName     = "/cache.CacheService/Health"
 )
 
 // CacheServiceClient is the client API for CacheService service.
@@ -48,6 +49,7 @@ type CacheServiceClient interface {
 	// TTL operations
 	SetTTL(ctx context.Context, in *SetTTLRequest, opts ...grpc.CallOption) (*SetTTLResponse, error)
 	GetTTL(ctx context.Context, in *GetTTLRequest, opts ...grpc.CallOption) (*GetTTLResponse, error)
+	SetWithTTL(ctx context.Context, in *SetWithTTLRequest, opts ...grpc.CallOption) (*SetWithTTLResponse, error)
 	// List operations (for chat messages, etc.)
 	Push(ctx context.Context, in *PushRequest, opts ...grpc.CallOption) (*PushResponse, error)
 	Range(ctx context.Context, in *RangeRequest, opts ...grpc.CallOption) (*RangeResponse, error)
@@ -125,6 +127,16 @@ func (c *cacheServiceClient) GetTTL(ctx context.Context, in *GetTTLRequest, opts
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetTTLResponse)
 	err := c.cc.Invoke(ctx, CacheService_GetTTL_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *cacheServiceClient) SetWithTTL(ctx context.Context, in *SetWithTTLRequest, opts ...grpc.CallOption) (*SetWithTTLResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SetWithTTLResponse)
+	err := c.cc.Invoke(ctx, CacheService_SetWithTTL_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -242,6 +254,7 @@ type CacheServiceServer interface {
 	// TTL operations
 	SetTTL(context.Context, *SetTTLRequest) (*SetTTLResponse, error)
 	GetTTL(context.Context, *GetTTLRequest) (*GetTTLResponse, error)
+	SetWithTTL(context.Context, *SetWithTTLRequest) (*SetWithTTLResponse, error)
 	// List operations (for chat messages, etc.)
 	Push(context.Context, *PushRequest) (*PushResponse, error)
 	Range(context.Context, *RangeRequest) (*RangeResponse, error)
@@ -282,6 +295,9 @@ func (UnimplementedCacheServiceServer) SetTTL(context.Context, *SetTTLRequest) (
 }
 func (UnimplementedCacheServiceServer) GetTTL(context.Context, *GetTTLRequest) (*GetTTLResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method GetTTL not implemented")
+}
+func (UnimplementedCacheServiceServer) SetWithTTL(context.Context, *SetWithTTLRequest) (*SetWithTTLResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method SetWithTTL not implemented")
 }
 func (UnimplementedCacheServiceServer) Push(context.Context, *PushRequest) (*PushResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method Push not implemented")
@@ -435,6 +451,24 @@ func _CacheService_GetTTL_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CacheServiceServer).GetTTL(ctx, req.(*GetTTLRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CacheService_SetWithTTL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetWithTTLRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CacheServiceServer).SetWithTTL(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CacheService_SetWithTTL_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CacheServiceServer).SetWithTTL(ctx, req.(*SetWithTTLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -626,6 +660,10 @@ var CacheService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _CacheService_GetTTL_Handler,
 		},
 		{
+			MethodName: "SetWithTTL",
+			Handler:    _CacheService_SetWithTTL_Handler,
+		},
+		{
 			MethodName: "Push",
 			Handler:    _CacheService_Push_Handler,
 		},
@@ -665,5 +703,5 @@ var CacheService_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "cache.proto",
+	Metadata: "proto/cache.proto",
 }

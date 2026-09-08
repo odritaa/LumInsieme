@@ -1,0 +1,558 @@
+- id: c9054d5e-dfbb-4f32-be04-7a6d062032aa
+  timestamp: 1785509476066
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token b8d1ef14fdf7b4d3ffd9f8db504f12e0631ed4e4
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 200
+    statusText: OK
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '3441'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:51:15 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: >-
+      {"id":14629499,"start":"2026-07-27T23:59:44Z","end":"2026-07-28T00:06:49Z","ground_station":5062,"transmitter":"ZAKErADdWKpMiDjvKKhmmB","norad_cat_id":20442,"payload":"https://network-satnogs.freetls.fastly.net/media/data_obs/2026/7/27/23/14629499/satnogs_14629499_2026-07-27T23-59-44.ogg","waterfall":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/waterfall_14629499_2026-07-27T23-59-44.png","demoddata":[{"payload_demod":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/data_14629499_2026-07-28T00-00-29"},{"payload_demod":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/data_14629499_2026-07-28T00-01-32"},{"payload_demod":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/data_14629499_2026-07-28T00-01-23"},{"payload_demod":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/data_14629499_2026-07-28T00-01-12"},{"payload_demod":"https://s3.eu-central-1.wasabisys.com/satnogs-network/data_obs/2026/7/27/23/14629499/data_14629499_2026-07-28T00-00-49"}],"station_name":"wz4jm
+      station","station_lat":29.05443238,"station_lng":-82.219724,"station_alt":100,"vetted_status":"good","vetted_user":8938,"vetted_datetime":"2026-07-28T00:13:42.768928Z","archived":false,"archive_url":null,"client_version":"2.1.2","client_metadata":"{\"radio\":
+      {\"name\": \"gr-satnogs\", \"version\": null, \"parameters\": {\"mode\":
+      \"CW\", \"soapy-rx-device\": \"driver=rtlsdr\", \"samp-rate-rx\":
+      \"2400000\", \"rx-freq\": \"437126350\", \"file-path\":
+      \"/tmp/.satnogs/data/receiving_satnogs_14629499_2026-07-27T23-59-44.out\",
+      \"waterfall-file-path\":
+      \"/tmp/.satnogs/data/receiving_waterfall_14629499_2026-07-27T23-59-44.dat\",
+      \"decoded-data-file-path\": \"/tmp/.satnogs/data/data_14629499\",
+      \"doppler-correction-per-sec\": \"20\", \"lo-offset\": null, \"ppm\":
+      null, \"rigctl-host\": \"rigctld\", \"rigctl-port\": \"4532\",
+      \"gain-mode\": \"Overall\", \"gain\": \"46\", \"antenna\": \"RX\",
+      \"dev-args\": null, \"stream-args\": null, \"tune-args\": null,
+      \"other-settings\": null, \"dc-removal\": null, \"bb-freq\": null, \"bw\":
+      null, \"enable-iq-dump\": \"0\", \"iq-file-path\": null,
+      \"udp-dump-host\": null, \"udp-dump-port\": 57356}}, \"latitude\":
+      29.05443238, \"longitude\": -82.219724, \"elevation\": 100.0,
+      \"frequency\":
+      437126350}","status":"good","waterfall_status":"with-signal","waterfall_status_user":8938,"waterfall_status_datetime":"2026-07-28T00:13:42.768928Z","rise_azimuth":155.0,"set_azimuth":356.0,"max_altitude":69.0,"transmitter_uuid":"ZAKErADdWKpMiDjvKKhmmB","transmitter_description":"Mode
+      U
+      TLM","transmitter_type":"Transmitter","transmitter_uplink_low":null,"transmitter_uplink_high":null,"transmitter_uplink_drift":null,"transmitter_downlink_low":437125000,"transmitter_downlink_high":null,"transmitter_downlink_drift":3088,"transmitter_mode":"CW","transmitter_invert":false,"transmitter_baud":0.0,"transmitter_updated":"2021-02-08T13:05:33.620486Z","transmitter_status":"active","tle0":"0
+      OSCAR 19 (LUSAT)","tle1":"1 20442U 90005G   26208.01974548  .00000124 
+      00000-0  60864-4 0  9997","tle2":"2 20442  98.8846 230.9213 0012686 
+      89.7372 270.5265
+      14.34133627908105","tle_source":"Space-Track.org","center_frequency":null,"observer":"wz4jm","observation_frequency":437126350,"transmitter_unconfirmed":false,"sat_id":"ZDPY-4221-9426-0630-5344"}
+    timeMs: 279.34630300011486
+    size: 3441
+- id: 1b1e0f59-911b-47f9-8dfd-578dec227792
+  timestamp: 1785509415469
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:50:15 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 245.69276600005105
+    size: 27
+- id: ce8146bf-55d5-4764-9949-9158f824b958
+  timestamp: 1785509362223
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:49:22 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 244.61413899995387
+    size: 27
+- id: 2857edda-4b7d-46e3-bdb2-5b2d5eca49e9
+  timestamp: 1785509335129
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:48:55 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 866.1744359997101
+    size: 27
+- id: adcad256-c07a-43a7-879f-90a0c4c24f44
+  timestamp: 1785508853847
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:40:53 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 740.6196490000002
+    size: 27
+- id: 7d97091e-ccc1-47d2-be07-2ea988ccb9df
+  timestamp: 1785508709563
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d7936995464045ac3938b7c849d8b9
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:38:29 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 716.2794799995609
+    size: 27
+- id: 0d9c91e5-228c-413e-a713-474f704a46c9
+  timestamp: 1785508618819
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://network.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d793699546404
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 401
+    statusText: Unauthorized
+    headers:
+      allow: GET, PUT, PATCH, HEAD, OPTIONS
+      connection: keep-alive
+      content-length: '27'
+      content-security-policy: >-
+        worker-src blob:; child-src blob:; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://network-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com https://archive.org https://*.archive.org
+        https://*.wasabisys.com https://network-satnogs.freetls.fastly.net;
+        frame-src blob:; style-src 'self' 'unsafe-inline'
+        https://network-satnogs.freetls.fastly.net; img-src 'self'
+        https://*.gravatar.com https://*.mapbox.com https://*.satnogs.org
+        https://*.wasabisys.com https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net
+        https://network-satnogs.freetls.fastly.net
+      content-type: application/json
+      cross-origin-opener-policy: same-origin
+      date: Fri, 31 Jul 2026 14:36:58 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=31536000; includeSubDomains
+      vary: Accept
+      www-authenticate: Token
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    body: '{"detail":"Invalid token."}'
+    timeMs: 718.9018830000423
+    size: 27
+- id: a5c28283-cec8-4b91-9565-80d5381e7954
+  timestamp: 1785508580089
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://db.satnogs.org/api/observations/14629499/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d793699546404
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 404
+    statusText: Not Found
+    headers:
+      connection: keep-alive
+      content-length: '10182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: text/html; charset=utf-8
+      date: Fri, 31 Jul 2026 14:36:19 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Cookie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    timeMs: 697.549391000066
+    size: 10182
+    bodyRef:
+      file: a5c28283-cec8-4b91-9565-80d5381e7954-response.gz
+      encoding: gzip
+      size: 10182
+- id: 4a3bd2c3-c559-4c4c-b5d4-0132fa6e47d3
+  timestamp: 1785508435204
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://db.satnogs.org/api/observations/
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d793699546404
+        enabled: true
+    params:
+      - name: observation_id
+        value: '14629499'
+        enabled: true
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 404
+    statusText: Not Found
+    headers:
+      connection: keep-alive
+      content-length: '10182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: text/html; charset=utf-8
+      date: Fri, 31 Jul 2026 14:33:55 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Cookie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    timeMs: 713.2653500000015
+    size: 10182
+    bodyRef:
+      file: 4a3bd2c3-c559-4c4c-b5d4-0132fa6e47d3-response.gz
+      encoding: gzip
+      size: 10182
+- id: 90002c7a-b347-4797-869e-63fb67e788a7
+  timestamp: 1785508367763
+  envName: development
+  request:
+    id: observaciones-lusat
+    name: Observaciones LUSAT
+    method: GET
+    url: https://db.satnogs.org/api/observations/?observation_id=14629499
+    headers:
+      Accept:
+        value: application/json
+        enabled: true
+      Authorization:
+        value: Token 8c6d58bcf1d793699546404
+        enabled: true
+    params: []
+    body: ''
+    auth:
+      type: none
+  response:
+    status: 404
+    statusText: Not Found
+    headers:
+      connection: keep-alive
+      content-length: '10182'
+      content-security-policy: >-
+        img-src 'self' https://*.gravatar.com https://*.mapbox.com
+        https://*.google-analytics.com data: blob:
+        https://db-satnogs.freetls.fastly.net; script-src 'self'
+        https://*.google-analytics.com 'unsafe-eval'
+        https://db-satnogs.freetls.fastly.net; default-src 'self'
+        https://*.mapbox.com 'unsafe-inline'
+        https://db-satnogs.freetls.fastly.net; frame-src blob:; worker-src
+        'self' blob:; child-src blob:
+      content-type: text/html; charset=utf-8
+      date: Fri, 31 Jul 2026 14:32:47 GMT
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security: max-age=63072000
+      vary: Cookie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: DENY
+      x-permitted-cross-domain-policies: none
+      x-xss-protection: 1; mode=block
+    timeMs: 784.1439020000398
+    size: 10182
+    bodyRef:
+      file: 90002c7a-b347-4797-869e-63fb67e788a7-response.gz
+      encoding: gzip
+      size: 10182
