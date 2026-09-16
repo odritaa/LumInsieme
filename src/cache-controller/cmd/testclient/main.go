@@ -72,5 +72,23 @@ func main() {
 	// Cleanup
 	client.Delete(ctx, &pb.DeleteRequest{Key: "test:list"})
 
+	// Test PushBatch
+	_, err = client.PushBatch(ctx, &pb.PushBatchRequest{
+		Key:        "test:batch",
+		Values:     []string{"batch1", "batch2", "batch3"},
+		TtlSeconds: 259200,
+	})
+	if err != nil {
+		log.Fatalf("PushBatch failed: %v", err)
+	}
+	rangeRes, err = client.Range(ctx, &pb.RangeRequest{Key: "test:batch", Start: 0, Stop: -1})
+	if err != nil {
+		log.Fatalf("Range failed: %v", err)
+	}
+	fmt.Printf("PushBatch Range: %v\n", rangeRes.Values)
+
+	// Cleanup batch
+	client.Delete(ctx, &pb.DeleteRequest{Key: "test:batch"})
+
 	fmt.Println("\nTodos los tests pasaron!")
 }

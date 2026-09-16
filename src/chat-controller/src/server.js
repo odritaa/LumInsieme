@@ -2,7 +2,7 @@ import http from "node:http";
 import { WebSocketServer } from "ws";
 import { URL } from "node:url";
 import app from "./app.js";
-import redis from "./database.js";
+import cacheClient from "./cache-client.js";
 import ChatMessage from "./models/ChatMessage.js";
 import WsMessage from "./models/WsMessage.js";
 import "dotenv/config";
@@ -62,19 +62,19 @@ wss.on("connection", (socket, req) => {
 
 async function sendHistory(socket, eventId) {
   try {
-    const raw = await redis.lrange(`chat:${eventId}`, -HISTORY_LIMIT, -1);
+    const raw = await cacheClient.range(`chat:${eventId}`, -HISTORY_LIMIT, -1);
     const messages = raw.map((m) => ChatMessage.fromJSON(JSON.parse(m)));
-    socket.send(WsMessage.history(messages).toJSON());
-  } catch {
-    console.warn(`[redis] no se pudo obtener historial del evento ${eventId}`);
+    socket.send(JSON.stringify(WsMessage.history(messages).toJSON()));
+  } catch (err) {
+    console.warn(`[cache-client] no se pudo obtener historial del evento ${eventId}:`, err.message);
   }
 }
 
 async function saveAndBroadcast(eventId, message) {
   try {
-    await redis.rpush(`chat:${eventId}`, JSON.stringify(message.toJSON()));
+    cacheClient.enqueue(eventId, JSON.stringify(message.toJSON()));
   } catch {
-    console.warn("[redis] no se pudo guardar el mensaje");
+    console.warn("[cache-client] no se pudo encolar el mensaje");
   }
 
   const payload = WsMessage.broadcast(message.username, message.content, message.timestamp);
@@ -91,19 +91,18 @@ async function saveAndBroadcast(eventId, message) {
 server.listen(port, async () => {
   console.log(`[server] escuchando en http://localhost:${port}`);
   try {
-    await redis.connect();
+    const health = await cacheClient.health();
+    console.log(`[cache-client] health: ${health.status} (redis: ${health.redis_connected})`);
   } catch (error) {
-    console.warn("[redis] sin conexión, el chat correrá en modo degradado:", error.message);
+    console.warn("[cache-client] sin conexión, el chat correrá en modo degradado:", error.message);
   }
 });
 
 const shutdown = async () => {
   console.log("\n[server] cerrando...");
+  await cacheClient.flushAll();
   wss.close();
   server.close();
-  if (redis.status === "ready") {
-    await redis.quit();
-  }
   process.exit(0);
 };
 

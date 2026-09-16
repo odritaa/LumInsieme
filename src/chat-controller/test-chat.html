@@ -54,7 +54,8 @@
       const eventId = document.getElementById("event_id").value.trim();
       if (!username || !eventId) return alert("Completá ambos campos");
 
-      ws = new WebSocket(`ws://${location.hostname}:3000?event_id=${eventId}&username=${username}`);
+      const host = location.hostname || "localhost";
+      ws = new WebSocket(`ws://${host}:3000?event_id=${eventId}&username=${username}`);
 
       ws.onopen = () => {
         document.getElementById("login").style.display = "none";

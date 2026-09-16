@@ -776,6 +776,110 @@ func (x *PushResponse) GetLength() int64 {
 	return 0
 }
 
+type PushBatchRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Key           string                 `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
+	Values        []string               `protobuf:"bytes,2,rep,name=values,proto3" json:"values,omitempty"`
+	TtlSeconds    int64                  `protobuf:"varint,3,opt,name=ttl_seconds,json=ttlSeconds,proto3" json:"ttl_seconds,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PushBatchRequest) Reset() {
+	*x = PushBatchRequest{}
+	mi := &file_proto_cache_proto_msgTypes[16]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PushBatchRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PushBatchRequest) ProtoMessage() {}
+
+func (x *PushBatchRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_cache_proto_msgTypes[16]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PushBatchRequest.ProtoReflect.Descriptor instead.
+func (*PushBatchRequest) Descriptor() ([]byte, []int) {
+	return file_proto_cache_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *PushBatchRequest) GetKey() string {
+	if x != nil {
+		return x.Key
+	}
+	return ""
+}
+
+func (x *PushBatchRequest) GetValues() []string {
+	if x != nil {
+		return x.Values
+	}
+	return nil
+}
+
+func (x *PushBatchRequest) GetTtlSeconds() int64 {
+	if x != nil {
+		return x.TtlSeconds
+	}
+	return 0
+}
+
+type PushBatchResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Length        int64                  `protobuf:"varint,1,opt,name=length,proto3" json:"length,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PushBatchResponse) Reset() {
+	*x = PushBatchResponse{}
+	mi := &file_proto_cache_proto_msgTypes[17]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PushBatchResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PushBatchResponse) ProtoMessage() {}
+
+func (x *PushBatchResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_cache_proto_msgTypes[17]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PushBatchResponse.ProtoReflect.Descriptor instead.
+func (*PushBatchResponse) Descriptor() ([]byte, []int) {
+	return file_proto_cache_proto_rawDescGZIP(), []int{17}
+}
+
+func (x *PushBatchResponse) GetLength() int64 {
+	if x != nil {
+		return x.Length
+	}
+	return 0
+}
+
 type RangeRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Key           string                 `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
@@ -787,7 +891,7 @@ type RangeRequest struct {
 
 func (x *RangeRequest) Reset() {
 	*x = RangeRequest{}
-	mi := &file_proto_cache_proto_msgTypes[16]
+	mi := &file_proto_cache_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -799,7 +903,7 @@ func (x *RangeRequest) String() string {
 func (*RangeRequest) ProtoMessage() {}
 
 func (x *RangeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[16]
+	mi := &file_proto_cache_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -812,7 +916,7 @@ func (x *RangeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RangeRequest.ProtoReflect.Descriptor instead.
 func (*RangeRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{16}
+	return file_proto_cache_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *RangeRequest) GetKey() string {
@@ -845,7 +949,7 @@ type RangeResponse struct {
 
 func (x *RangeResponse) Reset() {
 	*x = RangeResponse{}
-	mi := &file_proto_cache_proto_msgTypes[17]
+	mi := &file_proto_cache_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -857,7 +961,7 @@ func (x *RangeResponse) String() string {
 func (*RangeResponse) ProtoMessage() {}
 
 func (x *RangeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[17]
+	mi := &file_proto_cache_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -870,7 +974,7 @@ func (x *RangeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RangeResponse.ProtoReflect.Descriptor instead.
 func (*RangeResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{17}
+	return file_proto_cache_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *RangeResponse) GetValues() []string {
@@ -892,7 +996,7 @@ type HSetRequest struct {
 
 func (x *HSetRequest) Reset() {
 	*x = HSetRequest{}
-	mi := &file_proto_cache_proto_msgTypes[18]
+	mi := &file_proto_cache_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -904,7 +1008,7 @@ func (x *HSetRequest) String() string {
 func (*HSetRequest) ProtoMessage() {}
 
 func (x *HSetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[18]
+	mi := &file_proto_cache_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -917,7 +1021,7 @@ func (x *HSetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HSetRequest.ProtoReflect.Descriptor instead.
 func (*HSetRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{18}
+	return file_proto_cache_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *HSetRequest) GetKey() string {
@@ -950,7 +1054,7 @@ type HSetResponse struct {
 
 func (x *HSetResponse) Reset() {
 	*x = HSetResponse{}
-	mi := &file_proto_cache_proto_msgTypes[19]
+	mi := &file_proto_cache_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -962,7 +1066,7 @@ func (x *HSetResponse) String() string {
 func (*HSetResponse) ProtoMessage() {}
 
 func (x *HSetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[19]
+	mi := &file_proto_cache_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -975,7 +1079,7 @@ func (x *HSetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HSetResponse.ProtoReflect.Descriptor instead.
 func (*HSetResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{19}
+	return file_proto_cache_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *HSetResponse) GetOk() bool {
@@ -995,7 +1099,7 @@ type HGetRequest struct {
 
 func (x *HGetRequest) Reset() {
 	*x = HGetRequest{}
-	mi := &file_proto_cache_proto_msgTypes[20]
+	mi := &file_proto_cache_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1007,7 +1111,7 @@ func (x *HGetRequest) String() string {
 func (*HGetRequest) ProtoMessage() {}
 
 func (x *HGetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[20]
+	mi := &file_proto_cache_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1020,7 +1124,7 @@ func (x *HGetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HGetRequest.ProtoReflect.Descriptor instead.
 func (*HGetRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{20}
+	return file_proto_cache_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *HGetRequest) GetKey() string {
@@ -1047,7 +1151,7 @@ type HGetResponse struct {
 
 func (x *HGetResponse) Reset() {
 	*x = HGetResponse{}
-	mi := &file_proto_cache_proto_msgTypes[21]
+	mi := &file_proto_cache_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1059,7 +1163,7 @@ func (x *HGetResponse) String() string {
 func (*HGetResponse) ProtoMessage() {}
 
 func (x *HGetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[21]
+	mi := &file_proto_cache_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1072,7 +1176,7 @@ func (x *HGetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HGetResponse.ProtoReflect.Descriptor instead.
 func (*HGetResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{21}
+	return file_proto_cache_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *HGetResponse) GetValue() string {
@@ -1098,7 +1202,7 @@ type HGetAllRequest struct {
 
 func (x *HGetAllRequest) Reset() {
 	*x = HGetAllRequest{}
-	mi := &file_proto_cache_proto_msgTypes[22]
+	mi := &file_proto_cache_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1110,7 +1214,7 @@ func (x *HGetAllRequest) String() string {
 func (*HGetAllRequest) ProtoMessage() {}
 
 func (x *HGetAllRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[22]
+	mi := &file_proto_cache_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1123,7 +1227,7 @@ func (x *HGetAllRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HGetAllRequest.ProtoReflect.Descriptor instead.
 func (*HGetAllRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{22}
+	return file_proto_cache_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *HGetAllRequest) GetKey() string {
@@ -1142,7 +1246,7 @@ type HGetAllResponse struct {
 
 func (x *HGetAllResponse) Reset() {
 	*x = HGetAllResponse{}
-	mi := &file_proto_cache_proto_msgTypes[23]
+	mi := &file_proto_cache_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1154,7 +1258,7 @@ func (x *HGetAllResponse) String() string {
 func (*HGetAllResponse) ProtoMessage() {}
 
 func (x *HGetAllResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[23]
+	mi := &file_proto_cache_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1167,7 +1271,7 @@ func (x *HGetAllResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HGetAllResponse.ProtoReflect.Descriptor instead.
 func (*HGetAllResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{23}
+	return file_proto_cache_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *HGetAllResponse) GetFields() map[string]string {
@@ -1187,7 +1291,7 @@ type HDelRequest struct {
 
 func (x *HDelRequest) Reset() {
 	*x = HDelRequest{}
-	mi := &file_proto_cache_proto_msgTypes[24]
+	mi := &file_proto_cache_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1199,7 +1303,7 @@ func (x *HDelRequest) String() string {
 func (*HDelRequest) ProtoMessage() {}
 
 func (x *HDelRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[24]
+	mi := &file_proto_cache_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1212,7 +1316,7 @@ func (x *HDelRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HDelRequest.ProtoReflect.Descriptor instead.
 func (*HDelRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{24}
+	return file_proto_cache_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *HDelRequest) GetKey() string {
@@ -1238,7 +1342,7 @@ type HDelResponse struct {
 
 func (x *HDelResponse) Reset() {
 	*x = HDelResponse{}
-	mi := &file_proto_cache_proto_msgTypes[25]
+	mi := &file_proto_cache_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1250,7 +1354,7 @@ func (x *HDelResponse) String() string {
 func (*HDelResponse) ProtoMessage() {}
 
 func (x *HDelResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[25]
+	mi := &file_proto_cache_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1263,7 +1367,7 @@ func (x *HDelResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HDelResponse.ProtoReflect.Descriptor instead.
 func (*HDelResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{25}
+	return file_proto_cache_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *HDelResponse) GetDeleted() bool {
@@ -1284,7 +1388,7 @@ type PublishRequest struct {
 
 func (x *PublishRequest) Reset() {
 	*x = PublishRequest{}
-	mi := &file_proto_cache_proto_msgTypes[26]
+	mi := &file_proto_cache_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1296,7 +1400,7 @@ func (x *PublishRequest) String() string {
 func (*PublishRequest) ProtoMessage() {}
 
 func (x *PublishRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[26]
+	mi := &file_proto_cache_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1309,7 +1413,7 @@ func (x *PublishRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PublishRequest.ProtoReflect.Descriptor instead.
 func (*PublishRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{26}
+	return file_proto_cache_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *PublishRequest) GetChannel() string {
@@ -1335,7 +1439,7 @@ type PublishResponse struct {
 
 func (x *PublishResponse) Reset() {
 	*x = PublishResponse{}
-	mi := &file_proto_cache_proto_msgTypes[27]
+	mi := &file_proto_cache_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1347,7 +1451,7 @@ func (x *PublishResponse) String() string {
 func (*PublishResponse) ProtoMessage() {}
 
 func (x *PublishResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[27]
+	mi := &file_proto_cache_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1360,7 +1464,7 @@ func (x *PublishResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PublishResponse.ProtoReflect.Descriptor instead.
 func (*PublishResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{27}
+	return file_proto_cache_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *PublishResponse) GetSubscribers() int64 {
@@ -1379,7 +1483,7 @@ type SubscribeRequest struct {
 
 func (x *SubscribeRequest) Reset() {
 	*x = SubscribeRequest{}
-	mi := &file_proto_cache_proto_msgTypes[28]
+	mi := &file_proto_cache_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1391,7 +1495,7 @@ func (x *SubscribeRequest) String() string {
 func (*SubscribeRequest) ProtoMessage() {}
 
 func (x *SubscribeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[28]
+	mi := &file_proto_cache_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1404,7 +1508,7 @@ func (x *SubscribeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubscribeRequest.ProtoReflect.Descriptor instead.
 func (*SubscribeRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{28}
+	return file_proto_cache_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *SubscribeRequest) GetChannel() string {
@@ -1424,7 +1528,7 @@ type SubscribeResponse struct {
 
 func (x *SubscribeResponse) Reset() {
 	*x = SubscribeResponse{}
-	mi := &file_proto_cache_proto_msgTypes[29]
+	mi := &file_proto_cache_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1436,7 +1540,7 @@ func (x *SubscribeResponse) String() string {
 func (*SubscribeResponse) ProtoMessage() {}
 
 func (x *SubscribeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[29]
+	mi := &file_proto_cache_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1449,7 +1553,7 @@ func (x *SubscribeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubscribeResponse.ProtoReflect.Descriptor instead.
 func (*SubscribeResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{29}
+	return file_proto_cache_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *SubscribeResponse) GetChannel() string {
@@ -1475,7 +1579,7 @@ type HealthRequest struct {
 
 func (x *HealthRequest) Reset() {
 	*x = HealthRequest{}
-	mi := &file_proto_cache_proto_msgTypes[30]
+	mi := &file_proto_cache_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1487,7 +1591,7 @@ func (x *HealthRequest) String() string {
 func (*HealthRequest) ProtoMessage() {}
 
 func (x *HealthRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[30]
+	mi := &file_proto_cache_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1500,7 +1604,7 @@ func (x *HealthRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HealthRequest.ProtoReflect.Descriptor instead.
 func (*HealthRequest) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{30}
+	return file_proto_cache_proto_rawDescGZIP(), []int{32}
 }
 
 type HealthResponse struct {
@@ -1513,7 +1617,7 @@ type HealthResponse struct {
 
 func (x *HealthResponse) Reset() {
 	*x = HealthResponse{}
-	mi := &file_proto_cache_proto_msgTypes[31]
+	mi := &file_proto_cache_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1525,7 +1629,7 @@ func (x *HealthResponse) String() string {
 func (*HealthResponse) ProtoMessage() {}
 
 func (x *HealthResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_cache_proto_msgTypes[31]
+	mi := &file_proto_cache_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1538,7 +1642,7 @@ func (x *HealthResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HealthResponse.ProtoReflect.Descriptor instead.
 func (*HealthResponse) Descriptor() ([]byte, []int) {
-	return file_proto_cache_proto_rawDescGZIP(), []int{31}
+	return file_proto_cache_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *HealthResponse) GetStatus() string {
@@ -1602,6 +1706,13 @@ const file_proto_cache_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value\"&\n" +
 	"\fPushResponse\x12\x16\n" +
+	"\x06length\x18\x01 \x01(\x03R\x06length\"]\n" +
+	"\x10PushBatchRequest\x12\x10\n" +
+	"\x03key\x18\x01 \x01(\tR\x03key\x12\x16\n" +
+	"\x06values\x18\x02 \x03(\tR\x06values\x12\x1f\n" +
+	"\vttl_seconds\x18\x03 \x01(\x03R\n" +
+	"ttlSeconds\"+\n" +
+	"\x11PushBatchResponse\x12\x16\n" +
 	"\x06length\x18\x01 \x01(\x03R\x06length\"J\n" +
 	"\fRangeRequest\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
@@ -1646,7 +1757,7 @@ const file_proto_cache_proto_rawDesc = "" +
 	"\rHealthRequest\"Q\n" +
 	"\x0eHealthResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12'\n" +
-	"\x0fredis_connected\x18\x02 \x01(\bR\x0eredisConnected2\xee\x06\n" +
+	"\x0fredis_connected\x18\x02 \x01(\bR\x0eredisConnected2\xae\a\n" +
 	"\fCacheService\x12,\n" +
 	"\x03Get\x12\x11.cache.GetRequest\x1a\x12.cache.GetResponse\x12,\n" +
 	"\x03Set\x12\x11.cache.SetRequest\x1a\x12.cache.SetResponse\x125\n" +
@@ -1656,7 +1767,8 @@ const file_proto_cache_proto_rawDesc = "" +
 	"\x06GetTTL\x12\x14.cache.GetTTLRequest\x1a\x15.cache.GetTTLResponse\x12A\n" +
 	"\n" +
 	"SetWithTTL\x12\x18.cache.SetWithTTLRequest\x1a\x19.cache.SetWithTTLResponse\x12/\n" +
-	"\x04Push\x12\x12.cache.PushRequest\x1a\x13.cache.PushResponse\x122\n" +
+	"\x04Push\x12\x12.cache.PushRequest\x1a\x13.cache.PushResponse\x12>\n" +
+	"\tPushBatch\x12\x17.cache.PushBatchRequest\x1a\x18.cache.PushBatchResponse\x122\n" +
 	"\x05Range\x12\x13.cache.RangeRequest\x1a\x14.cache.RangeResponse\x12/\n" +
 	"\x04HSet\x12\x12.cache.HSetRequest\x1a\x13.cache.HSetResponse\x12/\n" +
 	"\x04HGet\x12\x12.cache.HGetRequest\x1a\x13.cache.HGetResponse\x128\n" +
@@ -1678,7 +1790,7 @@ func file_proto_cache_proto_rawDescGZIP() []byte {
 	return file_proto_cache_proto_rawDescData
 }
 
-var file_proto_cache_proto_msgTypes = make([]protoimpl.MessageInfo, 33)
+var file_proto_cache_proto_msgTypes = make([]protoimpl.MessageInfo, 35)
 var file_proto_cache_proto_goTypes = []any{
 	(*GetRequest)(nil),         // 0: cache.GetRequest
 	(*GetResponse)(nil),        // 1: cache.GetResponse
@@ -1696,26 +1808,28 @@ var file_proto_cache_proto_goTypes = []any{
 	(*SetWithTTLResponse)(nil), // 13: cache.SetWithTTLResponse
 	(*PushRequest)(nil),        // 14: cache.PushRequest
 	(*PushResponse)(nil),       // 15: cache.PushResponse
-	(*RangeRequest)(nil),       // 16: cache.RangeRequest
-	(*RangeResponse)(nil),      // 17: cache.RangeResponse
-	(*HSetRequest)(nil),        // 18: cache.HSetRequest
-	(*HSetResponse)(nil),       // 19: cache.HSetResponse
-	(*HGetRequest)(nil),        // 20: cache.HGetRequest
-	(*HGetResponse)(nil),       // 21: cache.HGetResponse
-	(*HGetAllRequest)(nil),     // 22: cache.HGetAllRequest
-	(*HGetAllResponse)(nil),    // 23: cache.HGetAllResponse
-	(*HDelRequest)(nil),        // 24: cache.HDelRequest
-	(*HDelResponse)(nil),       // 25: cache.HDelResponse
-	(*PublishRequest)(nil),     // 26: cache.PublishRequest
-	(*PublishResponse)(nil),    // 27: cache.PublishResponse
-	(*SubscribeRequest)(nil),   // 28: cache.SubscribeRequest
-	(*SubscribeResponse)(nil),  // 29: cache.SubscribeResponse
-	(*HealthRequest)(nil),      // 30: cache.HealthRequest
-	(*HealthResponse)(nil),     // 31: cache.HealthResponse
-	nil,                        // 32: cache.HGetAllResponse.FieldsEntry
+	(*PushBatchRequest)(nil),   // 16: cache.PushBatchRequest
+	(*PushBatchResponse)(nil),  // 17: cache.PushBatchResponse
+	(*RangeRequest)(nil),       // 18: cache.RangeRequest
+	(*RangeResponse)(nil),      // 19: cache.RangeResponse
+	(*HSetRequest)(nil),        // 20: cache.HSetRequest
+	(*HSetResponse)(nil),       // 21: cache.HSetResponse
+	(*HGetRequest)(nil),        // 22: cache.HGetRequest
+	(*HGetResponse)(nil),       // 23: cache.HGetResponse
+	(*HGetAllRequest)(nil),     // 24: cache.HGetAllRequest
+	(*HGetAllResponse)(nil),    // 25: cache.HGetAllResponse
+	(*HDelRequest)(nil),        // 26: cache.HDelRequest
+	(*HDelResponse)(nil),       // 27: cache.HDelResponse
+	(*PublishRequest)(nil),     // 28: cache.PublishRequest
+	(*PublishResponse)(nil),    // 29: cache.PublishResponse
+	(*SubscribeRequest)(nil),   // 30: cache.SubscribeRequest
+	(*SubscribeResponse)(nil),  // 31: cache.SubscribeResponse
+	(*HealthRequest)(nil),      // 32: cache.HealthRequest
+	(*HealthResponse)(nil),     // 33: cache.HealthResponse
+	nil,                        // 34: cache.HGetAllResponse.FieldsEntry
 }
 var file_proto_cache_proto_depIdxs = []int32{
-	32, // 0: cache.HGetAllResponse.fields:type_name -> cache.HGetAllResponse.FieldsEntry
+	34, // 0: cache.HGetAllResponse.fields:type_name -> cache.HGetAllResponse.FieldsEntry
 	0,  // 1: cache.CacheService.Get:input_type -> cache.GetRequest
 	2,  // 2: cache.CacheService.Set:input_type -> cache.SetRequest
 	4,  // 3: cache.CacheService.Delete:input_type -> cache.DeleteRequest
@@ -1724,32 +1838,34 @@ var file_proto_cache_proto_depIdxs = []int32{
 	10, // 6: cache.CacheService.GetTTL:input_type -> cache.GetTTLRequest
 	12, // 7: cache.CacheService.SetWithTTL:input_type -> cache.SetWithTTLRequest
 	14, // 8: cache.CacheService.Push:input_type -> cache.PushRequest
-	16, // 9: cache.CacheService.Range:input_type -> cache.RangeRequest
-	18, // 10: cache.CacheService.HSet:input_type -> cache.HSetRequest
-	20, // 11: cache.CacheService.HGet:input_type -> cache.HGetRequest
-	22, // 12: cache.CacheService.HGetAll:input_type -> cache.HGetAllRequest
-	24, // 13: cache.CacheService.HDel:input_type -> cache.HDelRequest
-	26, // 14: cache.CacheService.Publish:input_type -> cache.PublishRequest
-	28, // 15: cache.CacheService.Subscribe:input_type -> cache.SubscribeRequest
-	30, // 16: cache.CacheService.Health:input_type -> cache.HealthRequest
-	1,  // 17: cache.CacheService.Get:output_type -> cache.GetResponse
-	3,  // 18: cache.CacheService.Set:output_type -> cache.SetResponse
-	5,  // 19: cache.CacheService.Delete:output_type -> cache.DeleteResponse
-	7,  // 20: cache.CacheService.Exists:output_type -> cache.ExistsResponse
-	9,  // 21: cache.CacheService.SetTTL:output_type -> cache.SetTTLResponse
-	11, // 22: cache.CacheService.GetTTL:output_type -> cache.GetTTLResponse
-	13, // 23: cache.CacheService.SetWithTTL:output_type -> cache.SetWithTTLResponse
-	15, // 24: cache.CacheService.Push:output_type -> cache.PushResponse
-	17, // 25: cache.CacheService.Range:output_type -> cache.RangeResponse
-	19, // 26: cache.CacheService.HSet:output_type -> cache.HSetResponse
-	21, // 27: cache.CacheService.HGet:output_type -> cache.HGetResponse
-	23, // 28: cache.CacheService.HGetAll:output_type -> cache.HGetAllResponse
-	25, // 29: cache.CacheService.HDel:output_type -> cache.HDelResponse
-	27, // 30: cache.CacheService.Publish:output_type -> cache.PublishResponse
-	29, // 31: cache.CacheService.Subscribe:output_type -> cache.SubscribeResponse
-	31, // 32: cache.CacheService.Health:output_type -> cache.HealthResponse
-	17, // [17:33] is the sub-list for method output_type
-	1,  // [1:17] is the sub-list for method input_type
+	16, // 9: cache.CacheService.PushBatch:input_type -> cache.PushBatchRequest
+	18, // 10: cache.CacheService.Range:input_type -> cache.RangeRequest
+	20, // 11: cache.CacheService.HSet:input_type -> cache.HSetRequest
+	22, // 12: cache.CacheService.HGet:input_type -> cache.HGetRequest
+	24, // 13: cache.CacheService.HGetAll:input_type -> cache.HGetAllRequest
+	26, // 14: cache.CacheService.HDel:input_type -> cache.HDelRequest
+	28, // 15: cache.CacheService.Publish:input_type -> cache.PublishRequest
+	30, // 16: cache.CacheService.Subscribe:input_type -> cache.SubscribeRequest
+	32, // 17: cache.CacheService.Health:input_type -> cache.HealthRequest
+	1,  // 18: cache.CacheService.Get:output_type -> cache.GetResponse
+	3,  // 19: cache.CacheService.Set:output_type -> cache.SetResponse
+	5,  // 20: cache.CacheService.Delete:output_type -> cache.DeleteResponse
+	7,  // 21: cache.CacheService.Exists:output_type -> cache.ExistsResponse
+	9,  // 22: cache.CacheService.SetTTL:output_type -> cache.SetTTLResponse
+	11, // 23: cache.CacheService.GetTTL:output_type -> cache.GetTTLResponse
+	13, // 24: cache.CacheService.SetWithTTL:output_type -> cache.SetWithTTLResponse
+	15, // 25: cache.CacheService.Push:output_type -> cache.PushResponse
+	17, // 26: cache.CacheService.PushBatch:output_type -> cache.PushBatchResponse
+	19, // 27: cache.CacheService.Range:output_type -> cache.RangeResponse
+	21, // 28: cache.CacheService.HSet:output_type -> cache.HSetResponse
+	23, // 29: cache.CacheService.HGet:output_type -> cache.HGetResponse
+	25, // 30: cache.CacheService.HGetAll:output_type -> cache.HGetAllResponse
+	27, // 31: cache.CacheService.HDel:output_type -> cache.HDelResponse
+	29, // 32: cache.CacheService.Publish:output_type -> cache.PublishResponse
+	31, // 33: cache.CacheService.Subscribe:output_type -> cache.SubscribeResponse
+	33, // 34: cache.CacheService.Health:output_type -> cache.HealthResponse
+	18, // [18:35] is the sub-list for method output_type
+	1,  // [1:18] is the sub-list for method input_type
 	1,  // [1:1] is the sub-list for extension type_name
 	1,  // [1:1] is the sub-list for extension extendee
 	0,  // [0:1] is the sub-list for field type_name
@@ -1766,7 +1882,7 @@ func file_proto_cache_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_cache_proto_rawDesc), len(file_proto_cache_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   33,
+			NumMessages:   35,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

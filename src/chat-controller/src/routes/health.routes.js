@@ -1,15 +1,16 @@
 import { Router } from "express";
-import redis from "../database.js";
+import cacheClient from "../cache-client.js";
 
 const router = Router();
 
 router.get("/health", async (_req, res) => {
-  const status = { status: "ok", redis: "unknown" };
+  const status = { status: "ok", cache: "unknown" };
   try {
-    const pong = await redis.ping();
-    status.redis = pong === "PONG" ? "ok" : "error";
+    const health = await cacheClient.health();
+    status.cache = health.redis_connected ? "ok" : "error";
+    if (!health.redis_connected) status.status = "degraded";
   } catch {
-    status.redis = "error";
+    status.cache = "error";
     status.status = "degraded";
   }
   res.json(status);

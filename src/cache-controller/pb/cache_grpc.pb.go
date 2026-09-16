@@ -27,6 +27,7 @@ const (
 	CacheService_GetTTL_FullMethodName     = "/cache.CacheService/GetTTL"
 	CacheService_SetWithTTL_FullMethodName = "/cache.CacheService/SetWithTTL"
 	CacheService_Push_FullMethodName       = "/cache.CacheService/Push"
+	CacheService_PushBatch_FullMethodName  = "/cache.CacheService/PushBatch"
 	CacheService_Range_FullMethodName      = "/cache.CacheService/Range"
 	CacheService_HSet_FullMethodName       = "/cache.CacheService/HSet"
 	CacheService_HGet_FullMethodName       = "/cache.CacheService/HGet"
@@ -52,6 +53,7 @@ type CacheServiceClient interface {
 	SetWithTTL(ctx context.Context, in *SetWithTTLRequest, opts ...grpc.CallOption) (*SetWithTTLResponse, error)
 	// List operations (for chat messages, etc.)
 	Push(ctx context.Context, in *PushRequest, opts ...grpc.CallOption) (*PushResponse, error)
+	PushBatch(ctx context.Context, in *PushBatchRequest, opts ...grpc.CallOption) (*PushBatchResponse, error)
 	Range(ctx context.Context, in *RangeRequest, opts ...grpc.CallOption) (*RangeResponse, error)
 	// Hash operations
 	HSet(ctx context.Context, in *HSetRequest, opts ...grpc.CallOption) (*HSetResponse, error)
@@ -147,6 +149,16 @@ func (c *cacheServiceClient) Push(ctx context.Context, in *PushRequest, opts ...
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(PushResponse)
 	err := c.cc.Invoke(ctx, CacheService_Push_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *cacheServiceClient) PushBatch(ctx context.Context, in *PushBatchRequest, opts ...grpc.CallOption) (*PushBatchResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(PushBatchResponse)
+	err := c.cc.Invoke(ctx, CacheService_PushBatch_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -257,6 +269,7 @@ type CacheServiceServer interface {
 	SetWithTTL(context.Context, *SetWithTTLRequest) (*SetWithTTLResponse, error)
 	// List operations (for chat messages, etc.)
 	Push(context.Context, *PushRequest) (*PushResponse, error)
+	PushBatch(context.Context, *PushBatchRequest) (*PushBatchResponse, error)
 	Range(context.Context, *RangeRequest) (*RangeResponse, error)
 	// Hash operations
 	HSet(context.Context, *HSetRequest) (*HSetResponse, error)
@@ -301,6 +314,9 @@ func (UnimplementedCacheServiceServer) SetWithTTL(context.Context, *SetWithTTLRe
 }
 func (UnimplementedCacheServiceServer) Push(context.Context, *PushRequest) (*PushResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method Push not implemented")
+}
+func (UnimplementedCacheServiceServer) PushBatch(context.Context, *PushBatchRequest) (*PushBatchResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method PushBatch not implemented")
 }
 func (UnimplementedCacheServiceServer) Range(context.Context, *RangeRequest) (*RangeResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method Range not implemented")
@@ -491,6 +507,24 @@ func _CacheService_Push_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CacheService_PushBatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PushBatchRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CacheServiceServer).PushBatch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CacheService_PushBatch_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CacheServiceServer).PushBatch(ctx, req.(*PushBatchRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CacheService_Range_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RangeRequest)
 	if err := dec(in); err != nil {
@@ -666,6 +700,10 @@ var CacheService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Push",
 			Handler:    _CacheService_Push_Handler,
+		},
+		{
+			MethodName: "PushBatch",
+			Handler:    _CacheService_PushBatch_Handler,
 		},
 		{
 			MethodName: "Range",

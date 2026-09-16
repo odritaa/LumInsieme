@@ -77,6 +77,16 @@ func getOperations() []Operation {
 			},
 		},
 		{
+			Name:        "PushBatch",
+			Description: "Push multiple values to list with TTL",
+			Category:    "Lists",
+			Fields: []FieldDef{
+				{Title: "Key", Placeholder: "e.g. chat:room1"},
+				{Title: "Values (comma-separated)", Placeholder: "e.g. msg1,msg2,msg3"},
+				{Title: "TTL (seconds)", Placeholder: "e.g. 259200"},
+			},
+		},
+		{
 			Name:        "Range",
 			Description: "Get range of values from list",
 			Category:    "Lists",

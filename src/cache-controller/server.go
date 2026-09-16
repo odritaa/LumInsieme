@@ -97,6 +97,27 @@ func (s *cacheServer) Push(ctx context.Context, req *pb.PushRequest) (*pb.PushRe
 	return &pb.PushResponse{Length: n}, nil
 }
 
+func (s *cacheServer) PushBatch(ctx context.Context, req *pb.PushBatchRequest) (*pb.PushBatchResponse, error) {
+	if len(req.Values) == 0 {
+		return &pb.PushBatchResponse{Length: 0}, nil
+	}
+	pipe := s.rdb.Pipeline()
+	pipe.RPush(ctx, req.Key, req.Values)
+	if req.TtlSeconds > 0 {
+		ttl := time.Duration(req.TtlSeconds) * time.Second
+		pipe.Expire(ctx, req.Key, ttl)
+	}
+	_, err := pipe.Exec(ctx)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "redis PushBatch failed: %v", err)
+	}
+	length, err := s.rdb.LLen(ctx, req.Key).Result()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "redis LLEN failed: %v", err)
+	}
+	return &pb.PushBatchResponse{Length: length}, nil
+}
+
 func (s *cacheServer) Range(ctx context.Context, req *pb.RangeRequest) (*pb.RangeResponse, error) {
 	vals, err := s.rdb.LRange(ctx, req.Key, req.Start, req.Stop).Result()
 	if err != nil {
@@ -182,12 +203,12 @@ func (s *cacheServer) Health(ctx context.Context, req *pb.HealthRequest) (*pb.He
 	_, err := s.rdb.Ping(ctx).Result()
 	if err != nil {
 		return &pb.HealthResponse{
-			Status:        "unhealthy",
+			Status:         "unhealthy",
 			RedisConnected: false,
 		}, nil
 	}
 	return &pb.HealthResponse{
-		Status:        "healthy",
+		Status:         "healthy",
 		RedisConnected: true,
 	}, nil
 }
