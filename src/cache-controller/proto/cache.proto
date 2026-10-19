@@ -1,0 +1,194 @@
+syntax = "proto3";
+
+package cache;
+
+option go_package = "github.com/odritaa/LumInsieme/src/cache-controller/pb";
+
+service CacheService {
+  // Basic key-value operations
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Set(SetRequest) returns (SetResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+  rpc Exists(ExistsRequest) returns (ExistsResponse);
+
+  // TTL operations
+  rpc SetTTL(SetTTLRequest) returns (SetTTLResponse);
+  rpc GetTTL(GetTTLRequest) returns (GetTTLResponse);
+  rpc SetWithTTL(SetWithTTLRequest) returns (SetWithTTLResponse);
+
+  // List operations (for chat messages, etc.)
+  rpc Push(PushRequest) returns (PushResponse);
+  rpc PushBatch(PushBatchRequest) returns (PushBatchResponse);
+  rpc Range(RangeRequest) returns (RangeResponse);
+
+  // Hash operations
+  rpc HSet(HSetRequest) returns (HSetResponse);
+  rpc HGet(HGetRequest) returns (HGetResponse);
+  rpc HGetAll(HGetAllRequest) returns (HGetAllResponse);
+  rpc HDel(HDelRequest) returns (HDelResponse);
+
+  // Pub/Sub
+  rpc Publish(PublishRequest) returns (PublishResponse);
+  rpc Subscribe(SubscribeRequest) returns (stream SubscribeResponse);
+
+  // Health check
+  rpc Health(HealthRequest) returns (HealthResponse);
+}
+
+// Basic key-value
+message GetRequest {
+  string key = 1;
+}
+
+message GetResponse {
+  string value = 1;
+  bool found = 2;
+}
+
+message SetRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message SetResponse {
+  bool ok = 1;
+}
+
+message DeleteRequest {
+  string key = 1;
+}
+
+message DeleteResponse {
+  bool deleted = 1;
+}
+
+message ExistsRequest {
+  string key = 1;
+}
+
+message ExistsResponse {
+  bool exists = 1;
+}
+
+// TTL
+message SetTTLRequest {
+  string key = 1;
+  int64 ttl_seconds = 2;
+}
+
+message SetTTLResponse {
+  bool ok = 1;
+}
+
+message GetTTLRequest {
+  string key = 1;
+}
+
+message GetTTLResponse {
+  int64 ttl_seconds = 1;
+}
+
+message SetWithTTLRequest {
+  string key = 1;
+  string value = 2;
+  int64 ttl_seconds = 3;
+}
+
+message SetWithTTLResponse {
+  bool ok = 1;
+}
+
+// List operations
+message PushRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message PushResponse {
+  int64 length = 1;
+}
+
+message PushBatchRequest {
+  string key = 1;
+  repeated string values = 2;
+  int64 ttl_seconds = 3;
+}
+
+message PushBatchResponse {
+  int64 length = 1;
+}
+
+message RangeRequest {
+  string key = 1;
+  int64 start = 2;
+  int64 stop = 3;
+}
+
+message RangeResponse {
+  repeated string values = 1;
+}
+
+// Hash operations
+message HSetRequest {
+  string key = 1;
+  string field = 2;
+  string value = 3;
+}
+
+message HSetResponse {
+  bool ok = 1;
+}
+
+message HGetRequest {
+  string key = 1;
+  string field = 2;
+}
+
+message HGetResponse {
+  string value = 1;
+  bool found = 2;
+}
+
+message HGetAllRequest {
+  string key = 1;
+}
+
+message HGetAllResponse {
+  map<string, string> fields = 1;
+}
+
+message HDelRequest {
+  string key = 1;
+  string field = 2;
+}
+
+message HDelResponse {
+  bool deleted = 1;
+}
+
+// Pub/Sub
+message PublishRequest {
+  string channel = 1;
+  string message = 2;
+}
+
+message PublishResponse {
+  int64 subscribers = 1;
+}
+
+message SubscribeRequest {
+  string channel = 1;
+}
+
+message SubscribeResponse {
+  string channel = 1;
+  string message = 2;
+}
+
+// Health
+message HealthRequest {}
+
+message HealthResponse {
+  string status = 1;
+  bool redis_connected = 2;
+}

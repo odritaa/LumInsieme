@@ -1,6 +1,7 @@
 
 from types import CoroutineType
 import asyncio
+import json
 
 from playwright.async_api import async_playwright
 
@@ -8,6 +9,8 @@ from playwright.async_api import async_playwright
 from utils.movieData import MovieData
 from utils.strategyScrapping import StrategyScrapping
 from strategies.multiplexScrapping import MultiplexStrategy
+
+
 
 class PlaywrightBrowserController:
     _browser = None
@@ -37,17 +40,33 @@ class PlaywrightBrowserController:
         responseInfo:list[MovieData] = await strategy.doScrapping(page_context)
         return responseInfo
 
+    @staticmethod
+    def _serialize(obj):
+        if isinstance(obj, MovieData):
+            return {
+                "title": obj.title,
+                "date": obj.date.strftime("%Y-%m-%d"),
+                "duration": obj.duration,
+                "theater": obj.theater,
+                "screenings": obj.screenings,
+            }
+        if isinstance(obj, dict):
+            return {k: PlaywrightBrowserController._serialize(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [PlaywrightBrowserController._serialize(item) for item in obj]
+        return obj
+
     async def run(self):
         stretegies:list[StrategyScrapping] = [MultiplexStrategy()] # --- Load the strategies later.... --- #
         # --- Load the strategy later.... --- #
         task = [self.scrapper_page(strategy) for strategy in stretegies]
 
-        movies = await asyncio.gather(*task)
-        print(f"[DEBUG] Movies data: \n----------------------\n")
-        for movieData in movies:
-            for movie in movieData:
-                print(movie)
-                print("----------------------")
+        moviesDataDays = await asyncio.gather(*task)
+        
+        serialized = PlaywrightBrowserController._serialize(moviesDataDays)
+        with open("moviesData.json", "w", encoding="utf-8") as f:
+            json.dump(serialized, f, indent=2, ensure_ascii=False)
+        
         await self.close()
 
     # --- Close the browser ---#

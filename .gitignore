@@ -1,4 +1,5 @@
 #--- Librerias y entornos de ejecucion ---#
+<<<<<<< HEAD
 node_modules/
 env/
 venv/
@@ -7,10 +8,18 @@ __pycache__/
 dist/
 build/
 */node_modules/*
+=======
+**/env/*
+=======
+*/env/*
+**/__pycache__/*
+**/node_modules/*
+>>>>>>> 1d517e3fda1feb8d62af3b85ad9998aa96f97dc6
 */package.json
 /*package-lock.json
 #--- Librerias y entornos de ejecucion ---#
 #--- CONFIGURACIONES DEL SISTEMA ---#
+*.pyc
 *.env
 #--- CONFIGURACIONES DEL SISTEMA ---#
 

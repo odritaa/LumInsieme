@@ -1,0 +1,6199 @@
+[
+  {
+    "2026-08-04": [
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      }
+    ],
+    "2026-08-05": [
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      }
+    ],
+    "2026-08-06": [
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      }
+    ],
+    "2026-08-07": [
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      }
+    ],
+    "2026-08-08": [
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-04",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:05",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "20:40",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:00"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "14:25",
+              "18:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:50",
+              "18:50",
+              "20:05",
+              "21:10",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:40",
+              "14:40",
+              "16:40",
+              "18:40",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:45",
+              "14:30",
+              "16:15",
+              "18:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15",
+              "20:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Afinador",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "22:35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia De La Revelacion",
+        "date": "2026-08-05",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-06",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-07",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "El Dia D: Bajo Presion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "18:00"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Invitacion",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "14:25",
+              "22:25"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "20:25"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Spider-man: Un Dia Nuevo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "4D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "4D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "3D Subtitulada",
+            "hours": [
+              "15:50",
+              "21:30"
+            ]
+          },
+          {
+            "type": "3D Español",
+            "hours": [
+              "13:00",
+              "18:40"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "16:00",
+              "18:55"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "12:50",
+              "15:10",
+              "21:35"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "21:05",
+              "22:20"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:40",
+              "18:25"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Subtitulada",
+            "hours": [
+              "13:50",
+              "19:30",
+              "22:20"
+            ]
+          },
+          {
+            "type": "COMFORT PLUS Español",
+            "hours": [
+              "16:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Domingos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:00"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:15"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "La Odisea",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "15:35",
+              "16:40",
+              "17:55",
+              "18:50",
+              "20:05",
+              "21:15",
+              "22:10"
+            ]
+          },
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "13:00"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toy Story 5",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Español",
+            "hours": [
+              "13:40"
+            ]
+          },
+          {
+            "type": "2D Español",
+            "hours": [
+              "14:20",
+              "16:20",
+              "20:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Minions & Monstruos",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "12:55",
+              "14:40",
+              "18:40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Moana",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Español",
+            "hours": [
+              "16:25",
+              "18:20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Obsesión",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "2D Subtitulada",
+            "hours": [
+              "22:30"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Los Colores Del Tiempo",
+        "date": "2026-08-08",
+        "duration": "1 hora",
+        "theater": "Multiplex Belgrano",
+        "screenings": [
+          {
+            "type": "COMFORT PLUS 2D Subtitulada",
+            "hours": [
+              "13:10",
+              "15:35",
+              "20:00"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
