@@ -10,11 +10,19 @@ Los agentes deben tener siempre presente el objetivo principal y el stack tecnol
 
 **Stack tecnológico:**
 - **Frontend:** React JS + Tailwind CSS
-- **Backend:** Microservicios con NodeJS (login, gestión de usuarios, eventos), Python (scrapper, sistema de recomendación, acceso a base de datos), Golang (control de caché)
+- **Backend:** Microservicios con NodeJS (login, gestión de usuarios, eventos), Python (scrapper, acceso a base de datos), Golang (control de caché)
 - **Base de datos:** PostgreSQL (datos persistentes: usuarios, intereses, eventos), Redis (caché: chats grupales, datos scrapeados)
 - **Autenticación:** Google OAuth 2.0 + JWT
-- **Monitoreo:** Grafana
 - **Arquitectura:** Cliente-servidor, diseño modular de microservicios
+
+## Reducción de alcance (Resolución del 28 de septiembre de 2026)
+
+Por decisión unánime del grupo, el alcance del proyecto se redujo. Los agentes **no deben implementar ni proponer** lo siguiente:
+
+- **Sistema de recomendación de contenido:** queda postergado para una etapa futura. No crear ni modificar el módulo `recomendation-system/` ni agregar lógica de recomendación basada en gustos.
+- **Grafana:** no se utilizará para la observabilidad del proyecto. No agregar configuración, dashboards ni dependencias de Grafana.
+
+El feed de eventos lo gestiona `reunion-controller` (ver su sección). Cualquier cambio sobre estas decisiones requiere autorización explícita del usuario.
 
 ## Estructura del proyecto
 
@@ -30,15 +38,14 @@ Los agentes deben tener siempre presente el objetivo principal y el stack tecnol
     ├── scrapper/              # Scraping de datos de cines y horarios (Python)
     ├── cache-controller/      # Gestión de caché con Redis (Golang)
     ├── login-controller/      # Autenticación Google OAuth + JWT (NodeJS)
-    ├── reunion-controller/    # Gestión de eventos y emparejamiento de usuarios
-    ├── chat-controller/       # Chat grupal por evento en tiempo real (WebSockets)
-    └── recomendation-system/  # Sistema de recomendaciones basado en gustos (Python)
+    ├── reunion-controller/    # Gestión de eventos, feed cronológico y emparejamiento de usuarios
+    └── chat-controller/       # Chat grupal por evento en tiempo real (WebSockets)
 ```
 
 ## Arquitectura
 
 El sistema sigue un modelo cliente-servidor con dos formas de almacenamiento:
-- **PostgreSQL:** Almacenamiento centralizado para información de usuarios, intereses, eventos y datos del sistema de recomendación.
+- **PostgreSQL:** Almacenamiento centralizado para información de usuarios, intereses, eventos y datos del sistema.
 - **Redis:** Almacenamiento no persistente para chats grupales e información scrapeada de sitios web de cines.
 
 Los microservicios se comunican mediante interfaces estandarizadas, permitiendo escalamiento horizontal independiente por módulo.
@@ -56,6 +63,7 @@ Toda la documentación del proyecto se encuentra en el directorio `docs/`. Los a
 5. **No exponer secretos** — Nunca hardcodear claves, tokens o credenciales.
 6. **No hacer commits sin autorización explícita** — Solo crear commits cuando el usuario lo solicite.
 7. **Verificar con herramientas del proyecto** — Ejecutar lint y typecheck después de realizar cambios.
+8. **Respetar el alcance vigente** — No implementar funcionalidades postergadas (sistema de recomendación, Grafana) salvo autorización explícita.
 
 ## Convenciones por subproyecto
 
@@ -64,14 +72,15 @@ Toda la documentación del proyecto se encuentra en el directorio `docs/`. Los a
 - Mantener la separación de responsabilidades (componentes, hooks, servicios, estilos).
 - Usar los mismos patrones de estado global que ya estén implementados.
 - Diseño responsive (enfocado a dispositivos móviles como prioridad).
-- La interfaz debe permitir crear evento, ver recomendaciones o chatear en máximo 3 clics.
+- La interfaz debe permitir crear evento, ver el feed de eventos o chatear en máximo 3 clics.
+- El feed se muestra igual para todos los usuarios, sin personalización por gustos.
 
 ### `src/backend/` (NodeJS, Python, Golang)
 - Respetar la estructura de rutas y controladores establecida.
 - Usar los mismos patrones de middleware, validación y manejo de errores.
 - Seguir el esquema de base de datos/modelos existente.
 - NodeJS se encarga de login, gestión de usuarios y JWT.
-- Python se encarga de scrapper, sistema de recomendación y acceso a PostgreSQL.
+- Python se encarga de scrapper y acceso a PostgreSQL.
 - Golang se encarga del control de caché con Redis.
 
 ### `src/scrapper/` (Python)
@@ -98,18 +107,14 @@ Toda la documentación del proyecto se encuentra en el directorio `docs/`. Los a
 - Validar parámetros enviados por el usuario para crear un evento.
 - La lógica de emparejamiento debe considerar los gustos de ambos usuarios.
 - No forzar emparejamientos sin consentimiento mutuo explícito.
+- Es el responsable de proveer el contenido (feed de eventos) al usuario, ordenado únicamente por horario de publicación, del más reciente al más lejano.
+- El contenido se presenta de forma idéntica a todos los usuarios; no filtrar ni ordenar según gustos. El usuario distingue los eventos por su propio criterio.
 
 ### `src/chat-controller/` (WebSockets)
 - Conectar usuarios en un chat grupal único para cada evento.
 - La mensajería debe ser en tiempo real (WebSockets).
 - Almacenar solo el historial necesario en Redis; respetar privacidad.
 - Permitir coordinación entre usuarios para concretar la cita.
-
-### `src/recomendation-system/` (Python)
-- Basar recomendaciones en gustos declarados e historial de interacciones.
-- Usar como fuentes los gustos e intereses del perfil de usuario.
-- No recomendar contenido duplicado o ya visto/descartado.
-- Presentar eventos afines al usuario en el feed principal.
 
 ## Requisitos No Funcionales
 
