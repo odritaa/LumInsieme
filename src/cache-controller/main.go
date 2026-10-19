@@ -16,14 +16,22 @@ import (
 	pb "github.com/odritaa/LumInsieme/src/cache-controller/pb"
 )
 
-const port = ":50051"
+func getEnv(key, fallback string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return fallback
+}
 
 func main() {
 	ctx := context.Background()
 
+	redisAddr := getEnv("REDIS_ADDR", "localhost:6379")
+	port := ":" + getEnv("GRPC_PORT", "50051")
+
 	rdb := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
-		Password: "",
+		Addr:     redisAddr,
+		Password: getEnv("REDIS_PASSWORD", ""),
 		DB:       0,
 	})
 
