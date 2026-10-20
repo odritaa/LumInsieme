@@ -1,20 +1,20 @@
 import { createContext, useContext, useState, useCallback, useEffect, useMemo } from "react";
-import { CURRENT_USER_ID, mockRooms, mockMessages } from "../services/mockData";
 import {
   deleteCurrentUser,
   fetchCurrentUser,
   logoutRequest,
   updateCurrentUser,
 } from "../services/authService";
-import { currentTime } from "../utils/format";
+import { createSala, fetchSala, fetchSalas, joinSala, leaveSala } from "../services/salaService";
 
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
   const [user, setUser] = useState(null);
   const [authStatus, setAuthStatus] = useState("loading");
-  const [rooms, setRooms] = useState(mockRooms);
-  const [messages, setMessages] = useState(mockMessages);
+  const [rooms, setRooms] = useState([]);
+  const [roomsStatus, setRoomsStatus] = useState("idle");
+  const [roomsError, setRoomsError] = useState(null);
 
   /* ---- Sesión (JWT en cookie httpOnly emitida por el login-controller) ---- */
 
@@ -35,172 +35,165 @@ export function AppProvider({ children }) {
     };
   }, []);
 
+  const endSession = useCallback(() => {
+    setUser(null);
+    setAuthStatus("anonymous");
+    setRooms([]);
+    setRoomsStatus("idle");
+  }, []);
+
+  // Un 401 de cualquier servicio significa que el JWT venció: se vuelve al login.
+  const guard = useCallback(
+    async (request) => {
+      try {
+        return await request();
+      } catch (error) {
+        if (error.status === 401) endSession();
+        throw error;
+      }
+    },
+    [endSession]
+  );
+
   const logout = useCallback(async () => {
     try {
       await logoutRequest();
     } finally {
-      setUser(null);
-      setAuthStatus("anonymous");
+      endSession();
     }
+  }, [endSession]);
+
+  /* ---- Salas (reunion-controller) ---- */
+
+  const upsertRoom = useCallback((room) => {
+    setRooms((prev) => {
+      const index = prev.findIndex((r) => r.id === room.id);
+      if (index === -1) return [room, ...prev];
+      const next = [...prev];
+      next[index] = room;
+      return next;
+    });
   }, []);
 
-  const updateUser = useCallback(async (patch) => {
-    const saved = await updateCurrentUser(patch);
-    setUser(saved);
+  const removeRoom = useCallback((id) => {
+    setRooms((prev) => prev.filter((r) => r.id !== id));
+  }, []);
 
-    // Nombre y géneros viajan denormalizados en salas y mensajes: sincronizarlos.
-    const memberPatch = {};
-    if (patch.name !== undefined) memberPatch.name = saved.name;
-    if (patch.genres !== undefined) memberPatch.genres = saved.genres;
-    if (Object.keys(memberPatch).length === 0) return saved;
-
-    setRooms((rs) =>
-      rs.map((room) => ({
-        ...room,
-        members: room.members.map((m) =>
-          m.id === CURRENT_USER_ID ? { ...m, ...memberPatch } : m
-        ),
-      }))
-    );
-
-    if (patch.name !== undefined) {
-      setMessages((ms) =>
-        ms.map((m) => (m.authorId === CURRENT_USER_ID ? { ...m, author: saved.name } : m))
-      );
+  const loadRooms = useCallback(async () => {
+    setRoomsStatus("loading");
+    setRoomsError(null);
+    try {
+      setRooms(await guard(fetchSalas));
+      setRoomsStatus("ready");
+    } catch (error) {
+      setRoomsError(error.message);
+      setRoomsStatus("error");
     }
-
-    return saved;
-  }, []);
-
-  const deleteAccount = useCallback(async () => {
-    await deleteCurrentUser();
-
-    // Salas y mensajes siguen siendo mock en memoria: limpiarlos acá.
-    setRooms((rs) =>
-      rs.map((room) => ({
-        ...room,
-        members: room.members.filter((m) => m.id !== CURRENT_USER_ID),
-      }))
-    );
-    setMessages((ms) => ms.filter((m) => m.authorId !== CURRENT_USER_ID));
-    setUser(null);
-    setAuthStatus("anonymous");
-  }, []);
-
-  /* ---- Salas ---- */
+  }, [guard]);
 
   const getRoom = useCallback((id) => rooms.find((r) => r.id === String(id)) ?? null, [rooms]);
 
+  /** Trae la sala del servidor; devuelve null si ya no existe. */
+  const loadRoom = useCallback(
+    async (id) => {
+      try {
+        const room = await guard(() => fetchSala(id));
+        upsertRoom(room);
+        return room;
+      } catch (error) {
+        if (error.status === 404) {
+          removeRoom(id);
+          return null;
+        }
+        throw error;
+      }
+    },
+    [guard, upsertRoom, removeRoom]
+  );
+
   const createRoom = useCallback(
-    ({ movie, place, date, time, capacity, note }) => {
-      const room = {
-        id: String(Date.now()),
-        movie,
-        place,
-        date,
-        time,
-        host: user?.name ?? "Anónimo",
-        capacity,
-        note,
-        members: [
-          {
-            id: CURRENT_USER_ID,
-            name: user?.name ?? "Anónimo",
-            genres: user?.genres ?? [],
-            isAdmin: true,
-          },
-        ],
-      };
-      setRooms((prev) => [room, ...prev]);
+    async (data) => {
+      const room = await guard(() => createSala(data));
+      upsertRoom(room);
       return room;
     },
-    [user]
+    [guard, upsertRoom]
   );
 
   const joinRoom = useCallback(
-    (roomId) => {
-      setRooms((prev) =>
-        prev.map((room) => {
-          if (room.id !== roomId) return room;
-          if (room.members.some((m) => m.id === CURRENT_USER_ID)) return room;
-          if (room.members.length >= room.capacity) return room;
-          return {
-            ...room,
-            members: [
-              ...room.members,
-              { id: CURRENT_USER_ID, name: user?.name ?? "Anónimo", genres: user?.genres ?? [] },
-            ],
-          };
-        })
-      );
+    async (id) => {
+      const room = await guard(() => joinSala(id));
+      upsertRoom(room);
+      return room;
     },
-    [user]
+    [guard, upsertRoom]
   );
 
-  const leaveRoom = useCallback((roomId) => {
-    setRooms((prev) =>
-      prev.map((room) =>
-        room.id === roomId
-          ? { ...room, members: room.members.filter((m) => m.id !== CURRENT_USER_ID) }
-          : room
-      )
-    );
-  }, []);
-
-  /* ---- Chat ---- */
-
-  const getMessages = useCallback(
-    (roomId) => messages.filter((m) => m.roomId === roomId),
-    [messages]
-  );
-
-  const sendMessage = useCallback(
-    (roomId, text) => {
-      const clean = text.trim();
-      if (!clean) return;
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: `m${Date.now()}`,
-          roomId,
-          authorId: CURRENT_USER_ID,
-          author: user?.name ?? "Anónimo",
-          time: currentTime(),
-          text: clean,
-        },
-      ]);
+  /** Devuelve null si la sala se eliminó al quedar vacía. */
+  const leaveRoom = useCallback(
+    async (id) => {
+      const room = await guard(() => leaveSala(id));
+      if (room) upsertRoom(room);
+      else removeRoom(id);
+      return room;
     },
-    [user]
+    [guard, upsertRoom, removeRoom]
   );
+
+  /* ---- Perfil ---- */
+
+  const updateUser = useCallback(
+    async (patch) => {
+      const saved = await guard(() => updateCurrentUser(patch));
+      setUser(saved);
+      // Las salas muestran nombre y géneros de cada miembro: refrescarlas si cambiaron.
+      if ((patch.name !== undefined || patch.genres !== undefined) && roomsStatus === "ready") {
+        loadRooms();
+      }
+      return saved;
+    },
+    [guard, loadRooms, roomsStatus]
+  );
+
+  const deleteAccount = useCallback(async () => {
+    await guard(deleteCurrentUser);
+    endSession();
+  }, [guard, endSession]);
 
   const value = useMemo(
     () => ({
       user,
       authStatus,
       rooms,
+      roomsStatus,
+      roomsError,
       logout,
       updateUser,
       deleteAccount,
+      loadRooms,
       getRoom,
+      loadRoom,
       createRoom,
       joinRoom,
       leaveRoom,
-      getMessages,
-      sendMessage,
+      guard,
     }),
     [
       user,
       authStatus,
       rooms,
+      roomsStatus,
+      roomsError,
       logout,
       updateUser,
       deleteAccount,
+      loadRooms,
       getRoom,
+      loadRoom,
       createRoom,
       joinRoom,
       leaveRoom,
-      getMessages,
-      sendMessage,
+      guard,
     ]
   );
 

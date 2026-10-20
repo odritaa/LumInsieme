@@ -1,7 +1,7 @@
-export default function SessionLoader() {
+export default function SessionLoader({ message = "Verificando tu sesión…" }) {
   return (
     <div className="page login-container">
-      <p className="empty-state">Verificando tu sesión…</p>
+      <p className="empty-state">{message}</p>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { CURRENT_USER_ID } from "../services/mockData";
+import { useAppContext } from "../contexts/AppContext";
 import { getAvatarStyle, getInitials } from "../utils/avatar";
 import { formatDateTime, posterLabel } from "../utils/format";
 
 export default function RoomCard({ room, index = 0 }) {
+  const { user } = useAppContext();
   const taken = room.members.length;
   const free = Math.max(room.capacity - taken, 0);
-  const isMember = room.members.some((m) => m.id === CURRENT_USER_ID);
+  const isMember = room.members.some((m) => m.id === user?.id);
 
   return (
     <div className="room-card" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -39,7 +40,7 @@ export default function RoomCard({ room, index = 0 }) {
             <div
               key={m.id}
               className="avatar-small"
-              style={getAvatarStyle(m.id, m.id === CURRENT_USER_ID)}
+              style={getAvatarStyle(m.id, m.id === user?.id)}
               title={m.name}
             >
               {getInitials(m.name)}

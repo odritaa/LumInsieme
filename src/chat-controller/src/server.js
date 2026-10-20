@@ -2,6 +2,7 @@ import http from "node:http";
 import { WebSocketServer } from "ws";
 import { URL } from "node:url";
 import app from "./app.js";
+import { verifyChatTicket } from "./auth.js";
 import cacheClient from "./cache-client.js";
 import ChatMessage from "./models/ChatMessage.js";
 import WsMessage from "./models/WsMessage.js";
@@ -9,21 +10,25 @@ import "dotenv/config";
 
 const port = Number(process.env.PORT) || 3000;
 const HISTORY_LIMIT = 50;
+const MAX_CONTENT_LENGTH = 1000;
 
 const clients = new Map();
 
 const server = http.createServer(app);
-const wss = new WebSocketServer({ server });
+const wss = new WebSocketServer({ server, maxPayload: 16 * 1024 });
 
 wss.on("connection", (socket, req) => {
   const { searchParams } = new URL(req.url, `http://${req.headers.host}`);
-  const eventId = searchParams.get("event_id");
-  const username = searchParams.get("username");
+  const ticket = searchParams.get("ticket");
 
-  if (!eventId || !username) {
-    socket.close(4000, "event_id and username are required");
+  let identity;
+  try {
+    identity = verifyChatTicket(ticket ?? "");
+  } catch {
+    socket.close(4401, "invalid ticket");
     return;
   }
+  const { userId, username, eventId } = identity;
 
   if (!clients.has(eventId)) {
     clients.set(eventId, new Set());
@@ -37,9 +42,11 @@ wss.on("connection", (socket, req) => {
   socket.on("message", (raw) => {
     try {
       const data = JSON.parse(raw.toString());
-      if (!data.content || typeof data.content !== "string") return;
+      if (typeof data.content !== "string") return;
+      const content = data.content.trim();
+      if (!content || content.length > MAX_CONTENT_LENGTH) return;
 
-      const message = new ChatMessage(username, data.content);
+      const message = new ChatMessage(userId, username, content);
       saveAndBroadcast(eventId, message);
     } catch {
       console.warn("[ws] mensaje no es JSON válido");
@@ -77,7 +84,7 @@ async function saveAndBroadcast(eventId, message) {
     console.warn("[cache-client] no se pudo encolar el mensaje");
   }
 
-  const payload = WsMessage.broadcast(message.username, message.content, message.timestamp);
+  const payload = WsMessage.broadcast(message);
   const room = clients.get(eventId);
   if (!room) return;
 

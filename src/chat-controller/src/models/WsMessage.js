@@ -12,8 +12,8 @@ export default class WsMessage {
     return new WsMessage("history", messages);
   }
 
-  static broadcast(username, content, timestamp) {
-    return new WsMessage("message", { username, content, timestamp });
+  static broadcast(message) {
+    return new WsMessage("message", message.toJSON());
   }
 
   toJSON() {

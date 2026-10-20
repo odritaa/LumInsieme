@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
-import { fetchMovies } from "../services/movieService";
+import { fetchCarteleraMovies } from "../services/carteleraService";
 import Navbar from "../components/Navbar";
-import { formatDate } from "../utils/format";
+import { formatDate, todayISO } from "../utils/format";
 
 const CAPACITIES = [2, 3, 4, 5, 6];
 const MAX_RESULTS = 8;
@@ -13,20 +13,22 @@ export default function CreateRoom() {
   const navigate = useNavigate();
   const location = useLocation();
   const prefill = location.state?.movie ?? null;
+  const today = todayISO();
 
   const [catalog, setCatalog] = useState([]);
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(prefill);
   const [place, setPlace] = useState(prefill?.place ?? "");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [date, setDate] = useState(location.state?.date ?? "");
+  const [time, setTime] = useState(location.state?.time ?? "");
   const [capacity, setCapacity] = useState(3);
   const [note, setNote] = useState("");
   const [error, setError] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    fetchMovies()
+    fetchCarteleraMovies()
       .then((data) => { if (!cancelled) setCatalog(data); })
       .catch(() => { if (!cancelled) setCatalog([]); });
     return () => { cancelled = true; };
@@ -56,7 +58,7 @@ export default function CreateRoom() {
   const pickMovie = (movie) => {
     setSelected({ title: movie.title, place: movie.place });
     setPlace(movie.place ?? "");
-    if (movie.date) setDate(movie.date);
+    if (movie.date && movie.date >= today) setDate(movie.date);
     setQuery("");
   };
 
@@ -65,7 +67,7 @@ export default function CreateRoom() {
     setPlace("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!selected) {
       setError("Elegí una película para la sala.");
@@ -75,15 +77,22 @@ export default function CreateRoom() {
       setError("Indicá en qué cine se hace la función.");
       return;
     }
-    const room = createRoom({
-      movie: selected.title,
-      place: place.trim(),
-      date,
-      time,
-      capacity,
-      note: note.trim(),
-    });
-    navigate(`/sala/${room.id}`, { replace: true });
+    setError(null);
+    setSubmitting(true);
+    try {
+      const room = await createRoom({
+        movie: selected.title,
+        place: place.trim(),
+        date,
+        time,
+        capacity,
+        note: note.trim(),
+      });
+      navigate(`/sala/${room.id}`, { replace: true });
+    } catch (err) {
+      setError(err.details?.length ? err.details.join(". ") : err.message);
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -193,6 +202,7 @@ export default function CreateRoom() {
                   type="date"
                   className="input-dark"
                   required
+                  min={today}
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                 />
@@ -237,6 +247,7 @@ export default function CreateRoom() {
             <textarea
               id="note"
               className="input-dark"
+              maxLength={500}
               placeholder="Ej: Buscamos gente que ame el cine de autor, primer encuentro del grupo, etc."
               value={note}
               onChange={(e) => setNote(e.target.value)}
@@ -249,8 +260,8 @@ export default function CreateRoom() {
             <Link className="btn-secondary" to="/feed">
               Cancelar
             </Link>
-            <button type="submit" className="btn-primary">
-              Crear Sala
+            <button type="submit" className="btn-primary" disabled={submitting}>
+              {submitting ? "Creando..." : "Crear Sala"}
             </button>
           </div>
         </form>

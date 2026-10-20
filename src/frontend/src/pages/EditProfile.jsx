@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
-import { GENRES } from "../services/mockData";
+import { GENRES } from "../utils/genres";
 import Navbar from "../components/Navbar";
 
 const FAVORITES_SLOTS = 5;

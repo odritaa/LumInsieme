@@ -1,5 +1,6 @@
 export default class ChatMessage {
-  constructor(username, content, timestamp = Date.now()) {
+  constructor(userId, username, content, timestamp = Date.now()) {
+    this.userId = userId;
     this.username = username;
     this.content = content;
     this.timestamp = timestamp;
@@ -7,6 +8,7 @@ export default class ChatMessage {
 
   toJSON() {
     return {
+      userId: this.userId,
       username: this.username,
       content: this.content,
       timestamp: this.timestamp,
@@ -14,6 +16,6 @@ export default class ChatMessage {
   }
 
   static fromJSON(obj) {
-    return new ChatMessage(obj.username, obj.content, obj.timestamp);
+    return new ChatMessage(obj.userId ?? null, obj.username, obj.content, obj.timestamp);
   }
 }

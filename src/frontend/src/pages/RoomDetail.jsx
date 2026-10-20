@@ -1,25 +1,79 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
-import { CURRENT_USER_ID } from "../services/mockData";
+import useSalaChat from "../hooks/useSalaChat";
 import Navbar from "../components/Navbar";
 import ChatPanel from "../components/ChatPanel";
+import SessionLoader from "../components/SessionLoader";
 import { getAvatarStyle, getInitials } from "../utils/avatar";
 import { formatDateTime, posterLabel } from "../utils/format";
 
 export default function RoomDetail() {
   const { id } = useParams();
-  const { getRoom, joinRoom, leaveRoom, getMessages, sendMessage } = useAppContext();
+  const navigate = useNavigate();
+  const { user, getRoom, loadRoom, joinRoom, leaveRoom } = useAppContext();
+  const [status, setStatus] = useState("loading");
+  const [busy, setBusy] = useState(false);
+  const [actionError, setActionError] = useState(null);
 
   const room = getRoom(id);
-  if (!room) return <Navigate to="/feed" replace />;
+  const isMember = Boolean(room?.members.some((m) => m.id === user?.id));
+  const chat = useSalaChat(room?.id, isMember);
 
-  const isMember = room.members.some((m) => m.id === CURRENT_USER_ID);
+  // Siempre se refresca: la copia del feed puede tener miembros desactualizados.
+  useEffect(() => {
+    let cancelled = false;
+    setStatus("loading");
+    loadRoom(id)
+      .then((fresh) => {
+        if (!cancelled) setStatus(fresh ? "ready" : "missing");
+      })
+      .catch(() => {
+        if (!cancelled) setStatus("error");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [id, loadRoom]);
+
+  if (!room) {
+    if (status === "loading") return <SessionLoader message="Cargando sala…" />;
+    if (status === "error") {
+      return (
+        <div className="page">
+          <Navbar action={{ to: "/feed", label: "← Volver al Feed" }} />
+          <p className="feed-state feed-state-error">No pudimos cargar la sala. Probá de nuevo.</p>
+        </div>
+      );
+    }
+    return <Navigate to="/feed?vista=salas" replace />;
+  }
+
   const free = Math.max(room.capacity - room.members.length, 0);
-  const messages = getMessages(room.id);
+
+  const runAction = async (action) => {
+    setBusy(true);
+    setActionError(null);
+    try {
+      await action();
+    } catch (err) {
+      setActionError(err.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const handleJoin = () => runAction(() => joinRoom(room.id));
+
+  const handleLeave = () =>
+    runAction(async () => {
+      const remaining = await leaveRoom(room.id);
+      if (!remaining) navigate("/feed?vista=salas", { replace: true });
+    });
 
   return (
     <div className="page page-column">
-      <Navbar action={{ to: "/feed", label: "← Volver al Feed" }} />
+      <Navbar action={{ to: "/feed?vista=salas", label: "← Volver al Feed" }} />
 
       <div className="room-header">
         <div className="room-header-content">
@@ -32,20 +86,21 @@ export default function RoomDetail() {
               {room.note && <p className="room-description">{room.note}</p>}
               <div className="room-actions">
                 {isMember ? (
-                  <button type="button" className="btn-danger" onClick={() => leaveRoom(room.id)}>
+                  <button type="button" className="btn-danger" disabled={busy} onClick={handleLeave}>
                     Salir de la Sala
                   </button>
                 ) : (
                   <button
                     type="button"
                     className="btn-primary"
-                    disabled={free === 0}
-                    onClick={() => joinRoom(room.id)}
+                    disabled={busy || free === 0}
+                    onClick={handleJoin}
                   >
                     {free === 0 ? "Sala completa" : "Unirme a la Sala"}
                   </button>
                 )}
               </div>
+              {actionError && <p className="form-error">{actionError}</p>}
             </div>
           </div>
         </div>
@@ -58,7 +113,7 @@ export default function RoomDetail() {
           </h3>
           <div className="room-member-list">
             {room.members.map((m) => {
-              const isSelf = m.id === CURRENT_USER_ID;
+              const isSelf = m.id === user?.id;
               return (
                 <div key={m.id} className="room-member-item">
                   <div className="room-member-avatar" style={getAvatarStyle(m.id, isSelf)}>
@@ -89,8 +144,10 @@ export default function RoomDetail() {
         </div>
 
         <ChatPanel
-          messages={messages}
-          onSend={(text) => sendMessage(room.id, text)}
+          messages={chat.messages}
+          onSend={chat.send}
+          status={chat.status}
+          currentUserId={user?.id}
           disabled={!isMember}
           disabledHint="Unite a la sala para participar del chat"
         />

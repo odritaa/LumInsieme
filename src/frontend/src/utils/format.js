@@ -23,10 +23,41 @@ export function formatDateTime(date, time) {
   return parts.filter(Boolean).join(" · ");
 }
 
-/** Hora actual "HH:MM", para sellar los mensajes de chat nuevos. */
+function pad(n) {
+  return String(n).padStart(2, "0");
+}
+
+function toISODate(date) {
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
+
+/** Fecha local de hoy, "AAAA-MM-DD" (sin pasar por UTC). */
+export function todayISO() {
+  return toISODate(new Date());
+}
+
+/** "Hoy", "Mañana" o "mié, 21 oct" para los selectores de día. */
+export function dayLabel(date) {
+  const today = new Date();
+  const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+  if (date === toISODate(today)) return "Hoy";
+  if (date === toISODate(tomorrow)) return "Mañana";
+  return formatDate(date);
+}
+
+/** Hora "HH:MM" actual, para saber qué funciones de hoy ya empezaron. */
 export function currentTime() {
   const now = new Date();
-  return `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
+  return `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+}
+
+/** Sello de un mensaje de chat: "20:31", o "mar, 14 jul · 20:31" si no es de hoy. */
+export function formatMessageTime(timestamp) {
+  const date = new Date(Number(timestamp));
+  if (Number.isNaN(date.getTime())) return "";
+  const time = `${pad(date.getHours())}:${pad(date.getMinutes())}`;
+  const day = toISODate(date);
+  return day === todayISO() ? time : `${formatDate(day)} · ${time}`;
 }
 
 /** Etiqueta corta para los pósters placeholder: "Dune: Part Two" -> "Dune". */

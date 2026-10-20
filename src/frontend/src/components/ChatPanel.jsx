@@ -1,10 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import { CURRENT_USER_ID } from "../services/mockData";
 import { getAvatarStyle, getInitials } from "../utils/avatar";
 
-export default function ChatPanel({ messages, onSend, disabled = false, disabledHint }) {
+const STATUS_LABELS = {
+  connecting: "Conectando…",
+  error: "Chat no disponible",
+};
+
+export default function ChatPanel({
+  messages,
+  onSend,
+  currentUserId,
+  status = "open",
+  disabled = false,
+  disabledHint,
+}) {
   const [draft, setDraft] = useState("");
   const listRef = useRef(null);
+  const offline = !disabled && status !== "open";
 
   // Se mueve el scroll del propio contenedor: scrollIntoView arrastraría la página entera.
   useEffect(() => {
@@ -15,20 +27,26 @@ export default function ChatPanel({ messages, onSend, disabled = false, disabled
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!draft.trim()) return;
-    onSend(draft);
-    setDraft("");
+    if (onSend(draft) !== false) setDraft("");
   };
 
   return (
     <div className="room-chat-container">
-      <div className="room-chat-header">Coordinación de la salida</div>
+      <div className="room-chat-header">
+        Coordinación de la salida
+        {!disabled && STATUS_LABELS[status] && (
+          <span className="room-chat-status">{STATUS_LABELS[status]}</span>
+        )}
+      </div>
 
       <div className="room-chat-messages" ref={listRef}>
         {messages.length === 0 && (
-          <p className="chat-empty">Todavía no hay mensajes. Rompé el hielo.</p>
+          <p className="chat-empty">
+            {disabled ? disabledHint : "Todavía no hay mensajes. Rompé el hielo."}
+          </p>
         )}
         {messages.map((m) => {
-          const isOwn = m.authorId === CURRENT_USER_ID;
+          const isOwn = m.authorId === currentUserId;
           return (
             <div key={m.id} className={`chat-message${isOwn ? " chat-message-own" : ""}`}>
               <div className="chat-message-avatar" style={getAvatarStyle(m.authorId, isOwn)}>
@@ -52,11 +70,12 @@ export default function ChatPanel({ messages, onSend, disabled = false, disabled
           className="room-chat-input"
           placeholder={disabled ? disabledHint : "Escribí un mensaje..."}
           value={draft}
+          maxLength={1000}
           disabled={disabled}
           onChange={(e) => setDraft(e.target.value)}
           aria-label="Mensaje"
         />
-        <button type="submit" className="room-chat-send" disabled={disabled || !draft.trim()}>
+        <button type="submit" className="room-chat-send" disabled={disabled || offline || !draft.trim()}>
           Enviar
         </button>
       </form>
