@@ -1,7 +1,7 @@
 import { ana, bruno, capture, expect, loginAs, test, tomorrow } from "./support.js";
 
 test.describe("Transversal — E2E del flujo principal (mobile)", () => {
-  test("PT-TR-50 Login (cookie JWT) → cartelera → elegir función → crear sala → chatear → sala creada y mensaje visible en el chat", async ({ anaPage: page }, testInfo) => {
+  test("PT-TR-50 Flujo login (cookie JWT), cartelera, elegir función, crear sala y chatear → sala creada con el usuario como anfitrión y mensaje visible en el chat", async ({ anaPage: page }, testInfo) => {
     await page.goto("/");
     await expect(page).toHaveURL(/\/feed$/);
     await expect(page.getByRole("heading", { name: "¿Qué vemos?" })).toBeVisible();
@@ -73,7 +73,7 @@ test.describe("Transversal — E2E del flujo principal (mobile)", () => {
     await brunoContext.close();
   });
 
-  test("PT-TR-52 Sin sesión una ruta interna → login con botón de Google; ?error=invalid_state → aviso visible", async ({ page }, testInfo) => {
+  test("PT-TR-52 Ruta interna sin sesión y login con ?error=invalid_state → botón de Google visible y aviso 'La sesión de inicio expiró'", async ({ page }, testInfo) => {
     await page.goto("/feed");
     await expect(page.getByRole("link", { name: "Iniciar sesión con Google" })).toHaveAttribute("href", "/auth/google");
     await page.goto("/?error=invalid_state");

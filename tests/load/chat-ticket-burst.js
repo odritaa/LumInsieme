@@ -1,4 +1,4 @@
-// PT-TR-63: rafagas de 60 pedidos simultaneos de ticket de chat (todos los usuarios entrando a la vez).
+// PT-TR-64: rafagas de 60 pedidos simultaneos de ticket de chat (todos los usuarios entrando a la vez).
 import http from "k6/http";
 import { check, sleep } from "k6";
 

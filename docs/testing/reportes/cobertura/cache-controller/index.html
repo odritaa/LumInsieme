@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>cache-controller: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/odritaa/LumInsieme/src/cache-controller/main.go (10.7%)</option>
+				
+				<option value="file1">github.com/odritaa/LumInsieme/src/cache-controller/server.go (85.1%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package main
+
+import (
+        "context"
+        "fmt"
+        "log"
+        "net"
+        "os"
+        "os/signal"
+        "syscall"
+
+        "github.com/redis/go-redis/v9"
+        "google.golang.org/grpc"
+        "google.golang.org/grpc/reflection"
+
+        pb "github.com/odritaa/LumInsieme/src/cache-controller/pb"
+)
+
+func getEnv(key, fallback string) string <span class="cov8" title="1">{
+        if value := os.Getenv(key); value != "" </span><span class="cov8" title="1">{
+                return value
+        }</span>
+        <span class="cov8" title="1">return fallback</span>
+}
+
+func main() <span class="cov0" title="0">{
+        ctx := context.Background()
+
+        redisAddr := getEnv("REDIS_ADDR", "localhost:6379")
+        port := ":" + getEnv("GRPC_PORT", "50051")
+
+        rdb := redis.NewClient(&amp;redis.Options{
+                Addr:     redisAddr,
+                Password: getEnv("REDIS_PASSWORD", ""),
+                DB:       0,
+        })
+
+        _, err := rdb.Ping(ctx).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatalf("No se pudo conectar a Redis: %v", err)
+        }</span>
+        <span class="cov0" title="0">fmt.Println("Conectado a Redis correctamente")
+
+        lis, err := net.Listen("tcp", port)
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatalf("No se pudo escuchar en %s: %v", port, err)
+        }</span>
+
+        <span class="cov0" title="0">grpcServer := grpc.NewServer()
+        pb.RegisterCacheServiceServer(grpcServer, newCacheServer(rdb))
+        reflection.Register(grpcServer)
+
+        go func() </span><span class="cov0" title="0">{
+                fmt.Printf("Servidor gRPC escuchando en %s\n", port)
+                if err := grpcServer.Serve(lis); err != nil </span><span class="cov0" title="0">{
+                        log.Fatalf("Error al servir gRPC: %v", err)
+                }</span>
+        }()
+
+        <span class="cov0" title="0">quit := make(chan os.Signal, 1)
+        signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+        &lt;-quit
+
+        fmt.Println("\nApagando servidor...")
+        grpcServer.GracefulStop()
+        rdb.Close()
+        fmt.Println("Servidor detenido correctamente")</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package main
+
+import (
+        "context"
+        "fmt"
+        "time"
+
+        "github.com/redis/go-redis/v9"
+        "google.golang.org/grpc"
+        "google.golang.org/grpc/codes"
+        "google.golang.org/grpc/status"
+
+        pb "github.com/odritaa/LumInsieme/src/cache-controller/pb"
+)
+
+type cacheServer struct {
+        pb.UnimplementedCacheServiceServer
+        rdb *redis.Client
+}
+
+func newCacheServer(rdb *redis.Client) *cacheServer <span class="cov8" title="1">{
+        return &amp;cacheServer{rdb: rdb}
+}</span>
+
+// Basic key-value operations
+
+func (s *cacheServer) Get(ctx context.Context, req *pb.GetRequest) (*pb.GetResponse, error) <span class="cov8" title="1">{
+        val, err := s.rdb.Get(ctx, req.Key).Result()
+        if err == redis.Nil </span><span class="cov8" title="1">{
+                return &amp;pb.GetResponse{Found: false}, nil
+        }</span>
+        <span class="cov8" title="1">if err != nil </span><span class="cov8" title="1">{
+                return nil, status.Errorf(codes.Internal, "redis GET failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.GetResponse{Value: val, Found: true}, nil</span>
+}
+
+func (s *cacheServer) Set(ctx context.Context, req *pb.SetRequest) (*pb.SetResponse, error) <span class="cov8" title="1">{
+        err := s.rdb.Set(ctx, req.Key, req.Value, 0).Err()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis SET failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.SetResponse{Ok: true}, nil</span>
+}
+
+func (s *cacheServer) Delete(ctx context.Context, req *pb.DeleteRequest) (*pb.DeleteResponse, error) <span class="cov8" title="1">{
+        n, err := s.rdb.Del(ctx, req.Key).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis DEL failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.DeleteResponse{Deleted: n &gt; 0}, nil</span>
+}
+
+func (s *cacheServer) Exists(ctx context.Context, req *pb.ExistsRequest) (*pb.ExistsResponse, error) <span class="cov8" title="1">{
+        n, err := s.rdb.Exists(ctx, req.Key).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis EXISTS failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.ExistsResponse{Exists: n &gt; 0}, nil</span>
+}
+
+// TTL operations
+
+func (s *cacheServer) SetTTL(ctx context.Context, req *pb.SetTTLRequest) (*pb.SetTTLResponse, error) <span class="cov8" title="1">{
+        ttl := time.Duration(req.TtlSeconds) * time.Second
+        err := s.rdb.Expire(ctx, req.Key, ttl).Err()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis EXPIRE failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.SetTTLResponse{Ok: true}, nil</span>
+}
+
+func (s *cacheServer) GetTTL(ctx context.Context, req *pb.GetTTLRequest) (*pb.GetTTLResponse, error) <span class="cov8" title="1">{
+        ttl, err := s.rdb.TTL(ctx, req.Key).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis TTL failed: %v", err)
+        }</span>
+        // go-redis devuelve -1 (sin vencimiento) y -2 (clave inexistente) como Duration crudo, no en segundos.
+        <span class="cov8" title="1">if ttl &lt; 0 </span><span class="cov8" title="1">{
+                return &amp;pb.GetTTLResponse{TtlSeconds: int64(ttl)}, nil
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.GetTTLResponse{TtlSeconds: int64(ttl.Seconds())}, nil</span>
+}
+
+func (s *cacheServer) SetWithTTL(ctx context.Context, req *pb.SetWithTTLRequest) (*pb.SetWithTTLResponse, error) <span class="cov8" title="1">{
+        ttl := time.Duration(req.TtlSeconds) * time.Second
+        err := s.rdb.Set(ctx, req.Key, req.Value, ttl).Err()
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, status.Errorf(codes.Internal, "redis SET with TTL failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.SetWithTTLResponse{Ok: true}, nil</span>
+}
+
+// List operations
+
+func (s *cacheServer) Push(ctx context.Context, req *pb.PushRequest) (*pb.PushResponse, error) <span class="cov8" title="1">{
+        n, err := s.rdb.RPush(ctx, req.Key, req.Value).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis RPUSH failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.PushResponse{Length: n}, nil</span>
+}
+
+func (s *cacheServer) PushBatch(ctx context.Context, req *pb.PushBatchRequest) (*pb.PushBatchResponse, error) <span class="cov8" title="1">{
+        if len(req.Values) == 0 </span><span class="cov8" title="1">{
+                return &amp;pb.PushBatchResponse{Length: 0}, nil
+        }</span>
+        <span class="cov8" title="1">pipe := s.rdb.Pipeline()
+        pipe.RPush(ctx, req.Key, req.Values)
+        if req.TtlSeconds &gt; 0 </span><span class="cov8" title="1">{
+                ttl := time.Duration(req.TtlSeconds) * time.Second
+                pipe.Expire(ctx, req.Key, ttl)
+        }</span>
+        <span class="cov8" title="1">_, err := pipe.Exec(ctx)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, status.Errorf(codes.Internal, "redis PushBatch failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">length, err := s.rdb.LLen(ctx, req.Key).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis LLEN failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.PushBatchResponse{Length: length}, nil</span>
+}
+
+func (s *cacheServer) Range(ctx context.Context, req *pb.RangeRequest) (*pb.RangeResponse, error) <span class="cov8" title="1">{
+        vals, err := s.rdb.LRange(ctx, req.Key, req.Start, req.Stop).Result()
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, status.Errorf(codes.Internal, "redis LRANGE failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.RangeResponse{Values: vals}, nil</span>
+}
+
+// Hash operations
+
+func (s *cacheServer) HSet(ctx context.Context, req *pb.HSetRequest) (*pb.HSetResponse, error) <span class="cov8" title="1">{
+        err := s.rdb.HSet(ctx, req.Key, req.Field, req.Value).Err()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis HSET failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.HSetResponse{Ok: true}, nil</span>
+}
+
+func (s *cacheServer) HGet(ctx context.Context, req *pb.HGetRequest) (*pb.HGetResponse, error) <span class="cov8" title="1">{
+        val, err := s.rdb.HGet(ctx, req.Key, req.Field).Result()
+        if err == redis.Nil </span><span class="cov8" title="1">{
+                return &amp;pb.HGetResponse{Found: false}, nil
+        }</span>
+        <span class="cov8" title="1">if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis HGET failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.HGetResponse{Value: val, Found: true}, nil</span>
+}
+
+func (s *cacheServer) HGetAll(ctx context.Context, req *pb.HGetAllRequest) (*pb.HGetAllResponse, error) <span class="cov8" title="1">{
+        vals, err := s.rdb.HGetAll(ctx, req.Key).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis HGETALL failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.HGetAllResponse{Fields: vals}, nil</span>
+}
+
+func (s *cacheServer) HDel(ctx context.Context, req *pb.HDelRequest) (*pb.HDelResponse, error) <span class="cov8" title="1">{
+        n, err := s.rdb.HDel(ctx, req.Key, req.Field).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis HDEL failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.HDelResponse{Deleted: n &gt; 0}, nil</span>
+}
+
+// Pub/Sub
+
+func (s *cacheServer) Publish(ctx context.Context, req *pb.PublishRequest) (*pb.PublishResponse, error) <span class="cov8" title="1">{
+        n, err := s.rdb.Publish(ctx, req.Channel, req.Message).Result()
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, status.Errorf(codes.Internal, "redis PUBLISH failed: %v", err)
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.PublishResponse{Subscribers: n}, nil</span>
+}
+
+func (s *cacheServer) Subscribe(req *pb.SubscribeRequest, stream grpc.ServerStreamingServer[pb.SubscribeResponse]) error <span class="cov8" title="1">{
+        ctx := stream.Context()
+        pubsub := s.rdb.Subscribe(ctx, req.Channel)
+        defer pubsub.Close()
+
+        ch := pubsub.Channel()
+        for </span><span class="cov8" title="1">{
+                select </span>{
+                case &lt;-ctx.Done():<span class="cov8" title="1">
+                        return ctx.Err()</span>
+                case msg, ok := &lt;-ch:<span class="cov8" title="1">
+                        if !ok </span><span class="cov0" title="0">{
+                                return fmt.Errorf("subscription channel closed")
+                        }</span>
+                        <span class="cov8" title="1">if err := stream.Send(&amp;pb.SubscribeResponse{
+                                Channel: msg.Channel,
+                                Message: msg.Payload,
+                        }); err != nil </span><span class="cov0" title="0">{
+                                return err
+                        }</span>
+                }
+        }
+}
+
+// Health check
+
+func (s *cacheServer) Health(ctx context.Context, req *pb.HealthRequest) (*pb.HealthResponse, error) <span class="cov8" title="1">{
+        _, err := s.rdb.Ping(ctx).Result()
+        if err != nil </span><span class="cov8" title="1">{
+                return &amp;pb.HealthResponse{
+                        Status:         "unhealthy",
+                        RedisConnected: false,
+                }, nil
+        }</span>
+        <span class="cov8" title="1">return &amp;pb.HealthResponse{
+                Status:         "healthy",
+                RedisConnected: true,
+        }, nil</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

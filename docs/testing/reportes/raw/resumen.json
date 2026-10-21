@@ -1,0 +1,56 @@
+{
+  "totals": {
+    "Vitest + Supertest": {
+      "pruebas": 112,
+      "pasaron": 112,
+      "fallaron": 0,
+      "ejecuciones": 112
+    },
+    "Vitest + RTL": {
+      "pruebas": 34,
+      "pasaron": 34,
+      "fallaron": 0,
+      "ejecuciones": 34
+    },
+    "pytest": {
+      "pruebas": 19,
+      "pasaron": 19,
+      "fallaron": 0,
+      "ejecuciones": 19
+    },
+    "go test + Testify + miniredis": {
+      "pruebas": 17,
+      "pasaron": 17,
+      "fallaron": 0,
+      "ejecuciones": 17
+    },
+    "Playwright (Chromium + WebKit mobile)": {
+      "pruebas": 8,
+      "pasaron": 8,
+      "fallaron": 0,
+      "ejecuciones": 16
+    },
+    "k6": {
+      "pruebas": 5,
+      "pasaron": 5,
+      "fallaron": 0,
+      "ejecuciones": 5
+    },
+    "OWASP ZAP baseline": {
+      "pruebas": 3,
+      "pasaron": 3,
+      "fallaron": 0,
+      "ejecuciones": 3
+    }
+  },
+  "total": 198,
+  "porCU": {
+    "CU-01": 40,
+    "CU-02": 21,
+    "CU-03": 30,
+    "CU-04": 12,
+    "CU-05": 28,
+    "CU-06": 8,
+    "Transversal": 59
+  }
+}

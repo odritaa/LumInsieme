@@ -111,7 +111,7 @@ func TestTTL(t *testing.T) {
 		assert.Equal(t, int64(120), ttl.TtlSeconds)
 	})
 
-	t.Run("PT-TR-35 GetTTL de clave sin vencimiento → -1; de clave inexistente → -2 (semántica Redis)", func(t *testing.T) {
+	t.Run("PT-TR-35 GetTTL de clave sin vencimiento y de clave inexistente → -1 y -2 respectivamente (semántica Redis)", func(t *testing.T) {
 		srv, mr := newTestServer(t)
 		require.NoError(t, mr.Set("persistente", "v"))
 		persistent, _ := srv.GetTTL(ctx, &pb.GetTTLRequest{Key: "persistente"})

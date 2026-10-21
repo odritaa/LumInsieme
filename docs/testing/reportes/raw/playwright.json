@@ -1,0 +1,797 @@
+{
+ "config": {
+  "argv": [
+   "C:\\nvm4w\\nodejs\\node.exe",
+   "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\node_modules\\@playwright\\test\\cli.js",
+   "test"
+  ],
+  "configFile": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\playwright.config.js",
+  "rootDir": "D:/Universidad/5/Hab. Prof/LumInsieme/tests/e2e/specs",
+  "failOnFlakyTests": false,
+  "forbidOnly": false,
+  "fullyParallel": false,
+  "globalSetup": null,
+  "globalTeardown": null,
+  "globalTimeout": 0,
+  "grep": {},
+  "grepInvert": null,
+  "maxFailures": 0,
+  "metadata": {
+   "actualWorkers": 1
+  },
+  "preserveOutput": "always",
+  "projects": [
+   {
+    "outputDir": "D:/Universidad/5/Hab. Prof/LumInsieme/tests/e2e/test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "id": "mobile-chromium",
+    "name": "mobile-chromium",
+    "testDir": "D:/Universidad/5/Hab. Prof/LumInsieme/tests/e2e/specs",
+    "testIgnore": [],
+    "testMatch": [
+     "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+    ],
+    "timeout": 60000
+   },
+   {
+    "outputDir": "D:/Universidad/5/Hab. Prof/LumInsieme/tests/e2e/test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "id": "mobile-webkit",
+    "name": "mobile-webkit",
+    "testDir": "D:/Universidad/5/Hab. Prof/LumInsieme/tests/e2e/specs",
+    "testIgnore": [],
+    "testMatch": [
+     "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+    ],
+    "timeout": 60000
+   }
+  ],
+  "filteredProjects": [
+   {
+    "grep": {},
+    "grepInvert": null,
+    "outputDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "name": "mobile-chromium",
+    "testDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\specs",
+    "snapshotDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\specs",
+    "testIgnore": [],
+    "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+    "timeout": 60000,
+    "use": {
+     "baseURL": "https://localhost:8443",
+     "ignoreHTTPSErrors": true,
+     "locale": "es-AR",
+     "timezoneId": "America/Argentina/Buenos_Aires",
+     "screenshot": "only-on-failure",
+     "trace": "retain-on-failure",
+     "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Mobile Safari/537.36",
+     "viewport": {
+      "width": 412,
+      "height": 839
+     },
+     "screen": {
+      "width": 412,
+      "height": 915
+     },
+     "deviceScaleFactor": 2.625,
+     "isMobile": true,
+     "hasTouch": true,
+     "defaultBrowserType": "chromium"
+    },
+    "dependencies": [],
+    "ignoreSnapshots": false,
+    "__projectId": "mobile-chromium"
+   },
+   {
+    "grep": {},
+    "grepInvert": null,
+    "outputDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "name": "mobile-webkit",
+    "testDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\specs",
+    "snapshotDir": "D:\\Universidad\\5\\Hab. Prof\\LumInsieme\\tests\\e2e\\specs",
+    "testIgnore": [],
+    "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+    "timeout": 60000,
+    "use": {
+     "baseURL": "https://localhost:8443",
+     "ignoreHTTPSErrors": true,
+     "locale": "es-AR",
+     "timezoneId": "America/Argentina/Buenos_Aires",
+     "screenshot": "only-on-failure",
+     "trace": "retain-on-failure",
+     "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+     "viewport": {
+      "width": 390,
+      "height": 664
+     },
+     "screen": {
+      "width": 390,
+      "height": 844
+     },
+     "deviceScaleFactor": 3,
+     "isMobile": true,
+     "hasTouch": true,
+     "defaultBrowserType": "webkit"
+    },
+    "dependencies": [],
+    "ignoreSnapshots": false,
+    "__projectId": "mobile-webkit"
+   }
+  ],
+  "quiet": false,
+  "reporter": [
+   [
+    "list",
+    null
+   ],
+   [
+    "html",
+    {
+     "outputFolder": "playwright-report",
+     "open": "never"
+    }
+   ],
+   [
+    "json",
+    {
+     "outputFile": "test-results/results.json"
+    }
+   ]
+  ],
+  "reportSlowTests": {
+   "max": 5,
+   "threshold": 300000
+  },
+  "shard": null,
+  "tags": [],
+  "updateSnapshots": "default",
+  "updateSourceMethod": "patch",
+  "version": "1.64.1",
+  "workers": 1,
+  "webServer": null
+ },
+ "suites": [
+  {
+   "title": "flujo.spec.js",
+   "file": "flujo.spec.js",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "Transversal — E2E del flujo principal (mobile)",
+     "file": "flujo.spec.js",
+     "line": 3,
+     "column": 6,
+     "specs": [
+      {
+       "title": "PT-TR-50 Flujo login (cookie JWT), cartelera, elegir función, crear sala y chatear → sala creada con el usuario como anfitrión y mensaje visible en el chat",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 3663,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:12.188Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "01-feed-cartelera",
+             "contentType": "image/png"
+            },
+            {
+             "name": "02-cartelera-manana",
+             "contentType": "image/png"
+            },
+            {
+             "name": "03-crear-sala",
+             "contentType": "image/png"
+            },
+            {
+             "name": "04-sala-chat",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-4fc8ddfc244326e14e31",
+       "file": "flujo.spec.js",
+       "line": 4,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-51 Dos usuarios en la misma sala → el segundo se une y ambos reciben los mensajes en tiempo real (y persisten al recargar)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 7078,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:16.014Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "05-chat-dos-usuarios",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-0364eb85e9e68186868c",
+       "file": "flujo.spec.js",
+       "line": 40,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-52 Ruta interna sin sesión y login con ?error=invalid_state → botón de Google visible y aviso 'La sesión de inicio expiró'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 716,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:23.105Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "06-login-invalid-state",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-06f6007a4ff7c26c6e6a",
+       "file": "flujo.spec.js",
+       "line": 76,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-53 Cartelera de hoy → la función ya iniciada (00:01) aparece deshabilitada y la de las 23:59 habilitada",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 655,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:23.837Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-d5bc833cef84fb0bafe5",
+       "file": "flujo.spec.js",
+       "line": 84,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-54 Viewport mobile → feed, salas y crear sala sin scroll horizontal",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2193,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:24.505Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-d4a9ba98c6b7f894f662",
+       "file": "flujo.spec.js",
+       "line": 92,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-55 Desde el feed, abrir el chat de una sala propia → a lo sumo 3 clics (RNF de usabilidad)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1668,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:26.711Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-48e76f32abb4ab8ffd6e",
+       "file": "flujo.spec.js",
+       "line": 101,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-57 Navegación completa con la CSP de nginx (feed, crear sala, sala con chat) → sin violaciones de CSP ni errores en consola",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1026,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:28.392Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-605e2ade8bb321d748f9",
+       "file": "flujo.spec.js",
+       "line": 116,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-56 El único miembro abandona la sala desde la UI → la sala desaparece y vuelve a 'Salas abiertas'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1838,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:29.427Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-f1244419fb82432443d6",
+       "file": "flujo.spec.js",
+       "line": 141,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-50 Flujo login (cookie JWT), cartelera, elegir función, crear sala y chatear → sala creada con el usuario como anfitrión y mensaje visible en el chat",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 5872,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:33.365Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "01-feed-cartelera",
+             "contentType": "image/png"
+            },
+            {
+             "name": "02-cartelera-manana",
+             "contentType": "image/png"
+            },
+            {
+             "name": "03-crear-sala",
+             "contentType": "image/png"
+            },
+            {
+             "name": "04-sala-chat",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-cc03dc504af04161d28a",
+       "file": "flujo.spec.js",
+       "line": 4,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-51 Dos usuarios en la misma sala → el segundo se une y ambos reciben los mensajes en tiempo real (y persisten al recargar)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 8513,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:39.339Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "05-chat-dos-usuarios",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-28bca2ccdad63836515a",
+       "file": "flujo.spec.js",
+       "line": 40,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-52 Ruta interna sin sesión y login con ?error=invalid_state → botón de Google visible y aviso 'La sesión de inicio expiró'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1136,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:47.869Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "06-login-invalid-state",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-68cf6b3623ce27607488",
+       "file": "flujo.spec.js",
+       "line": 76,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-53 Cartelera de hoy → la función ya iniciada (00:01) aparece deshabilitada y la de las 23:59 habilitada",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1446,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:49.018Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-248007f1d20dfa6c70b1",
+       "file": "flujo.spec.js",
+       "line": 84,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-54 Viewport mobile → feed, salas y crear sala sin scroll horizontal",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 3105,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:50.476Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-08cc5b330492fab917ae",
+       "file": "flujo.spec.js",
+       "line": 92,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-55 Desde el feed, abrir el chat de una sala propia → a lo sumo 3 clics (RNF de usabilidad)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2291,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:53.591Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-047bfa4ecb6816a2271b",
+       "file": "flujo.spec.js",
+       "line": 101,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-57 Navegación completa con la CSP de nginx (feed, crear sala, sala con chat) → sin violaciones de CSP ni errores en consola",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2917,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:55.892Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-b6bab1d47ac873406daf",
+       "file": "flujo.spec.js",
+       "line": 116,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-56 El único miembro abandona la sala desde la UI → la sala desaparece y vuelve a 'Salas abiertas'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1844,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-21T14:48:58.818Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-cf180d129dc83e598d87",
+       "file": "flujo.spec.js",
+       "line": 141,
+       "column": 3
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": [],
+ "stats": {
+  "startTime": "2026-10-21T14:48:11.168Z",
+  "duration": 49887.939999999995,
+  "expected": 16,
+  "skipped": 0,
+  "unexpected": 0,
+  "flaky": 0
+ }
+}

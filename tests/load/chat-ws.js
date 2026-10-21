@@ -1,4 +1,4 @@
-// PT-TR-62: N usuarios conectados al chat por WebSocket (12 salas x 5 miembros), enviando mensajes.
+// PT-TR-63: N usuarios conectados al chat por WebSocket (12 salas x 5 miembros), enviando mensajes.
 import http from "k6/http";
 import ws from "k6/ws";
 import { check } from "k6";

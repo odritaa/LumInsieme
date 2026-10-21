@@ -1,4 +1,4 @@
-// PT-TR-60 / PT-TR-61: carga sobre GET /cartelera y GET /salas a traves de nginx (HTTPS).
+// PT-TR-60 / PT-TR-61: carga sobre GET /cartelera y GET /salas a traves de nginx (HTTPS). Con VUS=200: PT-TR-62 (estres).
 import http from "k6/http";
 import { check, sleep } from "k6";
 

@@ -145,7 +145,7 @@ describe("CU-05 Coordinacion — historial y difusion", () => {
     ana.socket.close();
   });
 
-  it("PT-CU05-14 Mensaje de 1001 caracteres → descartado; de 1000 → difundido", async () => {
+  it("PT-CU05-14 Mensajes de 1001 y de 1000 caracteres → el de 1001 se descarta y el de 1000 se difunde", async () => {
     const ana = await connect(chatTicket({ sala: "sala-largo" }));
     ana.socket.send(JSON.stringify({ content: "x".repeat(1001) }));
     ana.socket.send(JSON.stringify({ content: "y".repeat(1000) }));

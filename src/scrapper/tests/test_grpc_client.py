@@ -1,5 +1,3 @@
-import json
-
 import grpc
 import pytest
 
@@ -58,7 +56,7 @@ async def test_set_json_y_get(client):
 
 
 async def test_get_inexistente_y_health(client):
-    """PT-TR-27 get de clave inexistente → None; health → redis_connected"""
+    """PT-TR-27 get de clave inexistente y health → None y redis_connected=True"""
     cache_client, _ = client
     assert await cache_client.get("no-existe") is None
     assert await cache_client.health() is True
@@ -68,4 +66,3 @@ def test_configuracion_por_entorno():
     """PT-TR-28 CacheClient sin argumentos → host y puerto desde GRPC_HOST/GRPC_PORT"""
     cache_client = CacheClient()
     assert (cache_client.host, cache_client.port) == ("127.0.0.1", 50998)
-    json.dumps({})
