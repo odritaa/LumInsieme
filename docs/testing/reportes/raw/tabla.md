@@ -71,7 +71,7 @@
 | PT-CU03-08 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Formato actual del scrapper (días 'AAAA-M-D' sin ceros) | fechas normalizadas AAAA-MM-DD | Igual al esperado | ✅ Pasó |
 | PT-CU03-09 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Formato anterior del scrapper (lista plana con fecha ISO) | mismo resultado normalizado | Igual al esperado | ✅ Pasó |
 | PT-CU03-10 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Ambos formatos mezclados y una función repetida | cada función se lista una sola vez | Igual al esperado | ✅ Pasó |
-| PT-CU03-11 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Funciones ordenadas por hora, luego título y formato | — | Igual al esperado | ✅ Pasó |
+| PT-CU03-11 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Cartelera con funciones desordenadas | ordenadas por hora, luego título y formato | Igual al esperado | ✅ Pasó |
 | PT-CU03-12 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Sin datos en caché (clave inexistente) | 200 con dates: [] y screenings: [] | Igual al esperado | ✅ Pasó |
 | PT-CU03-13 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | Caché caída (gRPC UNAVAILABLE) | 503 cache_unavailable | Igual al esperado | ✅ Pasó |
 | PT-CU03-14 | CU-03 | Integración (API, caché simulada) | Vitest + Supertest | scraped_data con JSON corrupto | 200 con dates: [] | Igual al esperado | ✅ Pasó |
@@ -114,16 +114,16 @@
 | PT-CU05-09 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Al conectar | frame history con los últimos 50 mensajes de chat:<sala> | Igual al esperado | ✅ Pasó |
 | PT-CU05-10 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Caché caída al pedir historial | sin history, pero el socket sigue abierto y difunde | Igual al esperado | ✅ Pasó |
 | PT-CU05-11 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Mensaje de un miembro | broadcast a todos los miembros de la sala y a nadie más | Igual al esperado | ✅ Pasó |
-| PT-CU05-12 | CU-05 | Integración (WebSocket) | Vitest + Supertest | La identidad sale del ticket: userId/username enviados por el cliente se ignoran | — | Igual al esperado | ✅ Pasó |
+| PT-CU05-12 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Mensaje con userId/username falsos enviados por el cliente | se difunde con la identidad del ticket | Igual al esperado | ✅ Pasó |
 | PT-CU05-13 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Mensaje vacío o solo espacios | descartado (sin broadcast ni persistencia) | Igual al esperado | ✅ Pasó |
 | PT-CU05-14 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Mensajes de 1001 y de 1000 caracteres | el de 1001 se descarta y el de 1000 se difunde | Igual al esperado | ✅ Pasó |
 | PT-CU05-15 | CU-05 | Integración (WebSocket) | Vitest + Supertest | Frame que no es JSON | ignorado sin cerrar la conexión | Igual al esperado | ✅ Pasó |
-| PT-CU05-16 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | 9 mensajes no disparan PushBatch; el 10.º envía el lote completo (chat:<sala>, TTL 3 días) | — | Igual al esperado | ✅ Pasó |
+| PT-CU05-16 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | Encolar 10 mensajes en una sala | sin PushBatch hasta el 10.º, que envía el lote completo (chat:<sala>, TTL 3 días) | Igual al esperado | ✅ Pasó |
 | PT-CU05-17 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | 3 mensajes sin completar el lote | PushBatch a los 3 s exactos (fake timers) | Igual al esperado | ✅ Pasó |
 | PT-CU05-18 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | Lote completo antes de los 3 s | cancela el timer (no hay PushBatch vacío ni duplicado) | Igual al esperado | ✅ Pasó |
-| PT-CU05-19 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | Buffers y timers independientes por sala | — | Igual al esperado | ✅ Pasó |
+| PT-CU05-19 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | Mensajes en dos salas con 1,5 s de diferencia | cada sala se persiste con su propio timer de 3 s | Igual al esperado | ✅ Pasó |
 | PT-CU05-20 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | PushBatch falla | los mensajes vuelven al buffer y se reintentan en el próximo intervalo de 3 s | 1.ª corrida: falló (DEF-01). Tras la corrección: igual al esperado | ✅ Pasó (tras DEF-01) |
-| PT-CU05-21 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | flushAll (apagado) persiste todos los buffers pendientes | — | Igual al esperado | ✅ Pasó |
+| PT-CU05-21 | CU-05 | Unitaria (fake timers) | Vitest + Supertest | flushAll al apagar con mensajes pendientes en dos salas | persiste ambos buffers | Igual al esperado | ✅ Pasó |
 | PT-CU05-22 | CU-05 | Integración (gRPC simulado) | Vitest + Supertest | pushBatch + range por gRPC | los mensajes se guardan y se leen en orden | Igual al esperado | ✅ Pasó |
 | PT-CU05-23 | CU-05 | Integración (gRPC simulado) | Vitest + Supertest | health por gRPC | redis_connected true | Igual al esperado | ✅ Pasó |
 | PT-CU05-24 | CU-05 | Integración (UI + API simulada) | Vitest + RTL | No miembro en la sala | chat deshabilitado con 'Unite a la sala para participar del chat' | Igual al esperado | ✅ Pasó |
@@ -178,7 +178,7 @@
 | PT-TR-40 | Transversal | Unitaria | go test + Testify + miniredis | Range de una sala sin historial | lista vacía sin error | Igual al esperado | ✅ Pasó |
 | PT-TR-41 | Transversal | Unitaria | go test + Testify + miniredis | HSet/HGet/HGetAll/HDel | CRUD de campos de un hash | Igual al esperado | ✅ Pasó |
 | PT-TR-42 | Transversal | Integración (gRPC bufconn) | go test + Testify + miniredis | Subscribe por gRPC (stream) + Publish | el suscriptor recibe el mensaje | Igual al esperado | ✅ Pasó |
-| PT-TR-43 | Transversal | Integración (gRPC bufconn) | go test + Testify + miniredis | Cliente gRPC: SetWithTTL + Get + PushBatch + Range de punta a punta | — | Igual al esperado | ✅ Pasó |
+| PT-TR-43 | Transversal | Integración (gRPC bufconn) | go test + Testify + miniredis | Cliente gRPC de punta a punta: SetWithTTL + Get + PushBatch + Range | devuelve los valores guardados | Igual al esperado | ✅ Pasó |
 | PT-TR-44 | Transversal | Unitaria | go test + Testify + miniredis | Health con Redis disponible | healthy, redis connected=true | Igual al esperado | ✅ Pasó |
 | PT-TR-45 | Transversal | Unitaria | go test + Testify + miniredis | Redis caído | Health unhealthy y las operaciones devuelven codes.Internal | Igual al esperado | ✅ Pasó |
 | PT-TR-46 | Transversal | Unitaria | go test + Testify + miniredis | getEnv | usa la variable si está definida y el valor por defecto si no | Igual al esperado | ✅ Pasó |

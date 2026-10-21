@@ -63,7 +63,7 @@ describe("CU-03 Exploracion de cartelera — GET /cartelera", () => {
     expect(res.body.screenings.map((s) => s.time)).toEqual(["20:00", "22:15"]);
   });
 
-  it("PT-CU03-11 Funciones ordenadas por hora, luego título y formato", async () => {
+  it("PT-CU03-11 Cartelera con funciones desordenadas → ordenadas por hora, luego título y formato", async () => {
     vi.mocked(cacheClient.get).mockResolvedValue(
       JSON.stringify([
         {

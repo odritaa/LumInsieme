@@ -214,7 +214,7 @@ func TestHashesAndPubSub(t *testing.T) {
 func TestGRPCAndFailures(t *testing.T) {
 	ctx := context.Background()
 
-	t.Run("PT-TR-43 Cliente gRPC: SetWithTTL + Get + PushBatch + Range de punta a punta", func(t *testing.T) {
+	t.Run("PT-TR-43 Cliente gRPC de punta a punta: SetWithTTL + Get + PushBatch + Range → devuelve los valores guardados", func(t *testing.T) {
 		srv, _ := newTestServer(t)
 		client := newGRPCClient(t, srv)
 		_, err := client.SetWithTTL(ctx, &pb.SetWithTTLRequest{Key: "scraped_data", Value: "[1]", TtlSeconds: 10})

@@ -49,7 +49,7 @@ afterEach(() => {
 const msg = (i) => JSON.stringify({ userId: "u", username: "Ana", content: `m${i}`, timestamp: i });
 
 describe("CU-05 Coordinacion — persistencia por lotes (PushBatch)", () => {
-  it("PT-CU05-16 9 mensajes no disparan PushBatch; el 10.º envía el lote completo (chat:<sala>, TTL 3 días)", async () => {
+  it("PT-CU05-16 Encolar 10 mensajes en una sala → sin PushBatch hasta el 10.º, que envía el lote completo (chat:<sala>, TTL 3 días)", async () => {
     vi.useFakeTimers();
     const push = vi.spyOn(cacheClient, "pushBatch").mockResolvedValue(10);
     for (let i = 1; i <= 9; i++) cacheClient.enqueue("sala-lote", msg(i));
@@ -78,7 +78,7 @@ describe("CU-05 Coordinacion — persistencia por lotes (PushBatch)", () => {
     expect(cacheClient.flushTimers.has("chat:sala-cancel")).toBe(false);
   });
 
-  it("PT-CU05-19 Buffers y timers independientes por sala", async () => {
+  it("PT-CU05-19 Mensajes en dos salas con 1,5 s de diferencia → cada sala se persiste con su propio timer de 3 s", async () => {
     vi.useFakeTimers();
     const push = vi.spyOn(cacheClient, "pushBatch").mockResolvedValue(1);
     cacheClient.enqueue("sala-1", msg(1));
@@ -108,7 +108,7 @@ describe("CU-05 Coordinacion — persistencia por lotes (PushBatch)", () => {
     expect(cacheClient.buffers.get("chat:sala-reintento")).toEqual([]);
   });
 
-  it("PT-CU05-21 flushAll (apagado) persiste todos los buffers pendientes", async () => {
+  it("PT-CU05-21 flushAll al apagar con mensajes pendientes en dos salas → persiste ambos buffers", async () => {
     const push = vi.spyOn(cacheClient, "pushBatch").mockResolvedValue(1);
     cacheClient.enqueue("sala-x", msg(1));
     cacheClient.enqueue("sala-y", msg(2));

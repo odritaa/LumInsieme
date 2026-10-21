@@ -126,7 +126,7 @@ describe("CU-05 Coordinacion — historial y difusion", () => {
     [ana, bruno, ajeno].forEach((c) => c.socket.close());
   });
 
-  it("PT-CU05-12 La identidad sale del ticket: userId/username enviados por el cliente se ignoran", async () => {
+  it("PT-CU05-12 Mensaje con userId/username falsos enviados por el cliente → se difunde con la identidad del ticket", async () => {
     const ana = await connect(chatTicket({ sub: "ana", name: "Ana", sala: "sala-id" }));
     ana.socket.send(JSON.stringify({ content: "soy otro", userId: "admin", username: "Administrador" }));
     await vi.waitFor(() => expect(ana.messages()).toHaveLength(1));
