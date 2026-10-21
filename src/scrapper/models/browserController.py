@@ -29,11 +29,11 @@ class PlaywrightBrowserController:
 
     async def start(self):
         playwright = await async_playwright().start()
-        self.browser = await playwright.chromium.launch(headless=True)
-        self.context = await self.browser.new_context()
+        self._browser = await playwright.chromium.launch(headless=True)
+        self._context = await self._browser.new_context()
 
     async def _new_page(self):
-        return await self.context.new_page()
+        return await self._context.new_page()
     
     async def scrapper_page(self, strategy: StrategyScrapping) -> list[MovieData]:
         page_context: CoroutineType = await self._new_page()
@@ -70,8 +70,13 @@ class PlaywrightBrowserController:
         await self.close()
 
     # --- Close the browser ---#
+    # Si start() fallo no hay nada que cerrar: un AttributeError aca taparia el error original.
     async def close(self):
-        await self.context.close()
-        await self.browser.close()
+        if self._context is not None:
+            await self._context.close()
+        if self._browser is not None:
+            await self._browser.close()
+        self._context = None
+        self._browser = None
 if __name__ == "__main__":
     asyncio.run(PlaywrightBrowserController.run())

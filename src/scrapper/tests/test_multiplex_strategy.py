@@ -93,6 +93,8 @@ async def test_browser_controller_ejecuta_una_estrategia():
     controller = PlaywrightBrowserController()
     await controller.start()
     try:
+        assert await controller.is_running()
         assert await controller.scrapper_page(EstrategiaFalsa()) == {"titulo": "ok"}
     finally:
         await controller.close()
+    assert not await controller.is_running()
