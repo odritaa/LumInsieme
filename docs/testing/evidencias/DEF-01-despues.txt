@@ -1,0 +1,9 @@
+
+ RUN  v5.0.5 D:/Universidad/5/Hab. Prof/LumInsieme/src/chat-controller
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  11:16:08
+   Duration  382ms (import 75%, tests 16%, transform 6%, worker 3%)
+

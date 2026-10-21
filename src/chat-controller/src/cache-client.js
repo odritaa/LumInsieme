@@ -86,6 +86,10 @@ class CacheClient {
       return;
     }
 
+    this.scheduleFlush(key);
+  }
+
+  scheduleFlush(key) {
     if (!this.flushTimers.has(key)) {
       const timer = setTimeout(() => this.flush(key), this.FLUSH_INTERVAL_MS);
       this.flushTimers.set(key, timer);
@@ -108,6 +112,8 @@ class CacheClient {
     } catch (err) {
       console.error(`[cache-client] flush failed for ${key}:`, err.message);
       buffer.unshift(...messages);
+      // Sin un timer nuevo el lote quedaria varado hasta que alguien vuelva a escribir en la sala.
+      this.scheduleFlush(key);
     }
   }
 
