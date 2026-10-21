@@ -1,0 +1,6 @@
+=== RUN   TestTTL
+=== RUN   TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis)
+--- PASS: TestTTL (0.00s)
+    --- PASS: TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis) (0.00s)
+PASS
+ok  	github.com/odritaa/LumInsieme/src/cache-controller	0.011s

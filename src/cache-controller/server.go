@@ -75,6 +75,10 @@ func (s *cacheServer) GetTTL(ctx context.Context, req *pb.GetTTLRequest) (*pb.Ge
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "redis TTL failed: %v", err)
 	}
+	// go-redis devuelve -1 (sin vencimiento) y -2 (clave inexistente) como Duration crudo, no en segundos.
+	if ttl < 0 {
+		return &pb.GetTTLResponse{TtlSeconds: int64(ttl)}, nil
+	}
 	return &pb.GetTTLResponse{TtlSeconds: int64(ttl.Seconds())}, nil
 }
 
