@@ -8,7 +8,7 @@ import ChatMessage from "./models/ChatMessage.js";
 import WsMessage from "./models/WsMessage.js";
 import "dotenv/config";
 
-const port = Number(process.env.PORT) || 3000;
+const port = Number(process.env.PORT ?? 3000);
 const HISTORY_LIMIT = 50;
 const MAX_CONTENT_LENGTH = 1000;
 
@@ -115,3 +115,5 @@ const shutdown = async () => {
 
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
+
+export { server };

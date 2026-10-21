@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Multiplex (fixture de pruebas)</title>
+  <style>
+    .funcion-item { display: none; }
+    .funcion-item.visible { display: block; }
+    #popup.cerrado { display: none; }
+  </style>
+</head>
+<body>
+  <!-- Muestra reducida de multiplex.com.ar con los mismos selectores que usa MultiplexStrategy. -->
+  <div id="popup">
+    <a class="dialog-close-button dialog-lightbox-close-button" href="#" onclick="document.getElementById('popup').classList.add('cerrado'); return false;">x</a>
+    Promo
+  </div>
+
+  <div id="complejos">
+    <label class="btn-complejo">Multiplex Pilar</label>
+    <label class="btn-complejo">Multiplex Belgrano</label>
+    <label class="btn-complejo">Multiplex Canning</label>
+  </div>
+
+  <div id="dias">
+    <label class="fecha-label"><input type="radio" name="dia" value="8.4.2026">Mar 4</label>
+    <label class="fecha-label"><input type="radio" name="dia" value="8.5.2026">Mié 5</label>
+    <label class="fecha-label"><input type="radio" name="dia" value="10.21.2026">Mié 21</label>
+    <label class="fecha-label"><input type="radio" name="dia" value="10.22.2026">Jue 22</label>
+    <label class="fecha-label"><input type="radio" name="dia" value="10.23.2026">Vie 23</label>
+    <label class="fecha-label"><input type="radio" name="dia" value="10.24.2026">Sáb 24</label>
+  </div>
+
+  <div id="funciones-list"></div>
+
+  <script>
+    const PELICULAS = {
+      "8.4.2026": [
+        { titulo: "  Dune: Parte Tres \n", formatos: [
+          { tipo: "2D Subtitulada", horas: [["18:30"], ["13:00", "desactivado"], ["21:00"]] },
+          { tipo: "3D Español", horas: [["16:00"], ["23:45", "oculto"]] },
+          { tipo: "4D Español", oculto: true, horas: [["20:00"]] }
+        ] },
+        { titulo: "El Secreto de sus Ojos", formatos: [{ tipo: "2D Español", horas: [["20:15"]] }] },
+        { titulo: "Película fuera de cartelera", oculta: true, formatos: [{ tipo: "2D", horas: [["10:00"]] }] }
+      ],
+      "8.5.2026": [
+        { titulo: "Relatos Salvajes", formatos: [{ tipo: "2D Español", horas: [["19:00"], ["22:10"]] }] }
+      ]
+    };
+
+    function render(dia) {
+      const lista = document.getElementById("funciones-list");
+      lista.innerHTML = "";
+      for (const peli of PELICULAS[dia] ?? []) {
+        const item = document.createElement("div");
+        item.className = peli.oculta ? "funcion-item" : "funcion-item visible";
+        item.innerHTML = `<h4>${peli.titulo}</h4>`;
+        for (const formato of peli.formatos) {
+          const bloque = document.createElement("div");
+          bloque.className = "formato-idioma";
+          if (formato.oculto) bloque.style.display = "none";
+          const horas = formato.horas.map(([hora, estado]) => {
+            const clase = estado === "desactivado" ? "horario-btn horario-desactivado" : "horario-btn";
+            const estilo = estado === "oculto" ? ' style="display:none"' : "";
+            return `<span class="${clase}"${estilo}> ${hora} </span>`;
+          }).join("");
+          bloque.innerHTML = `<span>${formato.tipo}</span><div class="contenedor-horas">${horas}</div>`;
+          item.appendChild(bloque);
+        }
+        lista.appendChild(item);
+      }
+    }
+
+    document.querySelectorAll("label.fecha-label").forEach((label) => {
+      label.addEventListener("click", () => render(label.querySelector("input").value));
+    });
+  </script>
+</body>
+</html>

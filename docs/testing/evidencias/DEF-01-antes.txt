@@ -1,0 +1,27 @@
+
+ RUN  v5.0.5 D:/Universidad/5/Hab. Prof/LumInsieme/src/chat-controller
+
+ ❯ test/cache-client.test.js (8 tests | 1 failed | 7 skipped) 42ms
+   ❯ CU-05 Coordinacion — persistencia por lotes (PushBatch) (6)
+     × PT-CU05-20 PushBatch falla → los mensajes vuelven al buffer y se reintentan en el próximo intervalo de 3 s 13ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/cache-client.test.js > CU-05 Coordinacion — persistencia por lotes (PushBatch) > PT-CU05-20 PushBatch falla → los mensajes vuelven al buffer y se reintentan en el próximo intervalo de 3 s
+AssertionError: expected "pushBatch" to be called 2 times, but got 1 times
+ ❯ test/cache-client.test.js:106:18
+    104|     expect(cacheClient.buffers.get("chat:sala-reintento")).toEqual([ms…
+    105|     await vi.advanceTimersByTimeAsync(3000);
+    106|     expect(push).toHaveBeenCalledTimes(2);
+       |                  ^
+    107|     expect(push).toHaveBeenLastCalledWith("chat:sala-reintento", [msg(…
+    108|     expect(cacheClient.buffers.get("chat:sala-reintento")).toEqual([]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  11:04:37
+   Duration  407ms (import 74%, tests 18%, transform 6%, worker 2%)
+

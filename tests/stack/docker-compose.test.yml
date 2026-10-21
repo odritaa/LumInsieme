@@ -1,0 +1,111 @@
+# Stack aislado para las pruebas: proyecto propio, datos en tmpfs y secretos generados por stack.mjs.
+# No comparte contenedores ni volumenes con el docker-compose.yml de desarrollo.
+name: luminsieme-test
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: luminsieme
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?ejecutar node tests/stack/stack.mjs up}
+      POSTGRES_DB: luminsieme
+    ports:
+      - "55432:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    volumes:
+      - ../../src/login-controller/db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luminsieme -d luminsieme"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    tmpfs:
+      - /data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  cache-controller:
+    build: ../../src/cache-controller
+    environment:
+      REDIS_ADDR: redis:6379
+      GRPC_PORT: "50051"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 50051"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  login-controller:
+    build: ../../src/login-controller
+    environment:
+      PORT: "4000"
+      DATABASE_URL: postgres://luminsieme:${POSTGRES_PASSWORD}@postgres:5432/luminsieme
+      GOOGLE_CLIENT_ID: test-client-id.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: test-client-secret
+      GOOGLE_REDIRECT_URI: https://localhost:8443/auth/google/callback
+      FRONTEND_URL: https://localhost:8443
+      JWT_SECRET: ${JWT_SECRET}
+      COOKIE_SECURE: "true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  reunion-controller:
+    build:
+      context: ../../src
+      dockerfile: reunion-controller/Dockerfile
+    environment:
+      PORT: "4100"
+      DATABASE_URL: postgres://luminsieme:${POSTGRES_PASSWORD}@postgres:5432/luminsieme
+      CACHE_GRPC_ADDR: cache-controller:50051
+      FRONTEND_URL: https://localhost:8443
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      cache-controller:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:4100/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+
+  chat-controller:
+    build:
+      context: ../../src
+      dockerfile: chat-controller/Dockerfile
+    environment:
+      PORT: "3000"
+      CACHE_GRPC_ADDR: cache-controller:50051
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      cache-controller:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+
+  frontend:
+    build: ../../src/frontend
+    ports:
+      - "8443:443"
+    depends_on:
+      login-controller:
+        condition: service_started
+      reunion-controller:
+        condition: service_healthy
+      chat-controller:
+        condition: service_healthy

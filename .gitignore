@@ -16,3 +16,13 @@ build/
 #--- CONFIGURACIONES DEL SISTEMA ---#
 *.env
 #--- CONFIGURACIONES DEL SISTEMA ---#
+
+#--- Pruebas (TP4) ---#
+tests/stack/fixtures.local.json
+tests/e2e/test-results/
+tests/e2e/playwright-report/
+**/coverage/
+.venv/
+**/.venv/*
+.pytest_cache/
+coverage.out

@@ -1,0 +1,19 @@
+=== RUN   TestTTL
+=== RUN   TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis)
+    server_test.go:119: 
+        	Error Trace:	/src/server_test.go:119
+        	Error:      	Not equal: 
+        	            	expected: -1
+        	            	actual  : 0
+        	Test:       	TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis)
+    server_test.go:120: 
+        	Error Trace:	/src/server_test.go:120
+        	Error:      	Not equal: 
+        	            	expected: -2
+        	            	actual  : 0
+        	Test:       	TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis)
+--- FAIL: TestTTL (0.00s)
+    --- FAIL: TestTTL/PT-TR-35_GetTTL_de_clave_sin_vencimiento_→_-1;_de_clave_inexistente_→_-2_(semántica_Redis) (0.00s)
+FAIL
+FAIL	github.com/odritaa/LumInsieme/src/cache-controller	0.011s
+FAIL

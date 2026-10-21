@@ -1,0 +1,34 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________________________ test_main_navegador_no_inicia ________________________
+
+cache = <MagicMock id='2404489972768'>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000022FD718BCE0>
+capsys = <_pytest.capture.CaptureFixture object at 0x0000022FD7314EC0>
+
+    async def test_main_navegador_no_inicia(cache, monkeypatch, capsys):
+        """PT-TR-24 Chromium no arranca (start falla) → se informa el error, sin excepción secundaria, y se cierra el cliente gRPC"""
+        monkeypatch.delattr(PlaywrightBrowserController, "_instance", raising=False)
+        monkeypatch.setattr(PlaywrightBrowserController, "start", AsyncMock(side_effect=RuntimeError("chromium no instalado")))
+    
+>       await main.run_initial_scrape()
+
+tests\test_main.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+main.py:35: in run_initial_scrape
+    await controller.close()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <models.browserController.PlaywrightBrowserController object at 0x0000022FD73156A0>
+
+    async def close(self):
+>       await self.context.close()
+              ^^^^^^^^^^^^
+E       AttributeError: 'PlaywrightBrowserController' object has no attribute 'context'
+
+models\browserController.py:74: AttributeError
+---------------------------- Captured stdout call -----------------------------
+[ERROR] Scraping inicial falló: chromium no instalado
+=========================== short test summary info ===========================
+FAILED tests/test_main.py::test_main_navegador_no_inicia - AttributeError: 'P...
+1 failed in 0.28s
