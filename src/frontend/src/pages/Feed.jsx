@@ -6,8 +6,10 @@ import Navbar from "../components/Navbar";
 import RoomCard from "../components/RoomCard";
 import DaySelector from "../components/DaySelector";
 import ScreeningTimeline from "../components/ScreeningTimeline";
+import usePolling from "../hooks/usePolling";
 
 const EMPTY_CARTELERA = { dates: [], date: null, screenings: [] };
+const ROOMS_POLL_MS = 10000;
 
 export default function Feed() {
   const { rooms, roomsStatus, roomsError, loadRooms } = useAppContext();
@@ -22,6 +24,10 @@ export default function Feed() {
   useEffect(() => {
     loadRooms();
   }, [loadRooms]);
+
+  // Las altas/bajas de miembros ocurren en otros navegadores: se refresca sin recargar la vista.
+  const refreshRooms = useCallback(() => loadRooms({ silent: true }), [loadRooms]);
+  usePolling(refreshRooms, ROOMS_POLL_MS, { enabled: view === "salas", immediate: true });
 
   useEffect(() => {
     let cancelled = false;

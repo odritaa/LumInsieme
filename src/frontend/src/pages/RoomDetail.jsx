@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 import useSalaChat from "../hooks/useSalaChat";
+import usePolling from "../hooks/usePolling";
 import Navbar from "../components/Navbar";
 import ChatPanel from "../components/ChatPanel";
 import SessionLoader from "../components/SessionLoader";
 import { getAvatarStyle, getInitials } from "../utils/avatar";
 import { formatDateTime, posterLabel } from "../utils/format";
+
+const ROOM_POLL_MS = 5000;
 
 export default function RoomDetail() {
   const { id } = useParams();
@@ -35,6 +38,10 @@ export default function RoomDetail() {
       cancelled = true;
     };
   }, [id, loadRoom]);
+
+  // Los demás usuarios se unen o salen sin avisar: se refresca la sala mientras esté abierta.
+  const refreshRoom = useCallback(() => loadRoom(id), [id, loadRoom]);
+  usePolling(refreshRoom, ROOM_POLL_MS, { enabled: Boolean(room) });
 
   if (!room) {
     if (status === "loading") return <SessionLoader message="Cargando sala…" />;

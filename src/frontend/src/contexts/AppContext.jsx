@@ -79,17 +79,25 @@ export function AppProvider({ children }) {
     setRooms((prev) => prev.filter((r) => r.id !== id));
   }, []);
 
-  const loadRooms = useCallback(async () => {
-    setRoomsStatus("loading");
-    setRoomsError(null);
-    try {
-      setRooms(await guard(fetchSalas));
-      setRoomsStatus("ready");
-    } catch (error) {
-      setRoomsError(error.message);
-      setRoomsStatus("error");
-    }
-  }, [guard]);
+  const loadRooms = useCallback(
+    async ({ silent = false } = {}) => {
+      if (!silent) {
+        setRoomsStatus("loading");
+        setRoomsError(null);
+      }
+      try {
+        setRooms(await guard(fetchSalas));
+        setRoomsStatus("ready");
+      } catch (error) {
+        // En refrescos silenciosos se conserva el último estado válido.
+        if (!silent) {
+          setRoomsError(error.message);
+          setRoomsStatus("error");
+        }
+      }
+    },
+    [guard]
+  );
 
   const getRoom = useCallback((id) => rooms.find((r) => r.id === String(id)) ?? null, [rooms]);
 
