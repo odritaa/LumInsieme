@@ -1,0 +1,1858 @@
+[
+ {
+  "short": "bceec38",
+  "full": "bceec38560242079f4cddfcb8d49435d46acc04b",
+  "date": "2026-10-26T20:49:18-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: docs refresh room",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 101,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/main"
+ },
+ {
+  "short": "7afec48",
+  "full": "7afec48cbc526439c47a057627646cbbef3fa1b8",
+  "date": "2026-10-26T20:43:33-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "fix: polling feed, room and chat to refresh UI for join/leave",
+  "stats": {
+   "src": {
+    "add": 100,
+    "del": 12,
+    "files": 4
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/main"
+ },
+ {
+  "short": "caf5d66",
+  "full": "caf5d66d34f11278679178cf9d06c9d698b62c12",
+  "date": "2026-10-21T11:55:49-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "docs(testing): titulos con resultado esperado explicito en todas las pruebas",
+  "stats": {
+   "src": {
+    "add": 6,
+    "del": 6,
+    "files": 4
+   },
+   "docs": {
+    "add": 151,
+    "del": 151,
+    "files": 44
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "1807d8e",
+  "full": "1807d8ec88e7257c1ff7034340139f593f593b61",
+  "date": "2026-10-21T11:54:16-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "docs(testing): resultados de la ejecucion del Plan de Pruebas (TP4)",
+  "stats": {
+   "src": {
+    "add": 8,
+    "del": 6,
+    "files": 5
+   },
+   "docs": {
+    "add": 31415,
+    "del": 0,
+    "files": 170
+   },
+   "tests": {
+    "add": 239,
+    "del": 5,
+    "files": 5
+   },
+   "raiz": {
+    "add": 75,
+    "del": 0,
+    "files": 2
+   }
+  },
+  "binary": 31,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "f5f74d3",
+  "full": "f5f74d3a2dd18319c9f1f2b197f511ef8a6c949e",
+  "date": "2026-10-21T11:41:23-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "fix(frontend): cabeceras de seguridad en nginx (DEF-04)",
+  "stats": {
+   "src": {
+    "add": 27,
+    "del": 0,
+    "files": 1
+   },
+   "docs": {
+    "add": 3910,
+    "del": 0,
+    "files": 4
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "a784d40",
+  "full": "a784d40ccbf5e13d95668e49ca51eefb354d7502",
+  "date": "2026-10-21T11:41:21-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "test: E2E con Playwright (Chromium y WebKit mobile), carga con k6 y ZAP baseline",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 7107,
+    "del": 0,
+    "files": 16
+   },
+   "tests": {
+    "add": 461,
+    "del": 0,
+    "files": 8
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 12,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "9347ad4",
+  "full": "9347ad4d190b7cb9d7ce0e197548e8296ff00e68",
+  "date": "2026-10-21T11:17:42-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "fix(scrapper): close() del navegador tolera un start() fallido (DEF-03)",
+  "stats": {
+   "src": {
+    "add": 12,
+    "del": 5,
+    "files": 2
+   },
+   "docs": {
+    "add": 2,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "0ee56db",
+  "full": "0ee56dba4fbf04dfcac6ca49db8e54465e66fc3e",
+  "date": "2026-10-21T11:16:59-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "fix(cache): GetTTL devuelve -1/-2 para claves sin vencimiento o inexistentes (DEF-02)",
+  "stats": {
+   "src": {
+    "add": 4,
+    "del": 0,
+    "files": 1
+   },
+   "docs": {
+    "add": 6,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "9727b91",
+  "full": "9727b91b1c3fc51e3f5a1bd11533d82b3477b3ee",
+  "date": "2026-10-21T11:16:14-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "fix(chat): reprogramar el flush cuando PushBatch falla (DEF-01)",
+  "stats": {
+   "src": {
+    "add": 6,
+    "del": 0,
+    "files": 1
+   },
+   "docs": {
+    "add": 9,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "3ba285a",
+  "full": "3ba285ae9a0da6cdeceedf1bf927eec71ace61c8",
+  "date": "2026-10-21T11:15:27-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "test: suites unitarias y de integracion del TP4 (Plan de Pruebas)",
+  "stats": {
+   "src": {
+    "add": 8443,
+    "del": 47,
+    "files": 41
+   },
+   "docs": {
+    "add": 80,
+    "del": 0,
+    "files": 3
+   },
+   "tests": {
+    "add": 300,
+    "del": 0,
+    "files": 2
+   },
+   "raiz": {
+    "add": 10,
+    "del": 0,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "tp4-plan-pruebas"
+ },
+ {
+  "short": "655f973",
+  "full": "655f973ba5e2b49a542335302723753de4b3fdf8",
+  "date": "2026-10-20T20:43:39-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "#Commit: Proyecto funcional completado",
+  "stats": {
+   "src": {
+    "add": 3737,
+    "del": 238,
+    "files": 52
+   },
+   "docs": {
+    "add": 543,
+    "del": 0,
+    "files": 2
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 165,
+    "del": 21,
+    "files": 4
+   }
+  },
+  "binary": 0,
+  "branch": "main"
+ },
+ {
+  "short": "15e17b7",
+  "full": "15e17b71e75d3fdb970783356b92a9c7fe836df8",
+  "date": "2026-10-20T20:42:59-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "#Commit: Proyecto Finalizado",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 343,
+    "files": 4
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "main"
+ },
+ {
+  "short": "9eca38b",
+  "full": "9eca38b857d87b2aea156173fc5daa07f04dbc63",
+  "date": "2026-10-19T10:17:14-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: reduccion de alcance y modificación de AGENTES.md",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 20,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 19,
+    "del": 14,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "main"
+ },
+ {
+  "short": "b648f32",
+  "full": "b648f32b3469bc0883731a607c2620767056faa2",
+  "date": "2026-10-19T09:55:41-03:00",
+  "author": "Tomás Varas Oviedo",
+  "merge": true,
+  "subject": "Merge pull request #3 from odritaa/cache-chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "cache-chat (PR #3)"
+ },
+ {
+  "short": "27ee1e9",
+  "full": "27ee1e981d6209a4092f47ea4dd6a32de3933db1",
+  "date": "2026-10-19T09:44:44-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Dockerfile to scrapper/chat/cache",
+  "stats": {
+   "src": {
+    "add": 60,
+    "del": 18,
+    "files": 7
+   },
+   "docs": {
+    "add": 322,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 68,
+    "del": 0,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "05943bf",
+  "full": "05943bff38e1bacf63c1b8e3e9dec883053f819c",
+  "date": "2026-09-16T11:07:02-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: integracion chat <-> cache, terminada",
+  "stats": {
+   "src": {
+    "add": 6128,
+    "del": 231,
+    "files": 21
+   },
+   "docs": {
+    "add": 199,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 2,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "aea4f93",
+  "full": "aea4f935e36eb0f62c95845461c2d927ab36eac8",
+  "date": "2026-09-15T09:13:49-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "docs: Integracion chat-cache",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 133,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "c464c65",
+  "full": "c464c656514cdc03502660c63831126d87f266bd",
+  "date": "2026-09-08T19:13:39-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "Merge branch 'cache-scrapper' of https://github.com/odritaa/LumInsieme into cache-chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "d742501",
+  "full": "d74250107231d68a9db8a4115220088519e08233",
+  "date": "2026-09-08T18:45:46-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "Merge branch 'chat-controller' of https://github.com/odritaa/LumInsieme into cache-chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "5452eb8",
+  "full": "5452eb8ad8cf9392d5151256298d40895d87a144",
+  "date": "2026-09-08T18:44:40-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "Merge branch 'cache-controller' of https://github.com/odritaa/LumInsieme into cache-chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-chat"
+ },
+ {
+  "short": "0f534e6",
+  "full": "0f534e690022d4a2cbf2d9646cd3bad7870f1e2f",
+  "date": "2026-09-01T19:24:57-03:00",
+  "author": "Diego Escorche",
+  "merge": false,
+  "subject": "Delete src/frontend/node_modules directory",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 858193,
+    "files": 2879
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 3,
+  "branch": "main"
+ },
+ {
+  "short": "040cb45",
+  "full": "040cb4524c16ee4c5b1ed8a0073fcbc4bb51efa6",
+  "date": "2026-09-01T19:24:38-03:00",
+  "author": "Diego Escorche",
+  "merge": false,
+  "subject": "Delete src/chat-controller directory from Chat Branch",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 7475,
+    "files": 40
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "main"
+ },
+ {
+  "short": "5146d75",
+  "full": "5146d75a6a0355f3e9eb36be165d8fad7814fa90",
+  "date": "2026-09-01T10:32:10-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: documentacion del proceso",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 237,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-scrapper"
+ },
+ {
+  "short": "05ad76c",
+  "full": "05ad76c42ff8d51d7780e63623d85a3f30b04097",
+  "date": "2026-09-01T10:17:48-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Integracion scrapper <-> cache, faltan pruebas",
+  "stats": {
+   "src": {
+    "add": 1294,
+    "del": 274,
+    "files": 12
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-scrapper"
+ },
+ {
+  "short": "d79f99a",
+  "full": "d79f99a23ef68b1d3fdddec1b2660aa6d94330ce",
+  "date": "2026-09-01T09:02:08-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "Merge branch 'cache-controller' of https://github.com/odritaa/LumInsieme into cache-scrapper",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-scrapper"
+ },
+ {
+  "short": "a2e36d3",
+  "full": "a2e36d31c23b7d9be636bc7e2b10a0ee14106ef8",
+  "date": "2026-09-01T08:59:48-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "add: Cambios de rama scrapper",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-scrapper"
+ },
+ {
+  "short": "1ddcaff",
+  "full": "1ddcaff03849b89ed7de76896f294cb779199525",
+  "date": "2026-08-31T23:01:52-03:00",
+  "author": "Diego Escorche",
+  "merge": true,
+  "subject": "Merge pull request #2 from odritaa/chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "chat (PR #2)"
+ },
+ {
+  "short": "de9bc4e",
+  "full": "de9bc4e549bb27dfdd6442e20056833f3380f176",
+  "date": "2026-08-31T22:58:58-03:00",
+  "author": "Diego-Escorche",
+  "merge": true,
+  "subject": "Merge branch 'main' into chat",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "chat"
+ },
+ {
+  "short": "ff28bb7",
+  "full": "ff28bb73274bd543bb57d7430dac1f18fcdf059a",
+  "date": "2026-08-31T22:41:31-03:00",
+  "author": "Diego Escorche",
+  "merge": true,
+  "subject": "Merge pull request #1 from odritaa:login",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "chat"
+ },
+ {
+  "short": "6dcc170",
+  "full": "6dcc1706efd2d6d874cd25fc9e75ae87dd2ebb14",
+  "date": "2026-08-31T22:11:08-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "#Add: Pruebas Estres",
+  "stats": {
+   "src": {
+    "add": 7475,
+    "del": 0,
+    "files": 40
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 10,
+    "del": 5,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "chat"
+ },
+ {
+  "short": "9b94403",
+  "full": "9b9440313c8d6601088bffe33b04d90524151b76",
+  "date": "2026-08-11T20:27:21-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: gRPC y TUI de pruebas",
+  "stats": {
+   "src": {
+    "add": 3708,
+    "del": 0,
+    "files": 13
+   },
+   "docs": {
+    "add": 337,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/cache-controller"
+ },
+ {
+  "short": "6eb1cdd",
+  "full": "6eb1cdd9b352782929c2945dc8ec401842ebe4ea",
+  "date": "2026-08-10T22:15:14-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "Created chat branch",
+  "stats": {
+   "src": {
+    "add": 979199,
+    "del": 0,
+    "files": 4068
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 4,
+  "branch": "chat"
+ },
+ {
+  "short": "00d0500",
+  "full": "00d05006730f4e0043f407fd5b87569dbd037b9e",
+  "date": "2026-08-05T12:10:28-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "Add: Modulo de login con OAuth de manera local",
+  "stats": {
+   "src": {
+    "add": 2556,
+    "del": 59,
+    "files": 35
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 42,
+    "del": 0,
+    "files": 2
+   }
+  },
+  "binary": 0,
+  "branch": "login"
+ },
+ {
+  "short": "1d517e3",
+  "full": "1d517e3fda1feb8d62af3b85ad9998aa96f97dc6",
+  "date": "2026-08-04T19:45:52-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "fix: Arreglo de sobre informacion, peliculas con dias adecuados",
+  "stats": {
+   "src": {
+    "add": 1,
+    "del": 1,
+    "files": 1
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "b23c6fe",
+  "full": "b23c6feec9ef245584f678ab3eebbc8590d74fdd",
+  "date": "2026-08-04T11:28:57-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: falta verificar error de archivo JSON (Estructura)",
+  "stats": {
+   "src": {
+    "add": 7100,
+    "del": 31,
+    "files": 19
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 3,
+    "del": 199,
+    "files": 2
+   }
+  },
+  "binary": 5,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "163afcd",
+  "full": "163afcd9c43ead7296e52f07eb4ccaa3649b7733",
+  "date": "2026-08-03T20:40:19-03:00",
+  "author": "Diego-Escorche",
+  "merge": false,
+  "subject": "Add: Front del mockup aplicado al proyecto actual",
+  "stats": {
+   "src": {
+    "add": 1868,
+    "del": 448,
+    "files": 29
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "12a5f23",
+  "full": "12a5f232aaf4468f72e2e941485eed0e30d4cc86",
+  "date": "2026-08-03T20:25:38-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add:implementacion basica, faltan cosas",
+  "stats": {
+   "src": {
+    "add": 1709,
+    "del": 0,
+    "files": 10
+   },
+   "docs": {
+    "add": 49,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "chat-controller"
+ },
+ {
+  "short": "635c7aa",
+  "full": "635c7aa7e74dae8cab3598bc40a521ab6b5ea9ad",
+  "date": "2026-07-16T14:05:09-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix:cambio de frontend (Excepto main.py)",
+  "stats": {
+   "src": {
+    "add": 258,
+    "del": 4,
+    "files": 7
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 1,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "012a339",
+  "full": "012a339f2b67f7d1527033b1cb09cc4579f1cd6e",
+  "date": "2026-07-16T13:53:30-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: Docker file y ngnix para SSL",
+  "stats": {
+   "src": {
+    "add": 16,
+    "del": 1,
+    "files": 2
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "4a653a6",
+  "full": "4a653a6257cdbb760b3ff062319030d1024170cf",
+  "date": "2026-07-16T11:12:30-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Dockerfile para PoC",
+  "stats": {
+   "src": {
+    "add": 33,
+    "del": 0,
+    "files": 2
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "0bfd554",
+  "full": "0bfd554895ac70f3b8ce82ff57a440a318bddd26",
+  "date": "2026-07-16T10:59:14-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: PoC adecuacion para EC2 scrapper",
+  "stats": {
+   "src": {
+    "add": 51,
+    "del": 7,
+    "files": 3
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "049baa5",
+  "full": "049baa5060235cb95f9ab5e3c5f2f72725ec76ab",
+  "date": "2026-07-15T19:21:03-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Dockerfile, preparacion para EC2",
+  "stats": {
+   "src": {
+    "add": 91,
+    "del": 6,
+    "files": 4
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "f0cbf50",
+  "full": "f0cbf5044a83a426b6768cbb23bbd874f5551e32",
+  "date": "2026-07-15T19:16:17-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix:adaptacion para ejecucion en EC2",
+  "stats": {
+   "src": {
+    "add": 58,
+    "del": 3,
+    "files": 5
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 1,
+  "branch": "frontend"
+ },
+ {
+  "short": "37666a2",
+  "full": "37666a2061a16ef33f49cc9d12344e5ee9ff8087",
+  "date": "2026-07-14T19:29:42-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: FastAPI y Redis",
+  "stats": {
+   "src": {
+    "add": 217,
+    "del": 9,
+    "files": 6
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "684008e",
+  "full": "684008e8303daca54c662caf7ba5944f8bdaaea9",
+  "date": "2026-07-14T19:26:35-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: redaptacion de plantilla a React",
+  "stats": {
+   "src": {
+    "add": 3091,
+    "del": 0,
+    "files": 23
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "frontend"
+ },
+ {
+  "short": "02acdf1",
+  "full": "02acdf189e248cf3b471e19666caa2f74b470ba6",
+  "date": "2026-07-12T19:53:24-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: error de dia, cambio a locator -> Falta implementacion demo",
+  "stats": {
+   "src": {
+    "add": 30,
+    "del": 74,
+    "files": 3
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "ba73b3c",
+  "full": "ba73b3c344ee360a1a50f5a7c95940911aec4720",
+  "date": "2026-07-11T21:56:39-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix:arreglos finales -> falta implementacion y desiciones para demo",
+  "stats": {
+   "src": {
+    "add": 435,
+    "del": 10,
+    "files": 3
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "e8f3c7a",
+  "full": "e8f3c7a057176cad74723de0c55b9e74d1e82cf9",
+  "date": "2026-07-10T20:14:34-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "fix: corregiendo error -> Falta screenings",
+  "stats": {
+   "src": {
+    "add": 62,
+    "del": 27,
+    "files": 8
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 1,
+    "del": 3,
+    "files": 1
+   }
+  },
+  "binary": 4,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "7165bd8",
+  "full": "7165bd809ed55d42ea65c31c664559b109b32f57",
+  "date": "2026-07-09T19:30:47-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Estrategia Multiplex -> Faltan prueba",
+  "stats": {
+   "src": {
+    "add": 101,
+    "del": 22,
+    "files": 14
+   },
+   "docs": {
+    "add": 1370,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 7,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "21e913e",
+  "full": "21e913e85a5abf366798ed339ddf67a338fd746b",
+  "date": "2026-06-15T10:39:49-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": true,
+  "subject": "Merge branch 'main' of https://github.com/odritaa/LumInsieme into scrapper",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "4ddfe56",
+  "full": "4ddfe56c33bfee4f30e364f784255e65e36cc515",
+  "date": "2026-06-12T20:06:15-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: AGENTES.md, documentación para agentes  y modificacion de archivo .gitignore",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 100,
+    "del": 0,
+    "files": 1
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 143,
+    "del": 0,
+    "files": 2
+   }
+  },
+  "binary": 0,
+  "branch": "chat-controller"
+ },
+ {
+  "short": "81c8a2f",
+  "full": "81c8a2f673a19e9d18291f58fd8a7dccd1852121",
+  "date": "2026-06-12T19:41:59-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: Comenzando a codificar estrategia",
+  "stats": {
+   "src": {
+    "add": 51,
+    "del": 15,
+    "files": 1
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "4b94432",
+  "full": "4b9443217c496b51db552a294a3e668ac82688c0",
+  "date": "2026-06-11T19:27:10-03:00",
+  "author": "Tomy Varas",
+  "merge": false,
+  "subject": "add: Instruccciones de Scrapping para Multiplex",
+  "stats": {
+   "src": {
+    "add": 12,
+    "del": 1,
+    "files": 1
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "cd9ab41",
+  "full": "cd9ab41eda40970e7a79d7f8c5b79c4f9bdbf425",
+  "date": "2026-06-11T15:17:23-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "add: Estructura y estrategias",
+  "stats": {
+   "src": {
+    "add": 84,
+    "del": 0,
+    "files": 9
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "36a76d5",
+  "full": "36a76d580abc53d44c1d474b172ef711a8784988",
+  "date": "2026-06-09T10:31:30-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "init: estructura y configuracion",
+  "stats": {
+   "src": {
+    "add": 10,
+    "del": 0,
+    "files": 5
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 1,
+    "del": 1,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "origin/scrapper"
+ },
+ {
+  "short": "7a7d443",
+  "full": "7a7d443ef2e0edea1e4ebc4ce54c4b46b75a537a",
+  "date": "2026-06-09T09:53:51-03:00",
+  "author": "TomyVarasOviedo",
+  "merge": false,
+  "subject": "init: configuracion y estructura",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 29,
+    "del": 1,
+    "files": 2
+   }
+  },
+  "binary": 0,
+  "branch": "chat-controller"
+ },
+ {
+  "short": "6ff3d1b",
+  "full": "6ff3d1b84b9105eb42d6ea5a7a51a093fffe2e4b",
+  "date": "2026-05-09T11:20:40-03:00",
+  "author": "Audrey Virginia Barrientos Galarza",
+  "merge": false,
+  "subject": "Add files via upload",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 197,
+    "del": 0,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "chat-controller"
+ },
+ {
+  "short": "b19533d",
+  "full": "b19533df769d091996eb3ae8acd2bc07646d23ca",
+  "date": "2026-05-09T11:13:56-03:00",
+  "author": "Audrey Virginia Barrientos Galarza",
+  "merge": false,
+  "subject": "Initial commit",
+  "stats": {
+   "src": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "docs": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "tests": {
+    "add": 0,
+    "del": 0,
+    "files": 0
+   },
+   "raiz": {
+    "add": 1,
+    "del": 0,
+    "files": 1
+   }
+  },
+  "binary": 0,
+  "branch": "chat-controller"
+ }
+]

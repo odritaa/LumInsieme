@@ -1,0 +1,116 @@
+[
+  {
+    "title": "PT-TR-25 CacheClient.set_with_ttl → SetWithTTLRequest con clave, valor y TTL; devuelve ok",
+    "status": "passed",
+    "duration": 0.009,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-26 set_json + get → serializa sin escapar acentos y get devuelve el objeto decodificado",
+    "status": "passed",
+    "duration": 0.011,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-27 get de clave inexistente y health → None y redis_connected=True",
+    "status": "passed",
+    "duration": 0.012,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-28 CacheClient sin argumentos → host y puerto desde GRPC_HOST/GRPC_PORT",
+    "status": "passed",
+    "duration": 0.001,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-21 run_initial_scrape → SetWithTTL('scraped_data', JSON serializado, CACHE_TTL) una vez, por el mock del cliente gRPC",
+    "status": "passed",
+    "duration": 0.015,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-22 SetWithTTL responde ok=false → informa el error y termina sin excepción",
+    "status": "passed",
+    "duration": 0.005,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-23 La estrategia lanza una excepción → no se escribe en caché y se cierran navegador y cliente",
+    "status": "passed",
+    "duration": 0.005,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-24 Chromium no arranca (start falla) → se informa el error, sin excepción secundaria, y se cierra el cliente gRPC",
+    "status": "failed",
+    "duration": 0.004,
+    "message": "AttributeError: 'PlaywrightBrowserController' object has no attribute 'context'"
+  },
+  {
+    "title": "PT-TR-10 doScrapping sobre el HTML de muestra → un dict por día con las películas visibles",
+    "status": "passed",
+    "duration": 3.139,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-11 extractScreenings → excluye horarios .horario-desactivado, ocultos y formatos no visibles",
+    "status": "passed",
+    "duration": 1.6,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-12 valor de día 'M.D.AAAA' → clave 'AAAA-M-D' y MovieData con fecha, cine y duración",
+    "status": "passed",
+    "duration": 1.682,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-13 página con 6 días disponibles → se scrapean solo los primeros 5",
+    "status": "passed",
+    "duration": 1.5,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-14 HTML sin el popup esperado (cambio de estructura del sitio) → TimeoutError en vez de datos vacíos",
+    "status": "passed",
+    "duration": 5.137,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-15 HTML con un solo complejo de cines → TimeoutError",
+    "status": "passed",
+    "duration": 0.567,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-16 PlaywrightBrowserController.start + scrapper_page + close con Chromium real → resultado de la estrategia",
+    "status": "failed",
+    "duration": 1.451,
+    "message": "assert False"
+  },
+  {
+    "title": "PT-TR-17 _serialize(MovieData) → dict con fecha AAAA-MM-DD y todos los campos que lee reunion-controller",
+    "status": "passed",
+    "duration": 0.0,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-18 [{día: [MovieData]}] (salida de gather) → JSON válido que conserva acentos y la estructura por día",
+    "status": "passed",
+    "duration": 0.001,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-19 _serialize de str/int/None → se devuelven sin cambios",
+    "status": "passed",
+    "duration": 0.0,
+    "message": ""
+  },
+  {
+    "title": "PT-TR-20 repr(MovieData) → incluye título, fecha, cine y funciones",
+    "status": "passed",
+    "duration": 0.0,
+    "message": ""
+  }
+]

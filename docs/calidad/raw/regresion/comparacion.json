@@ -1,0 +1,127 @@
+{
+  "totals": {
+    "Vitest + Supertest": {
+      "pruebas": 112,
+      "pasaron": 111,
+      "fallaron": 1,
+      "pasaron2110": 112
+    },
+    "Vitest + RTL": {
+      "pruebas": 34,
+      "pasaron": 34,
+      "fallaron": 0,
+      "pasaron2110": 34
+    },
+    "go test + Testify + miniredis": {
+      "pruebas": 17,
+      "pasaron": 16,
+      "fallaron": 1,
+      "pasaron2110": 17
+    },
+    "pytest": {
+      "pruebas": 19,
+      "pasaron": 17,
+      "fallaron": 2,
+      "pasaron2110": 19
+    },
+    "Playwright": {
+      "pruebas": 8,
+      "pasaron": 7,
+      "fallaron": 1,
+      "pasaron2110": 8
+    },
+    "k6": {
+      "pruebas": 5,
+      "pasaron": 4,
+      "fallaron": 1,
+      "pasaron2110": 5
+    },
+    "OWASP ZAP baseline": {
+      "pruebas": 3,
+      "pasaron": 1,
+      "fallaron": 2,
+      "pasaron2110": 3
+    }
+  },
+  "differences": [
+    {
+      "id": "PT-CU05-20",
+      "tool": "Vitest + Supertest",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "AssertionError: expected \"pushBatch\" to be called 2 times, but got 1 times"
+    },
+    {
+      "id": "PT-TR-16",
+      "tool": "pytest",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "assert False"
+    },
+    {
+      "id": "PT-TR-24",
+      "tool": "pytest",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "AttributeError: 'PlaywrightBrowserController' object has no attribute 'context'"
+    },
+    {
+      "id": "PT-TR-35",
+      "tool": "go test + Testify + miniredis",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "expected: -1; actual : 0; expected: -2; actual : 0"
+    },
+    {
+      "id": "PT-TR-57",
+      "tool": "Playwright",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "mobile-chromium: failed, mobile-webkit: failed"
+    },
+    {
+      "id": "PT-TR-64",
+      "tool": "k6",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "p95 por ráfaga 221 / 122 / 110 / 125 / 129 ms"
+    },
+    {
+      "id": "PT-TR-71",
+      "tool": "OWASP ZAP baseline",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "alertas presentes: 10038, 10020, 10021, 10035, 10063"
+    },
+    {
+      "id": "PT-TR-72",
+      "tool": "OWASP ZAP baseline",
+      "antes": "pasó",
+      "ahora": "falló",
+      "detalle": "alertas presentes: 10036, 10037"
+    }
+  ],
+  "faltantes": [],
+  "metricas": {
+    "PT-TR-60": {
+      "hoy": "p95 6,3 ms",
+      "21/10": "p95 6,0 ms"
+    },
+    "PT-TR-61": {
+      "hoy": "p95 10,4 ms",
+      "21/10": "p95 10,0 ms"
+    },
+    "PT-TR-62": {
+      "hoy": "p95 123,4 ms / 126,4 ms",
+      "21/10": "p95 107,4 ms / 111,1 ms"
+    },
+    "PT-TR-63": {
+      "hoy": "entrega p95 3,0 ms; ticket p95 196,4 ms",
+      "21/10": "entrega p95 3,0 ms; ticket p95 255,7 ms"
+    },
+    "PT-TR-64": {
+      "hoy": "p95 por ráfaga 221 / 122 / 110 / 125 / 129 ms",
+      "21/10": "p95 por ráfaga 184 / 100 / 92 / 102 / 100 ms"
+    }
+  }
+}

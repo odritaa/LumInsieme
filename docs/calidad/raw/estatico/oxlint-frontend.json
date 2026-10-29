@@ -1,0 +1,7 @@
+{ "diagnostics": [{"message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.","code": "react(only-export-components)","severity": "warning","causes": [],"url": "https://oxc.rs/docs/guide/usage/linter/rules/react/only-export-components.html","filename": "src/contexts/AppContext.jsx","labels": [{"span": {"offset": 5388,"length": 13,"line": 211,"column": 17}}],"related": []}],
+              "number_of_files": 25,
+              "number_of_rules": 91,
+              "threads_count": 12,
+              "start_time": 0.2448759
+            }
+            

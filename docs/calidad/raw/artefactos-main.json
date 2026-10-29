@@ -1,0 +1,110 @@
+{
+ "total": {
+  "archivos": 1372,
+  "bytes": 53549123
+ },
+ "grupos": [
+  {
+   "grupo": "src/login-controller/node_modules/",
+   "archivos": 1185,
+   "bytes": 4514113,
+   "ejemplos": [
+    "src/login-controller/node_modules/.bin/mime",
+    "src/login-controller/node_modules/.bin/mime.cmd",
+    "src/login-controller/node_modules/.bin/mime.ps1"
+   ]
+  },
+  {
+   "grupo": "src/frontend/dist/ (build de Vite)",
+   "archivos": 4,
+   "bytes": 298933,
+   "ejemplos": [
+    "src/frontend/dist/assets/index-2yzlc95j.js",
+    "src/frontend/dist/assets/index-C3AnEHVw.css",
+    "src/frontend/dist/favicon.svg"
+   ]
+  },
+  {
+   "grupo": "binarios ELF de Go (cache-controller, testclient)",
+   "archivos": 2,
+   "bytes": 41640099,
+   "ejemplos": [
+    "src/cache-controller/cache-controller",
+    "src/cache-controller/testclient"
+   ]
+  },
+  {
+   "grupo": "__pycache__ / *.pyc",
+   "archivos": 8,
+   "bytes": 18315,
+   "ejemplos": [
+    "src/scrapper/models/__pycache__/__init__.cpython-311.pyc",
+    "src/scrapper/models/__pycache__/browserController.cpython-311.pyc",
+    "src/scrapper/strategies/__pycache__/__init__.cpython-311.pyc"
+   ]
+  },
+  {
+   "grupo": "gRPC Go: pb/",
+   "archivos": 2,
+   "bytes": 83219,
+   "ejemplos": [
+    "src/cache-controller/pb/cache.pb.go",
+    "src/cache-controller/pb/cache_grpc.pb.go"
+   ]
+  },
+  {
+   "grupo": "gRPC Go: proto/*.pb.go",
+   "archivos": 2,
+   "bytes": 83219,
+   "ejemplos": [
+    "src/cache-controller/proto/cache.pb.go",
+    "src/cache-controller/proto/cache_grpc.pb.go"
+   ]
+  },
+  {
+   "grupo": "gRPC Go: github.com/... (copia anidada)",
+   "archivos": 2,
+   "bytes": 83219,
+   "ejemplos": [
+    "src/cache-controller/github.com/odritaa/LumInsieme/src/cache-controller/pb/cache.pb.go",
+    "src/cache-controller/github.com/odritaa/LumInsieme/src/cache-controller/pb/cache_grpc.pb.go"
+   ]
+  },
+  {
+   "grupo": "gRPC Python: scrapper/pb/*_pb2*.py (generado)",
+   "archivos": 2,
+   "bytes": 36145,
+   "ejemplos": [
+    "src/scrapper/pb/cache_pb2.py",
+    "src/scrapper/pb/cache_pb2_grpc.py"
+   ]
+  },
+  {
+   "grupo": "scrapper/requests/.timeline y .noodle (estado de cliente HTTP)",
+   "archivos": 9,
+   "bytes": 50691,
+   "ejemplos": [
+    "src/scrapper/requests/.noodle/ui-state.yml",
+    "src/scrapper/requests/.timeline/example.yml",
+    "src/scrapper/requests/.timeline/observaciones-lusat.yml"
+   ]
+  },
+  {
+   "grupo": "scrapper/moviesData.json (salida de scraping)",
+   "archivos": 1,
+   "bytes": 136030,
+   "ejemplos": [
+    "src/scrapper/moviesData.json"
+   ]
+  },
+  {
+   "grupo": "HTML/TXT guardados de multiplex.com.ar",
+   "archivos": 2,
+   "bytes": 5898946,
+   "ejemplos": [
+    "docs/multiplex-codigo-fuente.txt",
+    "src/scrapper/docs/multiplex.com.ar-codigo-fuente.html"
+   ]
+  }
+ ]
+}

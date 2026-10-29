@@ -1,0 +1,1 @@
+{"code":"SA1019","severity":"error","location":{"file":"/src/cmd/testclient/main.go","line":19,"column":15},"end":{"file":"/src/cmd/testclient/main.go","line":19,"column":31},"message":"grpc.DialContext is deprecated: use NewClient instead.  Will be supported throughout 1.x. "}

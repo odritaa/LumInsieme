@@ -1,0 +1,107 @@
+[
+ {
+  "ref": "refs/heads/chat",
+  "sha": "de9bc4e",
+  "date": "2026-08-31T22:58:58-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Merge branch 'main' into chat"
+ },
+ {
+  "ref": "refs/heads/chat-controller",
+  "sha": "12a5f23",
+  "date": "2026-08-03T20:25:38-03:00",
+  "author": "Tomy Varas",
+  "subject": "add:implementacion basica, faltan cosas"
+ },
+ {
+  "ref": "refs/heads/frontend",
+  "sha": "163afcd",
+  "date": "2026-08-03T20:40:19-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Add: Front del mockup aplicado al proyecto actual"
+ },
+ {
+  "ref": "refs/heads/login",
+  "sha": "00d0500",
+  "date": "2026-08-05T12:10:28-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Add: Modulo de login con OAuth de manera local"
+ },
+ {
+  "ref": "refs/heads/main",
+  "sha": "655f973",
+  "date": "2026-10-20T20:43:39-03:00",
+  "author": "Diego-Escorche",
+  "subject": "#Commit: Proyecto funcional completado"
+ },
+ {
+  "ref": "refs/heads/tp4-plan-pruebas",
+  "sha": "caf5d66",
+  "date": "2026-10-21T11:55:49-03:00",
+  "author": "Diego-Escorche",
+  "subject": "docs(testing): titulos con resultado esperado explicito en todas las pruebas"
+ },
+ {
+  "ref": "refs/remotes/origin/cache-chat",
+  "sha": "27ee1e9",
+  "date": "2026-10-19T09:44:44-03:00",
+  "author": "TomyVarasOviedo",
+  "subject": "add: Dockerfile to scrapper/chat/cache"
+ },
+ {
+  "ref": "refs/remotes/origin/cache-controller",
+  "sha": "9b94403",
+  "date": "2026-08-11T20:27:21-03:00",
+  "author": "Tomy Varas",
+  "subject": "add: gRPC y TUI de pruebas"
+ },
+ {
+  "ref": "refs/remotes/origin/cache-scrapper",
+  "sha": "5146d75",
+  "date": "2026-09-01T10:32:10-03:00",
+  "author": "TomyVarasOviedo",
+  "subject": "add: documentacion del proceso"
+ },
+ {
+  "ref": "refs/remotes/origin/chat",
+  "sha": "de9bc4e",
+  "date": "2026-08-31T22:58:58-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Merge branch 'main' into chat"
+ },
+ {
+  "ref": "refs/remotes/origin/chat-controller",
+  "sha": "12a5f23",
+  "date": "2026-08-03T20:25:38-03:00",
+  "author": "Tomy Varas",
+  "subject": "add:implementacion basica, faltan cosas"
+ },
+ {
+  "ref": "refs/remotes/origin/frontend",
+  "sha": "163afcd",
+  "date": "2026-08-03T20:40:19-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Add: Front del mockup aplicado al proyecto actual"
+ },
+ {
+  "ref": "refs/remotes/origin/login",
+  "sha": "00d0500",
+  "date": "2026-08-05T12:10:28-03:00",
+  "author": "Diego-Escorche",
+  "subject": "Add: Modulo de login con OAuth de manera local"
+ },
+ {
+  "ref": "refs/remotes/origin/main",
+  "sha": "bceec38",
+  "date": "2026-10-26T20:49:18-03:00",
+  "author": "Tomy Varas",
+  "subject": "add: docs refresh room"
+ },
+ {
+  "ref": "refs/remotes/origin/scrapper",
+  "sha": "1d517e3",
+  "date": "2026-08-04T19:45:52-03:00",
+  "author": "Tomy Varas",
+  "subject": "fix: Arreglo de sobre informacion, peliculas con dias adecuados"
+ }
+]

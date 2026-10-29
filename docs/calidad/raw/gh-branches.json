@@ -1,0 +1,74 @@
+[
+  {
+    "name": "cache-chat",
+    "commit": {
+      "sha": "27ee1e981d6209a4092f47ea4dd6a32de3933db1",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/27ee1e981d6209a4092f47ea4dd6a32de3933db1"
+    },
+    "protected": false
+  },
+  {
+    "name": "cache-controller",
+    "commit": {
+      "sha": "9b9440313c8d6601088bffe33b04d90524151b76",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/9b9440313c8d6601088bffe33b04d90524151b76"
+    },
+    "protected": false
+  },
+  {
+    "name": "cache-scrapper",
+    "commit": {
+      "sha": "5146d75a6a0355f3e9eb36be165d8fad7814fa90",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/5146d75a6a0355f3e9eb36be165d8fad7814fa90"
+    },
+    "protected": false
+  },
+  {
+    "name": "chat",
+    "commit": {
+      "sha": "de9bc4e549bb27dfdd6442e20056833f3380f176",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/de9bc4e549bb27dfdd6442e20056833f3380f176"
+    },
+    "protected": false
+  },
+  {
+    "name": "chat-controller",
+    "commit": {
+      "sha": "12a5f232aaf4468f72e2e941485eed0e30d4cc86",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/12a5f232aaf4468f72e2e941485eed0e30d4cc86"
+    },
+    "protected": false
+  },
+  {
+    "name": "frontend",
+    "commit": {
+      "sha": "163afcd9c43ead7296e52f07eb4ccaa3649b7733",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/163afcd9c43ead7296e52f07eb4ccaa3649b7733"
+    },
+    "protected": false
+  },
+  {
+    "name": "login",
+    "commit": {
+      "sha": "00d05006730f4e0043f407fd5b87569dbd037b9e",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/00d05006730f4e0043f407fd5b87569dbd037b9e"
+    },
+    "protected": false
+  },
+  {
+    "name": "main",
+    "commit": {
+      "sha": "bceec38560242079f4cddfcb8d49435d46acc04b",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/bceec38560242079f4cddfcb8d49435d46acc04b"
+    },
+    "protected": false
+  },
+  {
+    "name": "scrapper",
+    "commit": {
+      "sha": "1d517e3fda1feb8d62af3b85ad9998aa96f97dc6",
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/1d517e3fda1feb8d62af3b85ad9998aa96f97dc6"
+    },
+    "protected": false
+  }
+]

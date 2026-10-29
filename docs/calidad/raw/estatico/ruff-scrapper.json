@@ -1,0 +1,101 @@
+[
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 12,
+      "row": 3
+    },
+    "filename": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\src\\scrapper\\grpc_client.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Remove unused import: `grpc`"
+    },
+    "location": {
+      "column": 8,
+      "row": 3
+    },
+    "message": "`grpc` imported but unused",
+    "noqa_row": 3,
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 16,
+      "row": 4
+    },
+    "filename": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\src\\scrapper\\pb\\cache_pb2_grpc.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        }
+      ],
+      "message": "Remove unused import: `warnings`"
+    },
+    "location": {
+      "column": 8,
+      "row": 4
+    },
+    "message": "`warnings` imported but unused",
+    "noqa_row": 4,
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 80,
+      "row": 6
+    },
+    "filename": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\src\\scrapper\\strategies\\multiplexScrapping.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from playwright.async_api import TimeoutError, Error as PlaywrightError",
+          "end_location": {
+            "column": 80,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import: `playwright.async_api.expect`"
+    },
+    "location": {
+      "column": 74,
+      "row": 6
+    },
+    "message": "`playwright.async_api.expect` imported but unused",
+    "noqa_row": 6,
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  }
+]

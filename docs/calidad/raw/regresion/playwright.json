@@ -1,0 +1,877 @@
+{
+ "config": {
+  "argv": [
+   "C:\\nvm4w\\nodejs\\node.exe",
+   "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\node_modules\\@playwright\\test\\cli.js",
+   "test"
+  ],
+  "configFile": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\playwright.config.js",
+  "rootDir": "C:/Users/escor/AppData/Local/Temp/claude/d--Universidad-5-Hab--Prof-LumInsieme/596a8499-a532-4fa9-804b-bb356a1cbe48/scratchpad/main-qa/tests/e2e/specs",
+  "failOnFlakyTests": false,
+  "forbidOnly": false,
+  "fullyParallel": false,
+  "globalSetup": null,
+  "globalTeardown": null,
+  "globalTimeout": 0,
+  "grep": {},
+  "grepInvert": null,
+  "maxFailures": 0,
+  "metadata": {
+   "actualWorkers": 1
+  },
+  "preserveOutput": "always",
+  "projects": [
+   {
+    "outputDir": "C:/Users/escor/AppData/Local/Temp/claude/d--Universidad-5-Hab--Prof-LumInsieme/596a8499-a532-4fa9-804b-bb356a1cbe48/scratchpad/main-qa/tests/e2e/test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "id": "mobile-chromium",
+    "name": "mobile-chromium",
+    "testDir": "C:/Users/escor/AppData/Local/Temp/claude/d--Universidad-5-Hab--Prof-LumInsieme/596a8499-a532-4fa9-804b-bb356a1cbe48/scratchpad/main-qa/tests/e2e/specs",
+    "testIgnore": [],
+    "testMatch": [
+     "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+    ],
+    "timeout": 60000
+   },
+   {
+    "outputDir": "C:/Users/escor/AppData/Local/Temp/claude/d--Universidad-5-Hab--Prof-LumInsieme/596a8499-a532-4fa9-804b-bb356a1cbe48/scratchpad/main-qa/tests/e2e/test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "id": "mobile-webkit",
+    "name": "mobile-webkit",
+    "testDir": "C:/Users/escor/AppData/Local/Temp/claude/d--Universidad-5-Hab--Prof-LumInsieme/596a8499-a532-4fa9-804b-bb356a1cbe48/scratchpad/main-qa/tests/e2e/specs",
+    "testIgnore": [],
+    "testMatch": [
+     "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+    ],
+    "timeout": 60000
+   }
+  ],
+  "filteredProjects": [
+   {
+    "grep": {},
+    "grepInvert": null,
+    "outputDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "name": "mobile-chromium",
+    "testDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs",
+    "snapshotDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs",
+    "testIgnore": [],
+    "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+    "timeout": 60000,
+    "use": {
+     "baseURL": "https://localhost:8443",
+     "ignoreHTTPSErrors": true,
+     "locale": "es-AR",
+     "timezoneId": "America/Argentina/Buenos_Aires",
+     "screenshot": "only-on-failure",
+     "trace": "retain-on-failure",
+     "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Mobile Safari/537.36",
+     "viewport": {
+      "width": 412,
+      "height": 839
+     },
+     "screen": {
+      "width": 412,
+      "height": 915
+     },
+     "deviceScaleFactor": 2.625,
+     "isMobile": true,
+     "hasTouch": true,
+     "defaultBrowserType": "chromium"
+    },
+    "dependencies": [],
+    "ignoreSnapshots": false,
+    "__projectId": "mobile-chromium"
+   },
+   {
+    "grep": {},
+    "grepInvert": null,
+    "outputDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results",
+    "repeatEach": 1,
+    "retries": 0,
+    "metadata": {
+     "actualWorkers": 1
+    },
+    "name": "mobile-webkit",
+    "testDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs",
+    "snapshotDir": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs",
+    "testIgnore": [],
+    "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+    "timeout": 60000,
+    "use": {
+     "baseURL": "https://localhost:8443",
+     "ignoreHTTPSErrors": true,
+     "locale": "es-AR",
+     "timezoneId": "America/Argentina/Buenos_Aires",
+     "screenshot": "only-on-failure",
+     "trace": "retain-on-failure",
+     "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+     "viewport": {
+      "width": 390,
+      "height": 664
+     },
+     "screen": {
+      "width": 390,
+      "height": 844
+     },
+     "deviceScaleFactor": 3,
+     "isMobile": true,
+     "hasTouch": true,
+     "defaultBrowserType": "webkit"
+    },
+    "dependencies": [],
+    "ignoreSnapshots": false,
+    "__projectId": "mobile-webkit"
+   }
+  ],
+  "quiet": false,
+  "reporter": [
+   [
+    "list",
+    null
+   ],
+   [
+    "html",
+    {
+     "outputFolder": "playwright-report",
+     "open": "never"
+    }
+   ],
+   [
+    "json",
+    {
+     "outputFile": "test-results/results.json"
+    }
+   ]
+  ],
+  "reportSlowTests": {
+   "max": 5,
+   "threshold": 300000
+  },
+  "shard": null,
+  "tags": [],
+  "updateSnapshots": "default",
+  "updateSourceMethod": "patch",
+  "version": "1.64.1",
+  "workers": 1,
+  "webServer": null
+ },
+ "suites": [
+  {
+   "title": "flujo.spec.js",
+   "file": "flujo.spec.js",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "Transversal — E2E del flujo principal (mobile)",
+     "file": "flujo.spec.js",
+     "line": 3,
+     "column": 6,
+     "specs": [
+      {
+       "title": "PT-TR-50 Flujo login (cookie JWT), cartelera, elegir función, crear sala y chatear → sala creada con el usuario como anfitrión y mensaje visible en el chat",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 4230,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:21.169Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "01-feed-cartelera",
+             "contentType": "image/png"
+            },
+            {
+             "name": "02-cartelera-manana",
+             "contentType": "image/png"
+            },
+            {
+             "name": "03-crear-sala",
+             "contentType": "image/png"
+            },
+            {
+             "name": "04-sala-chat",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-4fc8ddfc244326e14e31",
+       "file": "flujo.spec.js",
+       "line": 4,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-51 Dos usuarios en la misma sala → el segundo se une y ambos reciben los mensajes en tiempo real (y persisten al recargar)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 7296,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:25.557Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "05-chat-dos-usuarios",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-0364eb85e9e68186868c",
+       "file": "flujo.spec.js",
+       "line": 40,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-52 Ruta interna sin sesión y login con ?error=invalid_state → botón de Google visible y aviso 'La sesión de inicio expiró'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 648,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:32.866Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "06-login-invalid-state",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-06f6007a4ff7c26c6e6a",
+       "file": "flujo.spec.js",
+       "line": 76,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-53 Cartelera de hoy → la función ya iniciada (00:01) aparece deshabilitada y la de las 23:59 habilitada",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 631,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:33.526Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-d5bc833cef84fb0bafe5",
+       "file": "flujo.spec.js",
+       "line": 84,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-54 Viewport mobile → feed, salas y crear sala sin scroll horizontal",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2259,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:34.166Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-d4a9ba98c6b7f894f662",
+       "file": "flujo.spec.js",
+       "line": 92,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-55 Desde el feed, abrir el chat de una sala propia → a lo sumo 3 clics (RNF de usabilidad)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1719,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:36.435Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-48e76f32abb4ab8ffd6e",
+       "file": "flujo.spec.js",
+       "line": 101,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-57 Navegación completa con la CSP de nginx (feed, crear sala, sala con chat) → sin violaciones de CSP ni errores en consola",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "parallelIndex": 0,
+           "status": "failed",
+           "duration": 651,
+           "error": {
+            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js:124:59",
+            "location": {
+             "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+             "column": 59,
+             "line": 124
+            },
+            "snippet": "\u001b[0m \u001b[90m 122 |\u001b[39m\n \u001b[90m 123 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/feed\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m     expect(response\u001b[33m.\u001b[39mheaders()[\u001b[32m\"content-security-policy\"\u001b[39m])\u001b[33m.\u001b[39mtoContain(\u001b[32m\"default-src 'self'\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"¿Qué vemos?\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/crear-sala\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 127 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Crear Nueva Sala\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+           },
+           "errors": [
+            {
+             "location": {
+              "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+              "column": 59,
+              "line": 124
+             },
+             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n  122 |\n  123 |     const response = await page.goto(\"/feed\");\n> 124 |     expect(response.headers()[\"content-security-policy\"]).toContain(\"default-src 'self'\");\n      |                                                           ^\n  125 |     await expect(page.getByRole(\"heading\", { name: \"¿Qué vemos?\" })).toBeVisible();\n  126 |     await page.goto(\"/crear-sala\");\n  127 |     await expect(page.getByRole(\"heading\", { name: \"Crear Nueva Sala\" })).toBeVisible();\n    at C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js:124:59"
+            }
+           ],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:38.164Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "screenshot",
+             "contentType": "image/png",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-chromium\\test-failed-1.png"
+            },
+            {
+             "name": "error-context",
+             "contentType": "text/markdown",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-chromium\\error-context.md"
+            },
+            {
+             "name": "trace",
+             "contentType": "application/zip",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-chromium\\trace.zip"
+            }
+           ],
+           "errorLocation": {
+            "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+            "column": 59,
+            "line": 124
+           }
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-605e2ade8bb321d748f9",
+       "file": "flujo.spec.js",
+       "line": 116,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-56 El único miembro abandona la sala desde la UI → la sala desaparece y vuelve a 'Salas abiertas'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-chromium",
+         "projectName": "mobile-chromium",
+         "results": [
+          {
+           "workerIndex": 1,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1271,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:40.629Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-f1244419fb82432443d6",
+       "file": "flujo.spec.js",
+       "line": 141,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-50 Flujo login (cookie JWT), cartelera, elegir función, crear sala y chatear → sala creada con el usuario como anfitrión y mensaje visible en el chat",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 5314,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:42.859Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "01-feed-cartelera",
+             "contentType": "image/png"
+            },
+            {
+             "name": "02-cartelera-manana",
+             "contentType": "image/png"
+            },
+            {
+             "name": "03-crear-sala",
+             "contentType": "image/png"
+            },
+            {
+             "name": "04-sala-chat",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-cc03dc504af04161d28a",
+       "file": "flujo.spec.js",
+       "line": 4,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-51 Dos usuarios en la misma sala → el segundo se une y ambos reciben los mensajes en tiempo real (y persisten al recargar)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 8899,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:48.362Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "05-chat-dos-usuarios",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-28bca2ccdad63836515a",
+       "file": "flujo.spec.js",
+       "line": 40,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-52 Ruta interna sin sesión y login con ?error=invalid_state → botón de Google visible y aviso 'La sesión de inicio expiró'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1286,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:57.278Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "06-login-invalid-state",
+             "contentType": "image/png"
+            }
+           ]
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-68cf6b3623ce27607488",
+       "file": "flujo.spec.js",
+       "line": 76,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-53 Cartelera de hoy → la función ya iniciada (00:01) aparece deshabilitada y la de las 23:59 habilitada",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1204,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:58.576Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-248007f1d20dfa6c70b1",
+       "file": "flujo.spec.js",
+       "line": 84,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-54 Viewport mobile → feed, salas y crear sala sin scroll horizontal",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2980,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:32:59.789Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-08cc5b330492fab917ae",
+       "file": "flujo.spec.js",
+       "line": 92,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-55 Desde el feed, abrir el chat de una sala propia → a lo sumo 3 clics (RNF de usabilidad)",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 2083,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:33:02.779Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-047bfa4ecb6816a2271b",
+       "file": "flujo.spec.js",
+       "line": 101,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-57 Navegación completa con la CSP de nginx (feed, crear sala, sala con chat) → sin violaciones de CSP ni errores en consola",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 2,
+           "parallelIndex": 0,
+           "status": "failed",
+           "duration": 684,
+           "error": {
+            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js:124:59",
+            "location": {
+             "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+             "column": 59,
+             "line": 124
+            },
+            "snippet": "\u001b[0m \u001b[90m 122 |\u001b[39m\n \u001b[90m 123 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/feed\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m     expect(response\u001b[33m.\u001b[39mheaders()[\u001b[32m\"content-security-policy\"\u001b[39m])\u001b[33m.\u001b[39mtoContain(\u001b[32m\"default-src 'self'\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"¿Qué vemos?\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/crear-sala\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 127 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Crear Nueva Sala\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+           },
+           "errors": [
+            {
+             "location": {
+              "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+              "column": 59,
+              "line": 124
+             },
+             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n  122 |\n  123 |     const response = await page.goto(\"/feed\");\n> 124 |     expect(response.headers()[\"content-security-policy\"]).toContain(\"default-src 'self'\");\n      |                                                           ^\n  125 |     await expect(page.getByRole(\"heading\", { name: \"¿Qué vemos?\" })).toBeVisible();\n  126 |     await page.goto(\"/crear-sala\");\n  127 |     await expect(page.getByRole(\"heading\", { name: \"Crear Nueva Sala\" })).toBeVisible();\n    at C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js:124:59"
+            }
+           ],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:33:04.874Z",
+           "annotations": [],
+           "attachments": [
+            {
+             "name": "screenshot",
+             "contentType": "image/png",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-webkit\\test-failed-1.png"
+            },
+            {
+             "name": "error-context",
+             "contentType": "text/markdown",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-webkit\\error-context.md"
+            },
+            {
+             "name": "trace",
+             "contentType": "application/zip",
+             "path": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\test-results\\flujo-Transversal-—-E2E-de-66415-e-CSP-ni-errores-en-consola-mobile-webkit\\trace.zip"
+            }
+           ],
+           "errorLocation": {
+            "file": "C:\\Users\\escor\\AppData\\Local\\Temp\\claude\\d--Universidad-5-Hab--Prof-LumInsieme\\596a8499-a532-4fa9-804b-bb356a1cbe48\\scratchpad\\main-qa\\tests\\e2e\\specs\\flujo.spec.js",
+            "column": 59,
+            "line": 124
+           }
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-b6bab1d47ac873406daf",
+       "file": "flujo.spec.js",
+       "line": 116,
+       "column": 3
+      },
+      {
+       "title": "PT-TR-56 El único miembro abandona la sala desde la UI → la sala desaparece y vuelve a 'Salas abiertas'",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "annotations": [],
+         "expectedStatus": "passed",
+         "projectId": "mobile-webkit",
+         "projectName": "mobile-webkit",
+         "results": [
+          {
+           "workerIndex": 3,
+           "parallelIndex": 0,
+           "status": "passed",
+           "duration": 1831,
+           "errors": [],
+           "stdout": [],
+           "stderr": [],
+           "retry": 0,
+           "startTime": "2026-10-28T00:33:06.386Z",
+           "annotations": [],
+           "attachments": []
+          }
+         ],
+         "status": "expected"
+        }
+       ],
+       "id": "bebafadf255f5423e778-cf180d129dc83e598d87",
+       "file": "flujo.spec.js",
+       "line": 141,
+       "column": 3
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": [],
+ "stats": {
+  "startTime": "2026-10-28T00:32:20.438Z",
+  "duration": 47942.027,
+  "expected": 14,
+  "skipped": 0,
+  "unexpected": 2,
+  "flaky": 0
+ }
+}

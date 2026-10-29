@@ -1,0 +1,593 @@
+{
+ "main (enchufado)": {
+  "chromium": "156.0.8078.4",
+  "filas": [
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 180,
+     "peor": 940
+    },
+    "lcp": {
+     "mediana": 220,
+     "peor": 940
+    },
+    "usable": {
+     "mediana": 213,
+     "peor": 929
+    },
+    "bytes": {
+     "mediana": 348241,
+     "peor": 348241
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 76,
+     "peor": 92
+    },
+    "lcp": {
+     "mediana": 104,
+     "peor": 120
+    },
+    "usable": {
+     "mediana": 96,
+     "peor": 113
+    },
+    "bytes": {
+     "mediana": 378,
+     "peor": 378
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 168,
+     "peor": 188
+    },
+    "lcp": {
+     "mediana": 264,
+     "peor": 308
+    },
+    "usable": {
+     "mediana": 228,
+     "peor": 240
+    },
+    "bytes": {
+     "mediana": 370195,
+     "peor": 370195
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 80,
+     "peor": 84
+    },
+    "lcp": {
+     "mediana": 116,
+     "peor": 116
+    },
+    "usable": {
+     "mediana": 126,
+     "peor": 135
+    },
+    "bytes": {
+     "mediana": 855,
+     "peor": 855
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 2168,
+     "peor": 2232
+    },
+    "lcp": {
+     "mediana": 2664,
+     "peor": 2752
+    },
+    "usable": {
+     "mediana": 2547,
+     "peor": 2578
+    },
+    "bytes": {
+     "mediana": 348241,
+     "peor": 348241
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 460,
+     "peor": 512
+    },
+    "lcp": {
+     "mediana": 776,
+     "peor": 844
+    },
+    "usable": {
+     "mediana": 768,
+     "peor": 828
+    },
+    "bytes": {
+     "mediana": 378,
+     "peor": 378
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 2176,
+     "peor": 2288
+    },
+    "lcp": {
+     "mediana": 2708,
+     "peor": 2848
+    },
+    "usable": {
+     "mediana": 2799,
+     "peor": 2936
+    },
+    "bytes": {
+     "mediana": 370195,
+     "peor": 370195
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 476,
+     "peor": 684
+    },
+    "lcp": {
+     "mediana": 1496,
+     "peor": 1708
+    },
+    "usable": {
+     "mediana": 1083,
+     "peor": 1298
+    },
+    "bytes": {
+     "mediana": 855,
+     "peor": 855
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   }
+  ]
+ },
+ "control 21/10 (enchufado)": {
+  "chromium": "156.0.8078.4",
+  "filas": [
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 212,
+     "peor": 932
+    },
+    "lcp": {
+     "mediana": 252,
+     "peor": 932
+    },
+    "usable": {
+     "mediana": 246,
+     "peor": 918
+    },
+    "bytes": {
+     "mediana": 348619,
+     "peor": 348619
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 144,
+     "peor": 168
+    },
+    "lcp": {
+     "mediana": 168,
+     "peor": 188
+    },
+    "usable": {
+     "mediana": 156,
+     "peor": 181
+    },
+    "bytes": {
+     "mediana": 0,
+     "peor": 0
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 220,
+     "peor": 224
+    },
+    "lcp": {
+     "mediana": 320,
+     "peor": 332
+    },
+    "usable": {
+     "mediana": 268,
+     "peor": 303
+    },
+    "bytes": {
+     "mediana": 369997,
+     "peor": 369997
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 132,
+     "peor": 152
+    },
+    "lcp": {
+     "mediana": 168,
+     "peor": 192
+    },
+    "usable": {
+     "mediana": 175,
+     "peor": 203
+    },
+    "bytes": {
+     "mediana": 20992,
+     "peor": 20992
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 2208,
+     "peor": 2260
+    },
+    "lcp": {
+     "mediana": 2680,
+     "peor": 2776
+    },
+    "usable": {
+     "mediana": 2546,
+     "peor": 2667
+    },
+    "bytes": {
+     "mediana": 348619,
+     "peor": 348728
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 532,
+     "peor": 540
+    },
+    "lcp": {
+     "mediana": 836,
+     "peor": 924
+    },
+    "usable": {
+     "mediana": 824,
+     "peor": 911
+    },
+    "bytes": {
+     "mediana": 0,
+     "peor": 0
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 2212,
+     "peor": 2304
+    },
+    "lcp": {
+     "mediana": 2748,
+     "peor": 2832
+    },
+    "usable": {
+     "mediana": 2840,
+     "peor": 2896
+    },
+    "bytes": {
+     "mediana": 369997,
+     "peor": 369997
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 536,
+     "peor": 696
+    },
+    "lcp": {
+     "mediana": 1496,
+     "peor": 1680
+    },
+    "usable": {
+     "mediana": 1095,
+     "peor": 1296
+    },
+    "bytes": {
+     "mediana": 20992,
+     "peor": 20992
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   }
+  ]
+ },
+ "main a batería (descartada)": {
+  "chromium": "156.0.8078.4",
+  "filas": [
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 340,
+     "peor": 1368
+    },
+    "lcp": {
+     "mediana": 440,
+     "peor": 1368
+    },
+    "usable": {
+     "mediana": 421,
+     "peor": 1331
+    },
+    "bytes": {
+     "mediana": 348241,
+     "peor": 348241
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 188,
+     "peor": 476
+    },
+    "lcp": {
+     "mediana": 276,
+     "peor": 652
+    },
+    "usable": {
+     "mediana": 262,
+     "peor": 628
+    },
+    "bytes": {
+     "mediana": 378,
+     "peor": 378
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 264,
+     "peor": 292
+    },
+    "lcp": {
+     "mediana": 480,
+     "peor": 496
+    },
+    "usable": {
+     "mediana": 423,
+     "peor": 515
+    },
+    "bytes": {
+     "mediana": 370195,
+     "peor": 370195
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "local",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 192,
+     "peor": 236
+    },
+    "lcp": {
+     "mediana": 244,
+     "peor": 376
+    },
+    "usable": {
+     "mediana": 281,
+     "peor": 398
+    },
+    "bytes": {
+     "mediana": 855,
+     "peor": 855
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 5944,
+     "peor": 7844
+    },
+    "lcp": {
+     "mediana": 6080,
+     "peor": 9992
+    },
+    "usable": {
+     "mediana": 8067,
+     "peor": 9929
+    },
+    "bytes": {
+     "mediana": 348241,
+     "peor": 348241
+    },
+    "requests": 6,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "login",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 4632,
+     "peor": 5364
+    },
+    "lcp": {
+     "mediana": 6116,
+     "peor": 6816
+    },
+    "usable": {
+     "mediana": 6071,
+     "peor": 6777
+    },
+    "bytes": {
+     "mediana": 378,
+     "peor": 378
+    },
+    "requests": 6,
+    "fromCache": 5,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "sin cache",
+    "fcp": {
+     "mediana": 6044,
+     "peor": 6240
+    },
+    "lcp": {
+     "mediana": 8540,
+     "peor": 8952
+    },
+    "usable": {
+     "mediana": 9232,
+     "peor": 9377
+    },
+    "bytes": {
+     "mediana": 370195,
+     "peor": 370195
+    },
+    "requests": 8,
+    "fromCache": 0,
+    "corridas": 5
+   },
+   {
+    "profile": "slow4g-cpu4x",
+    "page": "feed",
+    "cache": "con cache",
+    "fcp": {
+     "mediana": 4604,
+     "peor": 5444
+    },
+    "lcp": {
+     "mediana": 6556,
+     "peor": 7188
+    },
+    "usable": {
+     "mediana": 7267,
+     "peor": 7639
+    },
+    "bytes": {
+     "mediana": 855,
+     "peor": 855
+    },
+    "requests": 8,
+    "fromCache": 5,
+    "corridas": 5
+   }
+  ]
+ }
+}

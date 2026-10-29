@@ -1,0 +1,63 @@
+{
+  "name": "main",
+  "commit": {
+    "sha": "bceec38560242079f4cddfcb8d49435d46acc04b",
+    "node_id": "C_kwDOSYwWZtoAKGJjZWVjMzg1NjAyNDIwNzlmNGNkZGZjYjhkNDk0MzVkNDZhY2MwNGI",
+    "commit": {
+      "author": {
+        "name": "Tomy Varas",
+        "email": "tomyvaras@tomyvaras.tomyvaras",
+        "date": "2026-10-26T23:49:18Z"
+      },
+      "committer": {
+        "name": "Tomy Varas",
+        "email": "tomyvaras@tomyvaras.tomyvaras",
+        "date": "2026-10-26T23:49:18Z"
+      },
+      "message": "add: docs refresh room",
+      "tree": {
+        "sha": "0b438581338db174c9c5250e1d415062c6f7cf76",
+        "url": "https://api.github.com/repos/odritaa/LumInsieme/git/trees/0b438581338db174c9c5250e1d415062c6f7cf76"
+      },
+      "url": "https://api.github.com/repos/odritaa/LumInsieme/git/commits/bceec38560242079f4cddfcb8d49435d46acc04b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/bceec38560242079f4cddfcb8d49435d46acc04b",
+    "html_url": "https://github.com/odritaa/LumInsieme/commit/bceec38560242079f4cddfcb8d49435d46acc04b",
+    "comments_url": "https://api.github.com/repos/odritaa/LumInsieme/commits/bceec38560242079f4cddfcb8d49435d46acc04b/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "7afec48cbc526439c47a057627646cbbef3fa1b8",
+        "url": "https://api.github.com/repos/odritaa/LumInsieme/commits/7afec48cbc526439c47a057627646cbbef3fa1b8",
+        "html_url": "https://github.com/odritaa/LumInsieme/commit/7afec48cbc526439c47a057627646cbbef3fa1b8"
+      }
+    ]
+  },
+  "_links": {
+    "self": "https://api.github.com/repos/odritaa/LumInsieme/branches/main",
+    "html": "https://github.com/odritaa/LumInsieme/tree/main"
+  },
+  "protected": false,
+  "protection": {
+    "enabled": false,
+    "required_status_checks": {
+      "enforcement_level": "off",
+      "contexts": [
+
+      ],
+      "checks": [
+
+      ]
+    }
+  },
+  "protection_url": "https://api.github.com/repos/odritaa/LumInsieme/branches/main/protection"
+}

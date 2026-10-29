@@ -1,0 +1,42 @@
+[
+  {
+    "id": 5073159195,
+    "node_id": "PRR_kwDOSYwWZs8AAAABLmJEGw",
+    "user": {
+      "login": "Diego-Escorche",
+      "id": 142900945,
+      "node_id": "U_kgDOCIR-0Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/142900945?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Diego-Escorche",
+      "html_url": "https://github.com/Diego-Escorche",
+      "followers_url": "https://api.github.com/users/Diego-Escorche/followers",
+      "following_url": "https://api.github.com/users/Diego-Escorche/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Diego-Escorche/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Diego-Escorche/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Diego-Escorche/subscriptions",
+      "organizations_url": "https://api.github.com/users/Diego-Escorche/orgs",
+      "repos_url": "https://api.github.com/users/Diego-Escorche/repos",
+      "events_url": "https://api.github.com/users/Diego-Escorche/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Diego-Escorche/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Merge Succesful. Continuar desarrollo",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/odritaa/LumInsieme/pull/1#pullrequestreview-5073159195",
+    "pull_request_url": "https://api.github.com/repos/odritaa/LumInsieme/pulls/1",
+    "author_association": "COLLABORATOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/odritaa/LumInsieme/pull/1#pullrequestreview-5073159195"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/odritaa/LumInsieme/pulls/1"
+      }
+    },
+    "submitted_at": "2026-09-01T01:43:28Z",
+    "commit_id": "00d05006730f4e0043f407fd5b87569dbd037b9e"
+  }
+]

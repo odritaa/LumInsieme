@@ -1,0 +1,77 @@
+[
+  {
+    "number": 3,
+    "title": "Cache chat",
+    "author": {
+      "login": "TomyVarasOviedo"
+    },
+    "createdAt": "2026-10-19T12:55:01Z",
+    "mergedAt": "2026-10-19T12:55:41Z",
+    "closedAt": "2026-10-19T12:55:41Z",
+    "state": "closed",
+    "mergedBy": "TomyVarasOviedo",
+    "headRefName": "cache-chat",
+    "baseRefName": "main",
+    "reviews": [],
+    "reviewDecision": null,
+    "additions": 20995,
+    "deletions": 285,
+    "changedFiles": 70,
+    "commits": 16,
+    "comments": 0,
+    "reviewComments": 0,
+    "mergeCommit": "b648f32"
+  },
+  {
+    "number": 2,
+    "title": "Pull Chat Branch",
+    "author": {
+      "login": "Diego-Escorche"
+    },
+    "createdAt": "2026-09-01T01:47:17Z",
+    "mergedAt": "2026-09-01T02:01:52Z",
+    "closedAt": "2026-09-01T02:01:52Z",
+    "state": "closed",
+    "mergedBy": "Diego-Escorche",
+    "headRefName": "chat",
+    "baseRefName": "main",
+    "reviews": [],
+    "reviewDecision": null,
+    "additions": 986681,
+    "deletions": 4,
+    "changedFiles": 4109,
+    "commits": 3,
+    "comments": 0,
+    "reviewComments": 0,
+    "mergeCommit": "1ddcaff"
+  },
+  {
+    "number": 1,
+    "title": "Pull Login branch",
+    "author": {
+      "login": "Diego-Escorche"
+    },
+    "createdAt": "2026-09-01T01:40:38Z",
+    "mergedAt": "2026-09-01T01:41:31Z",
+    "closedAt": "2026-09-01T01:41:31Z",
+    "state": "closed",
+    "mergedBy": "Diego-Escorche",
+    "headRefName": "login",
+    "baseRefName": "main",
+    "reviews": [
+      {
+        "author": "Diego-Escorche",
+        "state": "COMMENTED",
+        "submittedAt": "2026-09-01T01:43:28Z"
+      }
+    ],
+    "reviewDecision": null,
+    "additions": 2598,
+    "deletions": 59,
+    "changedFiles": 37,
+    "commits": 1,
+    "comments": 0,
+    "reviewComments": 0,
+    "mergeCommit": "ff28bb7"
+  }
+]
